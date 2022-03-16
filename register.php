@@ -2,7 +2,7 @@
 <html lang="en">
   
 <head>
-    <title>GFG- Store Data</title>
+    <title>PENDAFTARN AKAUN</title>
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,7 +15,7 @@
 
 <body>
     <center>
-        <h1>Storing Form data in Database</h1>
+        <h1>SILA ISI BORANG PENDAFTARAN DIBAWAH</h1>
         <form action="insert.php" method="post">    
 <p>
                 <label for="firstName">First Name:</label>
