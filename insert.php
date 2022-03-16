@@ -37,7 +37,7 @@
             echo "<h3>data stored in a successfully.</h3>";
             echo nl2br("\n$first_name\n $last_name\n "
                 . "$icnum\n $telnum\n $alamat\n $email");
-                header("Location:index.php");    
+                header("Location:mainpage.php");    
                
         } else{
             echo "ERROR: Hush! Sorry $sql. " 
