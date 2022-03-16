@@ -43,7 +43,7 @@
 <div class="topnav" id="myTopnav">
   <a href="#home" class="active">PAPARAN UTAMA</a>
   <a href="register.php">PENDAFTARAN PENGGUNA</a>
-  <a href="#contact">SENARAI NGO BERDAFTAR</a>
+  <a href="fetch.php">SENARAI NGO BERDAFTAR</a>
   <a href="#about">HUBUNGI KAMI</a>
   <a href="#about">TENTANG KAMI</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">

@@ -26,19 +26,26 @@
                 <input type="text" name="last_name" id="lastName">
             </p>           
 <p>
-                <label for="Gender">Gender:</label>
-                <input type="text" name="gender" id="Gender">
+                <label for="icnum">IC number:</label>
+                <input type="text" name="icnum" id="IC">
             </p>
      
 <p>
-                <label for="Address">Address:</label>
-                <input type="text" name="address" id="Address">
+                <label for="telnum">telefon number:</label>
+                <input type="text" name="telnum" id="telnum">
             </p>
 <p>
-                <label for="emailAddress">Email Address:</label>
-                <input type="text" name="email" id="emailAddress">
+                <label for="alamat">alamat:</label>
+                <input type="text" name="alamat" id="alamat">
             </p>
-            <input type="submit" value="Submit">
+<p>
+                <label for="email">email:</label>
+                <input type="text" name="email" id="email">
+            </p>
+            <a href="index.php">  
+            <input type="submit" value="Hantar">
+            </a>
+            
         </form>
     </center>
 </body>
