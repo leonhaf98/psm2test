@@ -1,6 +1,6 @@
 <?php
 include('database.php');
-$query = "SELECT first_name, last_name, icnum, telnum, alamat, email FROM users";
+$query = "SELECT first_name, last_name, icnum, telnum, alamat, email, username, katalaluan FROM users";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -20,6 +20,9 @@ $result = mysqli_query($conn, $query);
     <th>telefon number</th>
     <th>alamat</th>
     <th>email</th>
+    <th>username</th>
+    <th>password</th>
+
   </tr>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -34,6 +37,8 @@ if (mysqli_num_rows($result) > 0) {
    <td><?php echo $data['telnum']; ?> </td>
    <td><?php echo $data['alamat']; ?> </td>
    <td><?php echo $data['email']; ?> </td>
+   <td><?php echo $data['username']; ?> </td>
+   <td><?php echo $data['katalaluan']; ?> </td>
  <tr>
  <?php
   $sn++;}} else { ?>

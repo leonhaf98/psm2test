@@ -34,10 +34,30 @@
 }
 </style>    
 
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<?php
+session_start();
+?>
+<html>
+<head>
+<title>User Login</title>
+</head>
+<body>
+
+<?php
+if($_SESSION["username"]) 
+{
+?>
+Welcome <?php echo $_SESSION["username"]; ?>. 
+Click here to <a href="logout.php" tite="Logout">Logout.
+<?php
+}else echo "<h1>Please login first .</h1>";
+?>
+</body>
+</html>
 
 <div class="w3-panel w3-border w3-round-small">
 <div class="topnav" id="myTopnav">
@@ -46,22 +66,23 @@
   <a href="fetch.php">SENARAI NGO BERDAFTAR</a>
   <a href="#about">HUBUNGI KAMI</a>
   <a href="#about">TENTANG KAMI</a>
+  <a href="loginpage.php">LOG MASUK</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
-</div>
-
 <div class="w3-container"> 
   <h2>PSM2</h2>
   <p>London is the most populous city in the United Kingdom,
   with a metropolitan area of over 9 million inhabitants.</p>
+  
   <hr>
 </div>
 
 <div class="w3-panel w3-border w3-round-xlarge" >
   <p>I have a thick blue left border and a pale-blue background color.</p>
   <p>I have a thick blue left border and a pale-blue background color.</p>
+  
 </div>
 
 <script>

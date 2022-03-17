@@ -42,6 +42,14 @@
                 <label for="email">email:</label>
                 <input type="text" name="email" id="email">
             </p>
+<p>
+                <label for="username">username login:</label>
+                <input type="text" name="username" id="username">
+            </p>
+<p>
+                <label for="katalaluan">password login:</label>
+                <input type="text" name="katalaluan" id="katalaluan">
+            </p>            
             <a href="index.php">  
             <input type="submit" value="Hantar">
             </a>
