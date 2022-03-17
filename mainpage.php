@@ -64,6 +64,7 @@ Click here to <a href="logout.php" tite="Logout">Logout.
   <a href="#home" class="active">PAPARAN UTAMA</a>
   <a href="register.php">PENDAFTARAN PENGGUNA</a>
   <a href="fetch.php">SENARAI NGO BERDAFTAR</a>
+  <a href="viewuser.php">SENARAI PENGGUNA</a>
   <a href="#about">HUBUNGI KAMI</a>
   <a href="#about">TENTANG KAMI</a>
   <a href="loginpage.php">LOG MASUK</a>

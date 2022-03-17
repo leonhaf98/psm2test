@@ -22,12 +22,14 @@
         <thead>  
   
         <tr>  
-  
-            <th>User Id</th>  
-            <th>User Name</th>  
-            <th>User E-mail</th>  
-            <th>User Pass</th>  
-            <th>Delete User</th>  
+            <th>first name</th>  
+            <th>last Name</th>  
+            <th>number ic</th>  
+            <th>telefon number</th>  
+            <th>alamat</th>
+            <th>email</th>
+            <th>username</th> 
+            <th>password</th>   
         </tr>  
         </thead>  
   
@@ -51,11 +53,15 @@
   
         <tr>  
 <!--here showing results in the table -->  
-            <td><?php echo $user_id;  ?></td>  
-            <td><?php echo $user_name;  ?></td>  
-            <td><?php echo $user_email;  ?></td>  
-            <td><?php echo $user_pass;  ?></td>  
-            <td><a href="delete.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+            <td><?php echo $first_name;  ?></td>  
+            <td><?php echo $last_name;  ?></td>  
+            <td><?php echo $icnum;  ?></td>  
+            <td><?php echo $telnum;  ?></td> 
+            <td><?php echo $alamat;  ?></td>
+            <td><?php echo $email;  ?></td>
+            <td><?php echo $username;  ?></td>
+            <td><?php echo $password;  ?></td>
+            <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
         </tr>  
   
         <?php } ?>  
