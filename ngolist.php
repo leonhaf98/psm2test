@@ -1,6 +1,6 @@
 <?php
 include('database.php');
-$query = "SELECT first_name, last_name, telnum, alamat, email, username, katalaluan, icnum FROM users";
+$query = "SELECT first_name, last_name, telnum, alamat, email, username, password FROM users";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -12,6 +12,7 @@ $result = mysqli_query($conn, $query);
 </div>
 
 <table border ="1" cellspacing="0" cellpadding="10">
+  <td>
   <tr>
     <th>S.N</th>
     <th>Full Name</th>
@@ -21,9 +22,8 @@ $result = mysqli_query($conn, $query);
     <th>email</th>
     <th>username</th>
     <th>password</th>
-    <th>ic number</th>
-
   </tr>
+  </td>
 <?php
 if (mysqli_num_rows($result) > 0) {
   $sn=1;
@@ -37,8 +37,8 @@ if (mysqli_num_rows($result) > 0) {
    <td><?php echo $data['alamat']; ?> </td>
    <td><?php echo $data['email']; ?> </td>
    <td><?php echo $data['username']; ?> </td>
-   <td><?php echo $data['katalaluan']; ?> </td>
-   <td><?php echo $data['icnum']; ?> </td>
+   <td><?php echo $data['password']; ?> </td>
+   <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>
  <tr>
  <?php
   $sn++;}} else { ?>

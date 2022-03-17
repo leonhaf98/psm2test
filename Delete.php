@@ -7,7 +7,7 @@ $run=mysqli_query($conn,$delete_query);
 if($run)  
 {  
 //javascript function to open in the same window   
-    echo "<script>window.open('view_users.php?deleted=user has been deleted','_self')</script>";  
+    echo "<script>window.open('viewuser.php?deleted=user has been deleted','_self')</script>";  
 }  
   
 ?>  

@@ -65,7 +65,7 @@ if(strlen($email)>50){  // Max
          if(strlen($password)>20){ // Max 
             $error[] = 'Password: Max length 20 Characters Not allowed';
         }
-          $sql="select * from userss where (username='$username' or email='$email');";
+          $sql="select * from users where (username='$username' or email='$email');";
       $res=mysqli_query($conn,$sql);
    if (mysqli_num_rows($res) > 0) {
 $row = mysqli_fetch_assoc($res);
@@ -80,14 +80,11 @@ $row = mysqli_fetch_assoc($res);
           } 
       }
          if(!isset($error)){ 
-              $date=date('Y-m-d');
-            $options = array("cost"=>4);
-    $password = password_hash($password,PASSWORD_BCRYPT,$options);
-            
-            $result = mysqli_query($conn,"INSERT into userss(fname,lname,username,email,password,date) values('$fname','$lname','$username','$email','$password','$date')");
-
+            $result = mysqli_query($conn,"INSERT into users(first_name,last_name,username,email,telnum,alamat,password) values('$fname','$lname','$username','$email','$telnum','$alamat','$password')");
            if($result)
+           
     {
+        header("Location:mainpage.php"); 
      $done=2; 
     }
     else{
@@ -132,6 +129,17 @@ foreach($error as $error){
     <label class="label_txt">Email </label>
     <input type="email" class="form-control" name="email" value="<?php if(isset($error)){ echo $_POST['email'];}?>" required="">
   </div>
+
+<div class="form-group">
+    <label class="label_txt">telefon number </label>
+    <input type="telnum" class="form-control" name="telnum" value="<?php if(isset($error)){ echo $_POST['telnum'];}?>" required="">
+  </div>
+
+<div class="form-group">
+    <label class="label_txt">alamat </label>
+    <input type="alamat" class="form-control" name="alamat" value="<?php if(isset($error)){ echo $_POST['alamat'];}?>" required="">
+  </div>
+
   <div class="form-group">
     <label class="label_txt">Password </label>
     <input type="password" name="password" class="form-control" required="">

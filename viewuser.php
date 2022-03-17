@@ -25,7 +25,7 @@
 <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
     <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <thead>  
-  
+        <td>
         <tr>  
             <th>first name</th>  
             <th>last Name</th>  
@@ -37,7 +37,7 @@
             <th>password</th>   
         </tr>  
         </thead>  
-  
+     </td>
         <?php  
         include("database.php");  
         $view_users_query="select * from users";//select query for viewing users.  

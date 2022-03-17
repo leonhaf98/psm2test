@@ -32,6 +32,8 @@
           
         // Performing insert query execution
         // here our table name is college
+
+        
         $sql = "INSERT INTO users  VALUES ('$id','$first_name', 
             '$last_name','$telnum','$alamat','$email','$username','$katalaluan')";
           
