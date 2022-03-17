@@ -2,7 +2,7 @@
 <?php require_once("database.php"); ?>
 <html>
 <head>
-<title> SignUp - Techno Smarter</title>
+<title> SignUp </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="style.css">
@@ -12,9 +12,7 @@
   <div class="row">
     <div class="col-sm-4">
     </div>
-     <div class="col-sm-4">
-      <img src="https://technosmarter.com/assets/images/logo.png" alt="Techno Smarter" class="logo img-fluid"> 
-    </div>
+   
      <div class="col-sm-4">
     </div>
   </div>
@@ -106,7 +104,7 @@ foreach($error as $error){
 		<div class="col-sm-4">
       <?php if(isset($done)) 
       { ?>
-    <div class="successmsg"><span style="font-size:100px;">&#9989;</span> <br> You have registered successfully . <br> <a href="login.php" style="color:#fff;">Login here... </a> </div>
+    <div class="successmsg"><span style="font-size:50px;">&#9989;</span> <br> You have registered successfully . <br> <a href="login.php" style="color:#fff;">Login here... </a> </div>
       <?php } else { ?>
        <div class="signup_form">
 		<form action="" method="POST">
@@ -149,7 +147,7 @@ foreach($error as $error){
     <input type="password" name="passwordConfirm" class="form-control" required="">
   </div>
   <button type="submit" name="signup" class="btn btn-primary btn-group-lg form_btn">SignUp</button>
-   <p>Have an account?  <a href="login.php">Log in</a> </p>
+   <p>Have an account?  <a href="loginpage.php">Log in</a> </p>
 </form>
 <?php } ?> 
 </div>

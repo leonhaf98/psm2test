@@ -13,7 +13,7 @@
         }
     }
     if(isset($_SESSION["username"])) {
-    header("Location:mainpage.php");
+    header("Location:userpage.php");
     }
 ?>
 <html>

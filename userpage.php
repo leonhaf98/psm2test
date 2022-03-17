@@ -46,6 +46,16 @@ session_start();
 <title>User Login</title>
 </head>
 <body>
+
+<?php
+if($_SESSION["username"]) 
+{
+?>
+Welcome <?php echo $_SESSION["username"]; ?>. 
+Click here to <a href="logout.php" tite="Logout">Logout.
+<?php
+}else echo "<h1>Please login first .</h1>";
+?>
 </body>
 </html>
 
@@ -54,9 +64,6 @@ session_start();
   <a href="#home" class="active">PAPARAN UTAMA</a>
   <a href="register.php">PENDAFTARAN PENGGUNA</a>
   <a href="ngolist.php">SENARAI NGO BERDAFTAR</a>
-  <a href="viewuser.php">SENARAI PENGGUNA</a>
-  <a href="#about">HUBUNGI KAMI</a>
-  <a href="#about">TENTANG KAMI</a>
   <a href="loginpage.php">LOG MASUK</a>
   <a href="registration.php">PENDAFTARAN test</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
