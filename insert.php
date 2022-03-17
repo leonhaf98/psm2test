@@ -21,9 +21,9 @@
         }
           
         // Taking all 5 values from the form data(input)
+        //$id =  $_REQUEST['id'];
         $first_name =  $_REQUEST['first_name'];
         $last_name = $_REQUEST['last_name'];
-        $icnum =  $_REQUEST['icnum'];
         $telnum = $_REQUEST['telnum'];
         $alamat = $_REQUEST['alamat'];
         $email = $_REQUEST['email'];
@@ -32,13 +32,13 @@
           
         // Performing insert query execution
         // here our table name is college
-        $sql = "INSERT INTO users  VALUES ('$first_name', 
-            '$last_name','$icnum','$telnum','$alamat','$email','$username','$katalaluan')";
+        $sql = "INSERT INTO users  VALUES ('$id','$first_name', 
+            '$last_name','$telnum','$alamat','$email','$username','$katalaluan')";
           
         if(mysqli_query($conn, $sql)){
             echo "<h3>data stored in a successfully.</h3>";
-            echo nl2br("\n$first_name\n $last_name\n "
-                . "$icnum\n $telnum\n $alamat\n $email\n $username\n $katalaluan");
+            echo nl2br("$id\n $first_name\n $last_name\n "
+                . "$telnum\n $alamat\n $email\n $username\n $katalaluan");
                 header("Location:mainpage.php");    
                
         } else{

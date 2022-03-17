@@ -24,11 +24,7 @@
 <p>
                 <label for="lastName">Last Name:</label>
                 <input type="text" name="last_name" id="lastName">
-            </p>           
-<p>
-                <label for="icnum">IC number:</label>
-                <input type="text" name="icnum" id="IC">
-            </p>
+            </p>          
      
 <p>
                 <label for="telnum">telefon number:</label>

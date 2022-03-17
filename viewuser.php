@@ -13,7 +13,12 @@
 </style>  
   
 <body>  
-  
+<div class="topnav" id="myTopnav">
+  <a href="mainpage.php" class="active">Home</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div> 
 <div class="table-scrol">  
     <h1 align="center">All the Users</h1>  
   
