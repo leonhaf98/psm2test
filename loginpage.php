@@ -16,9 +16,12 @@
     header("Location:userpage.php");
     }
 ?>
+
+
 <html>
 <head>
 <title>User Login</title>
+
 </head>
 <body>
 <form name="frmUser" method="post" action="" align="center">

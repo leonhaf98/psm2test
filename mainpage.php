@@ -40,7 +40,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo me-5" href="index.html"><img src="images/logo.svg" class="me-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo me-5" href="index.html"><img src="images/logo-mini.svg" class="me-2" alt="logo"/></a>
         <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -68,10 +68,6 @@
               <a class="dropdown-item">
                 <i class="ti-settings text-primary"></i>
                 Settings
-              </a>
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i>
-                Logout
               </a>
             </div>
           </li>
@@ -113,9 +109,10 @@
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="loginpage.php"> Log masuk pengguna </a></li>
-                <li class="nav-item"> <a class="nav-link" href="register.php"> Log masuk ngo</a></li>
+                <li class="nav-item"> <a class="nav-link" href="loginn.php"> Log masuk ngo</a></li>
+                <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="register.php"> Pendaftaran Pengguna</a></li>
-                <li class="nav-item"> <a class="nav-link" href="register.php"> Pendaftaran NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="registration.php"> Pendaftaran NGO</a></li>
               </ul>
             </div>
           </li>
@@ -208,8 +205,7 @@
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a> templates</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best  dashboard </a> test</span>
           </div>
         </footer>
         <!-- partial -->
