@@ -59,6 +59,7 @@
                 </div>
                 <a href="mainpage.php">  
                <input type="submit" value="Hantar">
+
                 <div class="mb-4">
                   <div class="form-check">
                     <label class="form-check-label text-muted">
@@ -67,11 +68,6 @@
                     </label>
                   </div>
                 </div>
-
-                <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a>
-                </div>
-
                 <div class="text-center mt-4 font-weight-light">
                   Already have an account? <a href="mainpage.php" class="text-primary">Login</a>
                 </div>

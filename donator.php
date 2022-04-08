@@ -108,10 +108,9 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="loginuser.php"> Log masuk pengguna </a></li>
-                <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Log masuk ngo</a></li>
-                <li class="nav-item"> <a class="nav-link" href="register.php"> Pendaftaran Pengguna</a></li>
-                <li class="nav-item"> <a class="nav-link" href="registration.php"> Pendaftaran NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
+                <li class="nav-item"> <a class="nav-link" href="registration.php"> Profil Pengguna</a></li>
+                <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
               </ul>
             </div>
           </li>
