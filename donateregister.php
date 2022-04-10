@@ -26,36 +26,36 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                
+                <img src="images/logo.svg" alt="logo">
               </div>
               <h4>New here?</h4>
               <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
-              <form action="insertngo.php"  method="post">
+              <form action="insert.php"  method="post">
 
                 <div class="form-group">
-                  <input type="text" name="Nama" id="firstName" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="name">
+                  <input type="text" name="first_name" id="firstName" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="first name">
                 </div>
           
                 <div class="form-group">
-                  <input type="text" name="kataNama" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="username name">
+                  <input type="text" name="last_name" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="last name">
                 </div>
 
                 <div class="form-group">
-                  <input type="Password" name="KataLaluan" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="password">
+                  <input type="text" name="telnum" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="telnum">
                 </div>
 
                 <div class="form-group">
-                  <input type="text" name="negeri" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="negeri">
+                  <input type="text" name="alamat" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="alamat">
                 </div>
 
                 <div class="form-group">
-                  <input type="email" name="emel" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="email">
+                  <input type="email" name="email" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="email">
                 </div>
                 <div class="form-group">
-                  <input type="text" name="nomtel" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="nombor telefon">
+                  <input type="text" name="username" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="username">
                 </div>
                 <div class="form-group">
-                  <input type="text" name="nomakaun" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="nombor akaun bank">
+                  <input type="password" name="katalaluan" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <a href="mainpage.php">  
                <input type="submit" value="Hantar">
