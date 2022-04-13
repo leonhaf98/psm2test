@@ -58,7 +58,7 @@
                   <input type="text" name="nomakaun" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="nombor akaun bank">
                 </div>
                 <a href="mainpage.php">  
-               <input type="submit" value="Hantar">
+                <input type="submit" value="Hantar" style = "position:relative; left:80px; top:2px;">
 
                 <div class="mb-4">
                   <div class="form-check">

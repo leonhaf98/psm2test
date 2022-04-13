@@ -70,7 +70,7 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style=" background-color:pink">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="mainpage.php">
@@ -79,9 +79,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-              <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title">Pendermaan</span>
+            <a class="nav-link" href="derma.php">
+              <i class="ti-star menu-icon"></i>
+              <span class="menu-title">Sumbangan</span>
             </a>
           </li>
 
@@ -91,6 +91,7 @@
               <span class="menu-title">Hubungi kami</span>
             </a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
@@ -125,6 +126,12 @@
               <span class="menu-title">Documentation</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comment.php">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title">Maklum Balas</span>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- partial -->
@@ -137,9 +144,6 @@
                   <h4 class="font-weight-bold mb-0">Pendapat pengguna</h4>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
                 </div>
               </div>
             </div>
@@ -154,18 +158,14 @@
               <form action="insertngo.php"  method="post">
 
                 <div class="form-group">
-                  <input type="text" name="Nama" id="firstName" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="name">
+                  <input type="text" name="Nama" id="firstName" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="maklumbalas">
                 </div>
           
                 <a href="mainpage.php">  
-               <input type="submit" value="Hantar">
+                <input type="submit" value="Hantar" style = "position:relative; left:300px; top:2px;">
 
                 <div class="mb-4">
                   <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input">
-                      I agree to all Terms & Conditions
-                    </label>
                   </div>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
