@@ -19,14 +19,6 @@
 </head>
 <body>
   <div class="container-scroller">
-    <div class="row p-0 m-0 proBanner" id="proBanner">
-      <div class="col-md-12 p-0 m-0">
-        <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-          <div class="ps-lg-1">
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -70,7 +62,7 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style=" background-color:pink">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="mainpage.php">
@@ -79,9 +71,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-              <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title">Pendermaan</span>
+            <a class="nav-link" href="derma.php">
+              <i class="ti-star menu-icon"></i>
+              <span class="menu-title">Sumbangan</span>
             </a>
           </li>
 
@@ -91,6 +83,7 @@
               <span class="menu-title">Hubungi kami</span>
             </a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
@@ -125,6 +118,12 @@
               <span class="menu-title">Documentation</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comment.php">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title">Maklum Balas</span>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- partial -->
@@ -136,11 +135,6 @@
                 <div>
                   <h4 class="font-weight-bold mb-0"> Derma</h4>
                 </div>
-                <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
-                </div>
               </div>
             </div>
           </div>
@@ -149,8 +143,8 @@
               <div class="brand-logo">
                 
               </div>
-              <h4>New here?</h4>
-              <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
+              <h4>Sumbangan</h4>
+              <h6 class="font-weight-light">Sila Isi Maklumat Yang diperlukan diruangan tersebut</h6>
               <form action="insertngo.php"  method="post">
 
                 <div class="form-group">
@@ -179,7 +173,7 @@
                   <input type="text" name="nomakaun" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="nombor akaun bank">
                 </div>
                 <a href="mainpage.php">  
-               <input type="submit" value="Hantar">
+                <input type="submit" value="Hantar" style = "position:relative; left:300px; top:2px;">
 
                 <div class="mb-4">
                   <div class="form-check">

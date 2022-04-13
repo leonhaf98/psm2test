@@ -32,33 +32,33 @@
               <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
               <form action="insert.php"  method="post">
 
-                <div class="form-group">
+                <div class="form-group" style="width: 250px;">
                   <input type="text" name="first_name" id="firstName" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="first name">
                 </div>
           
-                <div class="form-group">
+                <div class="form-group"style="width: 250px;">
                   <input type="text" name="last_name" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="last name">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group"style="width: 250px;">
                   <input type="text" name="telnum" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="telnum">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group"style="width: 250px;">
                   <input type="text" name="alamat" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="alamat">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group"style="width: 250px;">
                   <input type="email" name="email" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="email">
                 </div>
-                <div class="form-group">
+                <div class="form-group"style="width: 250px;">
                   <input type="text" name="username" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="username">
                 </div>
-                <div class="form-group">
+                <div class="form-group"style="width: 250px;">
                   <input type="password" name="katalaluan" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <a href="mainpage.php">  
-               <input type="submit" value="Hantar">
+               <input type="submit" value="Hantar" style = "position:relative; left:80px; top:2px;">
 
                 <div class="mb-4">
                   <div class="form-check">
