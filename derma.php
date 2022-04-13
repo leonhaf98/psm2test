@@ -78,7 +78,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="pages/icons/themify.html">
+            <a class="nav-link" href="test.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title">Hubungi kami</span>
             </a>
@@ -107,7 +107,7 @@
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
               <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Log masuk ngo</a></li>
-                <li class="nav-item"> <a class="nav-link" href="registration.php"> Pendaftaran NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="ngoregistration.php"> Pendaftaran NGO</a></li>
               </ul>
             </div>
           </li>
