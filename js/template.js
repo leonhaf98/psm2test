@@ -50,7 +50,7 @@
 
     //Change sidebar 
     $('[data-toggle="minimize"]').on("click", function() {
-      body.toggleClass('sidebar-icon-only');
+      body.toggleClass('sidebar-icon-only' );
     });
 
     //checkbox and radios
