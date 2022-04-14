@@ -129,7 +129,7 @@ mysqli_close($con);
               <h4>Profile Penyumbang</h4>
               <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
               
-                <div class="form-group">
+                <div class="form-group" style="left: 100px;">
                 <label>nama pertama
                     <input type="text" value="<?php echo $row['first_name']; ?>">
                 </label>
