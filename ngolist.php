@@ -20,7 +20,7 @@
 <body>
 <?php
 include('database.php');
-$query = "SELECT first_name, last_name, telnum, alamat, email, username, password FROM users";
+$query = "SELECT Nama, kataNama, KataLaluan, negeri, emel, nomtel, nomakaun FROM ngo";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -126,12 +126,12 @@ $result = mysqli_query($conn, $query);
               <table border ="1" cellspacing="0" cellpadding="10">
   <td>
   <tr>
-    <th>S.N</th>
-    <th>Full Name</th>
-    <th>last name</th>
-    <th>telefon number</th>
-    <th>alamat</th>
-    <th>email</th>
+    <th>no.</th>
+    <th>Nama NGO</th>
+    <th>negeri</th>
+    <th>emel</th>
+    <th>nomtel</th>
+    <th>nomakaun</th>
   </td>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -140,11 +140,11 @@ if (mysqli_num_rows($result) > 0) {
  ?>
  <tr>
    <td><?php echo $sn; ?> </td>
-   <td><?php echo $data['first_name']; ?> </td>
-   <td><?php echo $data['last_name']; ?> </td>
-   <td><?php echo $data['telnum']; ?> </td>
-   <td><?php echo $data['alamat']; ?> </td>
-   <td><?php echo $data['email']; ?> </td>
+   <td><?php echo $data['Nama']; ?> </td>
+   <td><?php echo $data['negeri']; ?> </td>
+   <td><?php echo $data['emel']; ?> </td>
+   <td><?php echo $data['nomtel']; ?> </td>
+   <td><?php echo $data['nomakaun']; ?> </td>
 
    <!-- <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>-->
  <tr>

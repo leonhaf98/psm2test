@@ -172,10 +172,10 @@ mysqli_close($con);
                 </div>
 
                 <a href="mainpage.php">  
-                <input type="submit" value="Hantar" style = "position:relative; left:300px; top:2px;">
+                <input type="submit" value="Kemaskini" style = "position:relative; left:300px; top:2px;">
 
                 <div class="text-center mt-4 font-weight-light">
-                  Return to home page <a href="donator.php" class="text-primary">Login</a>
+                  Kembali ke halaman utama pengguna <a href="donator.php" class="text-primary">Login</a>
                 </div>
               </form>
             </div>

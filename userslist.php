@@ -18,8 +18,13 @@
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
+<?php
+include('database.php');
+$query = "SELECT first_name, last_name, telnum, alamat, email, username, password FROM users";
+$result = mysqli_query($conn, $query);
+?>
+
   <div class="container-scroller">
-  
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -66,27 +71,27 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar"style=" background-color:pink">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="donator.php">
+            <a class="nav-link" href="mainpage.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title"style=" color:black">Dashboard</span>
+              <span class="menu-title">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/tables/basic-table.html">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title"style=" color:black">Sumbangan</span>
+              <span class="menu-title">Pendermaan</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/icons/themify.html">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Tentang kami</span>
+              <span class="menu-title">Tentang kami</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">Halaman akaun</span>
+              <span class="menu-title">User Pages</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
@@ -100,7 +105,7 @@
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Documentation</span>
+              <span class="menu-title">Documentation</span>
             </a>
           </li>
         </ul>
@@ -109,55 +114,48 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h4 class="font-weight-bold mb-0"> Dashboard</h4>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
-                </div>
-              </div>
-            </div>
+          
           </div>
           <div class="row">
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Sumbangan</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">10000</h3>
-                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
+          <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+              <div class="brand-logo">
+                
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Sasaran</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">1000</h3>
-                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Jumlah Penyumbang</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">1000</h3>
-                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
+              <h4>Profile Penyumbang</h4>
+              <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
+              <table border ="1" cellspacing="0" cellpadding="10">
+  <td>
+  <tr>
+    <th>S.N</th>
+    <th>Full Name</th>
+    <th>last name</th>
+    <th>telefon number</th>
+    <th>alamat</th>
+    <th>email</th>
+  </td>
+<?php
+if (mysqli_num_rows($result) > 0) {
+  $sn=1;
+  while($data = mysqli_fetch_assoc($result)) {
+ ?>
+ <tr>
+   <td><?php echo $sn; ?> </td>
+   <td><?php echo $data['first_name']; ?> </td>
+   <td><?php echo $data['last_name']; ?> </td>
+   <td><?php echo $data['telnum']; ?> </td>
+   <td><?php echo $data['alamat']; ?> </td>
+   <td><?php echo $data['email']; ?> </td>
+
+   <!-- <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>-->
+ <tr>
+ <?php
+  $sn++;}} else { ?>
+    <tr>
+     <td colspan="8">No data found</td>
+    </tr>
+ <?php } ?>
+  </table>
+              </form>
             </div>
           </div>
           <div class="row">
