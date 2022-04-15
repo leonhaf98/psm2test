@@ -74,21 +74,21 @@
           <li class="nav-item">
             <a class="nav-link" href="derma.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title">Sumbangan</span>
+              <span class="menu-title"style=" color:black">Sumbangan</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="test.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title">Hubungi kami</span>
+              <span class="menu-title"style=" color:black">Hubungi kami</span>
             </a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
-              <span class="menu-title">Penderma</span>
+              <span class="menu-title"style=" color:black">Penderma</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -102,7 +102,7 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title">NGO</span>
+              <span class="menu-title"style=" color:black">NGO</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
@@ -116,21 +116,21 @@
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Documentation</span>
+              <span class="menu-title"style=" color:black">Documentation</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="donateprofile.php">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">profile</span>
+              <span class="menu-title"style=" color:black">profile</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="comment.php">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Maklum Balas</span>
+              <span class="menu-title"style=" color:black">Maklum Balas</span>
             </a>
           </li>
         </ul>
@@ -142,7 +142,7 @@
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 class="font-weight-bold mb-0"> Dashboard</h4>
+                  <h4 class="font-weight-bold mb-0"style=" color:black"> Dashboard</h4>
                 </div>
                 <div>
                     <button type="button" class="btn btn-primary btn-icon-text btn-rounded">

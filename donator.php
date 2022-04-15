@@ -19,24 +19,7 @@
 </head>
 <body>
   <div class="container-scroller">
-    <div class="row p-0 m-0 proBanner" id="proBanner">
-      <div class="col-md-12 p-0 m-0">
-        <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-          <div class="ps-lg-1">
-            <div class="d-flex align-items-center justify-content-between">
-              <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
-              <a href="https://www.bootstrapdash.com/product/royalui/?utm_source=organic&utm_medium=banner&utm_campaign=buynow_demo" target="_blank" class="btn me-2 buy-now-btn border-0">Get Pro</a>
-            </div>
-          </div>
-          <div class="d-flex align-items-center justify-content-between">
-            <a href="https://www.bootstrapdash.com/product/royalui/"><i class="ti-home me-3 text-white"></i></a>
-            <button id="bannerClose" class="btn border-0 p-0">
-              <i class="ti-close text-white me-0"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+  
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -85,25 +68,25 @@
           <li class="nav-item">
             <a class="nav-link" href="mainpage.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title"style=" color:black">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/tables/basic-table.html">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title">Pendermaan</span>
+              <span class="menu-title"style=" color:black">Sumbangan</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/icons/themify.html">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title">Tentang kami</span>
+              <span class="menu-title"style=" color:black">Tentang kami</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title">User Pages</span>
+              <span class="menu-title"style=" color:black">Halaman akaun</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
@@ -117,7 +100,7 @@
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Documentation</span>
+              <span class="menu-title"style=" color:black">Documentation</span>
             </a>
           </li>
         </ul>
@@ -143,9 +126,9 @@
             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Sales</p>
+                  <p class="card-title text-md-center text-xl-left">Sumbangan</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">34040</h3>
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">10000</h3>
                     <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
                   </div>  
                   <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
@@ -155,9 +138,9 @@
             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Revenue</p>
+                  <p class="card-title text-md-center text-xl-left">Sasaran</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">47033</h3>
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">1000</h3>
                     <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
                   </div>  
                   <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
@@ -167,24 +150,12 @@
             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Downloads</p>
+                  <p class="card-title text-md-center text-xl-left">Jumlah Penyumbang</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">40016</h3>
+                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">1000</h3>
                     <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
                   </div>  
                   <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Returns</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">61344</h3>
-                    <i class="ti-layers-alt icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-success">23.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
                 </div>
               </div>
             </div>
