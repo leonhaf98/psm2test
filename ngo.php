@@ -110,7 +110,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="registration.php"> Profil NGO</a></li>
-                <li class="nav-item"> <a class="nav-link" href="registration.php"> Senarai NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai penyumbang</a></li>
               </ul>
             </div>
           </li>
