@@ -152,7 +152,8 @@ $row = mysqli_fetch_assoc($res);
           } 
       }
          if(!isset($error)){ 
-            $result = mysqli_query($conn,"INSERT into users(first_name,last_name,username,email,telnum,alamat,password) values('$fname','$lname','$username','$email','$telnum','$alamat','$password')");
+            $result = mysqli_query($conn,"INSERT into users(first_name,last_name,username,email,telnum,alamat,password) 
+            values('$fname','$lname','$username','$email','$telnum','$alamat','$password')");
            if($result)
            
     {
