@@ -114,9 +114,9 @@
                   <h4 class="font-weight-bold mb-0"> Dashboard</h4>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
+                    <!--button type="button" class="btn btn-primary btn-icon-text btn-rounded">
                       <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
+                    </button-->
                 </div>
               </div>
             </div>
@@ -172,6 +172,55 @@
             </div>
           </div>
           <div class="row">
+          <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Info laman web ini</p>
+                  <p class="text-muted font-weight-light"> 1.4 Objektif projek
+                                Objektif projek ini adalah yang seperti berikut:</p>
+
+                                <p>(a) Untuk mengenal pasti keperluan pengguna bagi Sistem Sumbangan Bantuan 
+                                Kepada Mangsa Banjir (My E-Bantuan) dalam menyalurkan bantuan wang
+                                ringgit kepada mangsa.</p>
+                                <p>(b) Untuk membangunkan dan mereka bentuk Sistem Sumbangan Bantuan 
+                                Kepada Mangsa Banjir (My E- Bantuan) yang mempunyai fungsi untuk 
+                                menguruskan wang bantuan kepada mangsa banjir.</p>
+                                <p>(c) Untuk menguji kefungsian Sistem Sumbangan Bantuan Kepada Mangsa Banjir 
+                                (My E-Bantuan) mengikut keperluan pengguna.</p>
+                    </p>
+                  <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card border-bottom-0">
+                <div class="card-body pb-0">
+                  <p class="card-title">Purchases</p>
+                  <p class="text-muted font-weight-light">The argument in favor of using filler text goes something like this: If you use real content in the design process, anytime you reach a review</p>
+                  <div class="d-flex flex-wrap mb-5">
+                    <div class="me-5 mt-3">
+                      <p class="text-muted">Status</p>
+                      <h3>362</h3>
+                    </div>
+                    <div class="me-5 mt-3">
+                      <p class="text-muted">New users</p>
+                      <h3>187</h3>
+                    </div>
+                    <div class="me-5 mt-3">
+                      <p class="text-muted">Chats</p>
+                      <h3>524</h3>
+                    </div>
+                    <div class="mt-3">
+                      <p class="text-muted">Feedbacks</p>
+                      <h3>509</h3>
+                    </div> 
+                  </div>
+                </div>
+                <canvas id="order-chart" class="w-100"></canvas>
+              </div>
+            </div>
+          </div>
         
           <div class="row">
       

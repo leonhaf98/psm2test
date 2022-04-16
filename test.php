@@ -182,8 +182,10 @@ foreach($error as $error){
       <?php } else { ?>
        <div class="signup_form">
 		<form action="" method="POST">
+    <p>  </p>
+      <p> SILA ISI MAKLUMAT DIBAWAH </p>
+
   <div class="form-group"style="width:10cm;">
-  	
         <label class="label_txt">Nama pertama</label>
     <input type="text" class="form-control" name="fname" style="width:10cm; background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['fname'];}?>" required="">
   </div>
@@ -221,7 +223,7 @@ foreach($error as $error){
     <input type="password" name="passwordConfirm" class="form-control"style="width:10cm; background-color:lightyellow;" required="">
   </div>
   <button type="submit" name="signup" class="btn btn-primary btn-group-lg form_btn" 
-        style = "position:relative; left:80px; top:2px;">Daftar!</button>
+        style = "position:relative; left:180px; top:2px;">Daftar!</button>
         <p> </p>
    <p>Sudah ada akaun? sila klik butang sebelah <a href="mainpage.php">Log masuk</a> </p>
 </form>
