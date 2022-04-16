@@ -63,80 +63,14 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style=" background-color:pink">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="mainpage.php">
-              <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="loginuser.php">
-              <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Sumbangan</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="test2.php">
-              <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Hubungi kami</span>
-            </a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="ti-palette menu-icon"></i>
-              <span class="menu-title"style=" color:black">Penderma</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="loginuser.php"> Log masuk pengguna </a></li>
-                <li class="nav-item"> <a class="nav-link" href="donateregister.php"> Pendaftaran Pengguna</a></li>
-                
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">NGO</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Log masuk ngo</a></li>
-                <li class="nav-item"> <a class="nav-link" href="ngoregistration.php"> Pendaftaran NGO</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="documentation/documentation.html">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Documentation</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="comment.php">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Maklum Balas</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+     
       <!-- partial -->
       <div class="main-panel">
-        <div class="content-wrapper">
+        
           <div class="row">
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h4 class="font-weight-bold mb-0">Pendaftaran pengguna</h4>
-                </div>
+              
                 <div>
                 </div>
               </div>
@@ -248,43 +182,43 @@ foreach($error as $error){
       <?php } else { ?>
        <div class="signup_form">
 		<form action="" method="POST">
-  <div class="form-group">
+  <div class="form-group"style="width:10cm;">
   	
         <label class="label_txt">Nama pertama</label>
-    <input type="text" class="form-control" name="fname" value="<?php if(isset($error)){ echo $_POST['fname'];}?>" required="">
+    <input type="text" class="form-control" name="fname" style="width:10cm; background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['fname'];}?>" required="">
   </div>
-  <div class="form-group">
+  <div class="form-group"style="width:10cm;">
     <label class="label_txt">Nama terakhir </label>
-    <input type="text" class="form-control" name="lname" value="<?php if(isset($error)){ echo $_POST['lname'];}?>" required="">
+    <input type="text" class="form-control" name="lname"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['lname'];}?>" required="">
   </div>
  
-<div class="form-group">
+<div class="form-group"style="width:10cm;">
     <label class="label_txt">Username </label>
-    <input type="text" class="form-control" name="username" value="<?php if(isset($error)){ echo $_POST['username'];}?>" required="">
+    <input type="text" class="form-control" name="username"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['username'];}?>" required="">
   </div>
 
-<div class="form-group">
+<div class="form-group"style="width:10cm;">
     <label class="label_txt">Email </label>
-    <input type="email" class="form-control" name="email" value="<?php if(isset($error)){ echo $_POST['email'];}?>" required="">
+    <input type="email" class="form-control" name="email"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['email'];}?>" required="">
   </div>
 
-<div class="form-group">
+<div class="form-group"style="width:10cm;">
     <label class="label_txt">nombor telefon </label>
-    <input type="telnum" class="form-control" name="telnum" value="<?php if(isset($error)){ echo $_POST['telnum'];}?>" required="">
+    <input type="telnum" class="form-control" name="telnum"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['telnum'];}?>" required="">
   </div>
 
-<div class="form-group">
+<div class="form-group"style="width:10cm;">
     <label class="label_txt">alamat </label>
-    <input type="alamat" class="form-control" name="alamat" value="<?php if(isset($error)){ echo $_POST['alamat'];}?>" required="">
+    <input type="alamat" class="form-control" name="alamat" style="width:10cm; background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['alamat'];}?>" required="">
   </div>
 
-  <div class="form-group">
+  <div class="form-group"style="width:10cm;">
     <label class="label_txt">Kata laluan </label>
-    <input type="password" name="password" class="form-control" required="">
+    <input type="password" name="password" class="form-control"style="width:10cm; background-color:lightyellow;" required="">
   </div>
-   <div class="form-group">
+   <div class="form-group"style="width:10cm;">
     <label class="label_txt"> pengesahan kata laluan </label>
-    <input type="password" name="passwordConfirm" class="form-control" required="">
+    <input type="password" name="passwordConfirm" class="form-control"style="width:10cm; background-color:lightyellow;" required="">
   </div>
   <button type="submit" name="signup" class="btn btn-primary btn-group-lg form_btn" 
         style = "position:relative; left:80px; top:2px;">Daftar!</button>
@@ -317,11 +251,7 @@ foreach($error as $error){
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best  dashboard </a> test</span>
-          </div>
-        </footer>
+ 
         <!-- partial -->
       </div>
       <!-- main-panel ends -->
