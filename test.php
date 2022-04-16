@@ -72,23 +72,23 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="derma.php">
+            <a class="nav-link" href="loginuser.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title">Sumbangan</span>
+              <span class="menu-title"style=" color:black">Sumbangan</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="pages/icons/themify.html">
+            <a class="nav-link" href="test2.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title">Hubungi kami</span>
+              <span class="menu-title"style=" color:black">Hubungi kami</span>
             </a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
-              <span class="menu-title">Penderma</span>
+              <span class="menu-title"style=" color:black">Penderma</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -102,12 +102,12 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title">NGO</span>
+              <span class="menu-title"style=" color:black">NGO</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Log masuk ngo</a></li>
+                <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Log masuk ngo</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngoregistration.php"> Pendaftaran NGO</a></li>
               </ul>
             </div>
@@ -116,13 +116,28 @@
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Documentation</span>
+              <span class="menu-title"style=" color:black">Documentation</span>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="test.php">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title"style=" color:black">test</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="donateprofile.php">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title"style=" color:black">profile</span>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="comment.php">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Maklum Balas</span>
+              <span class="menu-title"style=" color:black">Maklum Balas</span>
             </a>
           </li>
         </ul>

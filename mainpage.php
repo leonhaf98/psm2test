@@ -79,7 +79,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="test2.php">
+            <a class="nav-link" href="testngo.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title"style=" color:black">Hubungi kami</span>
             </a>
@@ -128,7 +128,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="donateprofile.php">
+            <a class="nav-link" href="testngo.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">profile</span>
             </a>
