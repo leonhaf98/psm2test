@@ -76,33 +76,33 @@ mysqli_close($con);
       <nav class="sidebar sidebar-offcanvas" id="sidebar"style=" background-color:pink">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="mainpage.php">
+            <a class="nav-link" href="donator.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title"style=" color:black">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="derma.php">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title">Pendermaan</span>
+              <span class="menu-title"style=" color:black">Sumbangan</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/icons/themify.html">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title">Tentang kami</span>
+              <span class="menu-title"style=" color:black">Tentang kami</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title">User Pages</span>
+              <span class="menu-title"style=" color:black">Halaman Pengguna</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
-                <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Pengguna</a></li>
+                <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Penyumbang</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
               </ul>
             </div>
@@ -110,7 +110,7 @@ mysqli_close($con);
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Documentation</span>
+              <span class="menu-title"style=" color:black">Documentation</span>
             </a>
           </li>
         </ul>
@@ -130,49 +130,48 @@ mysqli_close($con);
               <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
               
                 <div class="form-group" style="left: 100px;">
-                <label>nama pertama
+                <p>nama pertama </p>
                     <input type="text" value="<?php echo $row['first_name']; ?>">
-                </label>
+                
                 </div>
           
                 <div class="form-group">
-                <label>nama kedua
+                <p>nama terakhir </p>
                     <input type="text" value="<?php echo $row['last_name']; ?>">
-                </label>
+                
                 </div>
 
                 <div class="form-group">
-                <label>alamat
+                <p>alamat penyumbang </p>
                     <input type="text" value="<?php echo $row['alamat']; ?>">
-                </label>
+                
                 </div>
 
                 <div class="form-group">
-                <label>nombor telefon
+                <p>nombor telefon </p>
                     <input type="text" value="<?php echo $row['telnum']; ?>">
-                </label>
+                
                 </div>
 
                 <div class="form-group">
-                <label>Email
+                <p>emel </p>
                     <input type="email" value="<?php echo $row['email']; ?>">
-                </label>
+                
                 </div>
 
                 <div class="form-group">
-                <label>katanama
+                <p>kata nama </p>
                     <input type="text" value="<?php echo $row['username']; ?>">
-                </label>
                 </div>
 
                 <div class="form-group">
-                <label>kata laluan
+                <p>kata laluan</p>
                     <input type="text" value="<?php echo $row['password']; ?>">
-                </label>
+              
                 </div>
 
                 <a href="mainpage.php">  
-                <input type="submit" value="Kemaskini" style = "position:relative; left:300px; top:2px;">
+                <input type="submit" value="Kemaskini" style = "position:relative; left:200px; top:2px;">
 
                 <div class="text-center mt-4 font-weight-light">
                   Kembali ke halaman utama pengguna <a href="donator.php" class="text-primary">Login</a>

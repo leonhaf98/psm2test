@@ -121,20 +121,6 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="test.php">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">test</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="donateprofile.php">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">profile</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
             <a class="nav-link" href="comment.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">Maklum Balas</span>

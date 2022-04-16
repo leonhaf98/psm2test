@@ -71,33 +71,33 @@ $result = mysqli_query($conn, $query);
       <nav class="sidebar sidebar-offcanvas" id="sidebar"style=" background-color:pink">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="mainpage.php">
+            <a class="nav-link" href="donator.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title"style=" color:black">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="derma.php">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title">Pendermaan</span>
+              <span class="menu-title"style=" color:black">Sumbangan</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/icons/themify.html">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title">Tentang kami</span>
+              <span class="menu-title"style=" color:black">Tentang kami</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title">User Pages</span>
+              <span class="menu-title"style=" color:black">Halaman Pengguna</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
-                <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Pengguna</a></li>
+                <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Penyumbang</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
               </ul>
             </div>
@@ -105,7 +105,7 @@ $result = mysqli_query($conn, $query);
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Documentation</span>
+              <span class="menu-title"style=" color:black">Documentation</span>
             </a>
           </li>
         </ul>

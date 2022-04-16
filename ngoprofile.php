@@ -18,8 +18,18 @@
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
+<?php
+session_start();//important
+
+$kataNama=$_SESSION["kataNama"];
+$getInfo="SELECT * from ngo where kataNama='$kataNama'";
+$con=mysqli_connect("localhost","root","","user");
+$res=mysqli_query($con,$getInfo);
+$row=mysqli_fetch_array($res);
+mysqli_close($con);
+?>
+
   <div class="container-scroller">
-   
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -63,67 +73,44 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style=" background-color:pink">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar"style=" background-color:pink">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="mainpage.php">
+            <a class="nav-link" href="ngo.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title"style=" color:black">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="loginuser.php">
+            <a class="nav-link" href="pages/tables/basic-table.html">
+              <i class="ti-view-list-alt menu-icon"></i>
+              <span class="menu-title"style=" color:black">Laporan Sumbangan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/themify.html">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Sumbangan</span>
+              <span class="menu-title"style=" color:black">Tentang kami</span>
             </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="testngo.php">
-              <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Hubungi kami</span>
-            </a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="ti-palette menu-icon"></i>
-              <span class="menu-title"style=" color:black">Penderma</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="loginuser.php"> Log masuk pengguna </a></li>
-                <li class="nav-item"> <a class="nav-link" href="test.php"> Pendaftaran Pengguna</a></li>
-                
-              </ul>
-            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">NGO</span>
+              <span class="menu-title"style=" color:black">User Pages</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Log masuk ngo</a></li>
-                <li class="nav-item"> <a class="nav-link" href="testngo.php"> Pendaftaran NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
+                <li class="nav-item"> <a class="nav-link" href="ngoprofile.php"> Profil NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="userslist.php"> Senarai Penyumbang</a></li>
               </ul>
             </div>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">Documentation</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="comment.php">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Maklum Balas</span>
             </a>
           </li>
         </ul>
@@ -132,68 +119,65 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h4 class="font-weight-bold mb-0"style=" color:black"> Dashboard</h4>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
-                </div>
-              </div>
-            </div>
+          
           </div>
           <div class="row">
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">JUMLAH DERMA</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">106500</h3>
-                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
+          <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+              <div class="brand-logo">
+                
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">SASARAN DERMA</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">90585</h3>
-                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
+              <h4>Profile Penyumbang</h4>
+              <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
+              
+                <div class="form-group" style="left: 100px;">
+
+                <p>nama pertama </p>
+                    <input type="text" value="<?php echo $row['Nama']; ?>">
+                
                 </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">PENGGUNA</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">10028</h3>
-                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
+          
+                <div class="form-group">
+                <p>nama terakhir </p>
+                    <input type="text" value="<?php echo $row['negeri']; ?>">
+                
                 </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">NGO berdaftar</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">60
-                    </h3>
-                    <i class="ti-layers-alt icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-success">23.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
+
+                <div class="form-group">
+                <p>alamat penyumbang </p>
+                    <input type="text" value="<?php echo $row['emel']; ?>">
+                
                 </div>
-              </div>
+
+                <div class="form-group">
+                <p>nombor telefon </p>
+                    <input type="text" value="<?php echo $row['nomtel']; ?>">
+                
+                </div>
+
+                <div class="form-group">
+                <p>emel </p>
+                    <input type="email" value="<?php echo $row['nomakaun']; ?>">
+                
+                </div>
+
+                <div class="form-group">
+                <p>kata nama </p>
+                    <input type="text" value="<?php echo $row['kataNama']; ?>">
+                </div>
+
+                <div class="form-group">
+
+                <p>kata laluan</p>
+                    <input type="text" value="<?php echo $row['KataLaluan']; ?>">
+                </div>
+
+                <a href="mainpage.php">  
+                <input type="submit" value="Kemaskini" style = "position:relative; left:200px; top:2px;">
+
+                <div class="text-center mt-4 font-weight-light">
+                  Kembali ke halaman utama  <a href="ngo.php" class="text-primary"></a>
+                </div>
+              </form>
             </div>
           </div>
           <div class="row">

@@ -71,7 +71,7 @@
                         			<i class="fa fa-key"></i>
                         		</div>
                             </div>
-                            <div class="form-bottom">
+                            <div class="form-bottom"style="background-color:forestgreen;">
 			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
@@ -81,7 +81,7 @@
 			                        	<label class="sr-only" for="form-password">Password</label>
 			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
-                                    <input type="submit" name="submit" value="Submit">
+                                    <input type="submit" name="submit" value="log masuk" style="background-color: mediumblue;">
 			                    </form>
 		                    </div>
                         </div>
