@@ -157,20 +157,18 @@
               <h6 class="font-weight-light">sila isi maklum balas dibawah</h6>
               <form action="insertngo.php"  method="post">
 
-                <div class="form-group">
+                <div class="form-group" style="width: 600px; height: 50px;">
                   <input type="text" name="Nama" id="firstName" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="maklumbalas">
                 </div>
           
                 <a href="mainpage.php">  
-                <input type="submit" value="Hantar" style = "position:relative; left:300px; top:2px;">
+                <input type="submit" value="Hantar" style = "position:relative; left:200px; top:2px;">
 
                 <div class="mb-4">
                   <div class="form-check">
                   </div>
                 </div>
-                <div class="text-center mt-4 font-weight-light">
-                  Return to home page <a href="donator.php" class="text-primary">Login</a>
-                </div>
+             
               </form>
             </div>
           </div>
@@ -188,7 +186,7 @@
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best  dashboard </a> test</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best  dashboard </a> </span>
           </div>
         </footer>
         <!-- partial -->

@@ -133,21 +133,19 @@
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 class="font-weight-bold mb-0"> Derma</h4>
+                  <h4 class="font-weight-bold mb-0" style="width: 100px;"> Derma</h4>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
-          <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-              <div class="brand-logo">
-                
-              </div>
+          <div class="auth-form-light text-left py-5 px-4 px-sm-5" style="width:500px ;">
+            
               <h4>Sumbangan</h4>
               <h6 class="font-weight-light">Sila Isi Maklumat Yang diperlukan diruangan tersebut</h6>
               <form action="insertngo.php"  method="post">
 
-                <div class="form-group">
+                <div class="form-group" >
                   <input type="text" name="Nama" id="firstName" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="name">
                 </div>
           
@@ -173,18 +171,15 @@
                   <input type="text" name="nomakaun" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="nombor akaun bank">
                 </div>
                 <a href="mainpage.php">  
-                <input type="submit" value="Hantar" style = "position:relative; left:300px; top:2px;">
+                <input type="submit" value="Hantar" style = "position:relative; left:100px; top:2px;">
 
                 <div class="mb-4">
                   <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input">
-                      I agree to all Terms & Conditions
-                    </label>
+            
                   </div>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  Return to home page <a href="donator.php" class="text-primary">Login</a>
+                  halaman utama<a href="donator.php" class="text-primary"></a>
                 </div>
               </form>
             </div>

@@ -72,14 +72,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="derma.php">
+            <a class="nav-link" href="loginuser.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title"style=" color:black">Sumbangan</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="test.php">
+            <a class="nav-link" href="test2.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title"style=" color:black">Hubungi kami</span>
             </a>

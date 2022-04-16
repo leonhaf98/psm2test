@@ -65,14 +65,14 @@
                         	<div class="form-top">
                         		<div class="form-top-left">
                         			<h3>Selamat Datang Penyumbang</h3>
-                            		<p>Enter your username and password to log on:</p>
+                            		<p>Sila masukkan kata nama dan kata laluan anda dibawah</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-key"></i>
                         		</div>
                             </div>
-                            <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
+                            <div class="form-bottom" style="background-color:forestgreen;">
+			                    <form role="form" action="" method="post" class="login-form" >
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
 			                        	<input type="text" name="user_name" placeholder="Username..." class="form-username form-control" id="form-username">
@@ -81,7 +81,7 @@
 			                        	<label class="sr-only" for="form-password">Password</label>
 			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
-                                    <input type="submit" name="submit" value="Submit">
+                                    <input type="submit" name="submit" value="log masuk" style="background-color: mediumblue;">
 			                    </form>
 		                    </div>
                         </div>
