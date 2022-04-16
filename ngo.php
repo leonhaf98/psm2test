@@ -90,7 +90,7 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
+                <li class="nav-item"> <a class="nav-link" href="logoutngo.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngoprofile.php"> Profil NGO</a></li>
                 <li class="nav-item"> <a class="nav-link" href="userslist.php"> Senarai penyumbang</a></li>
               </ul>
