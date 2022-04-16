@@ -3,11 +3,11 @@
     $message="";
     if(count($_POST)>0) {
         $con = mysqli_connect('localhost','root','','user') or die('Unable To connect');
-        $result = mysqli_query($con,"SELECT * FROM ngo WHERE kataNama='" . $_POST["user_name"] . "' and KataLaluan = '". $_POST["password"]."'");
+        $result = mysqli_query($con,"SELECT * FROM ngo WHERE kataNama='" . $_POST["user_name"] . "' and password = '". $_POST["password"]."'");
         $row  = mysqli_fetch_array($result);
         if(is_array($row)) {
         $_SESSION["kataNama"] = $row['kataNama'];
-        $_SESSION["KataLaluan"] = $row['KataLaluan'];
+        $_SESSION["password"] = $row['password'];
         } else {
          $message = "Invalid Username or Password!";
         }

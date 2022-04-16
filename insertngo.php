@@ -24,7 +24,7 @@
         //$id =  $_REQUEST['id'];
         $Nama =  $_REQUEST['Nama'];
         $kataNama = $_REQUEST['kataNama'];
-        $KataLaluan = $_REQUEST['KataLaluan'];
+        $KataLaluan = $_REQUEST['password'];
         $negeri = $_REQUEST['negeri'];
         $emel  = $_REQUEST['emel'];
         $nomtel = $_REQUEST['nomtel'];
@@ -35,12 +35,12 @@
 
         
         $sql = "INSERT INTO ngo  VALUES ('$ngo_id','$Nama', 
-            '$kataNama','$KataLaluan','$negeri','$emel','$nomtel','$nomakaun')";
+            '$kataNama','$password','$negeri','$emel','$nomtel','$nomakaun')";
           
         if(mysqli_query($conn, $sql)){
             echo "<h3>data stored in a successfully.</h3>";
             echo nl2br("$ngo_id\n $Nama\n $kataNama\n "
-                . "$KataLaluan\n $negeri\n $emel\n $nomtel\n $nomakaun");
+                . "$password\n $negeri\n $emel\n $nomtel\n $nomakaun");
                 header("Location:ngo.php");    
                
         } else{

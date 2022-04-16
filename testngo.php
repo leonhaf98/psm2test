@@ -99,8 +99,8 @@
                   if(strlen($Nama)<3){ // Minimum 
                       $error[] = 'Please enter First Name using 3 charaters atleast.';
                         }
-                if(strlen($Nama)>20){  // Max 
-                      $error[] = 'First Name: Max length 100 Characters Not allowed';
+                if(strlen($Nama)>100){  // Max 
+                      $error[] = 'nama: Maksimum adalah tidak lebih 100 character';
                         }
                 if(!preg_match("/^[A-Za-z _]*[A-Za-z ]+[A-Za-z _]*$/", $Nama)){
                             $error[] = 'Invalid Entry First Name. Please Enter letters without any Digit or special symbols like ( 1,2,3#,$,%,&,*,!,~,`,^,-,)';
@@ -110,29 +110,27 @@
                       if(strlen($kataNama)<3){ // Change Minimum Lenghth   
                             $error[] = 'Please enter Username using 3 charaters atleast.';
                         }
-                  if(strlen($kataNama)>50){ // Change Max Length 
+                  if(strlen($kataNama)>20){ // Change Max Length 
                             $error[] = 'Username : Max length 50 Characters Not allowed';
                         }
-                  if(!preg_match("/^^[^0-9][a-z0-9]+([_-]?[a-z0-9])*$/", $kataNama)){
-                            $error[] = 'Invalid Entry for Username. Enter lowercase letters without any space and No number at the start- Eg - myusername, okuniqueuser or myusername123';
-                        }  
+               
                 if(strlen($emel)>50){  // Max 
                             $error[] = 'Email: Max length 50 Characters Not allowed';
                         }
                   if($passwordConfirm ==''){
                             $error[] = 'Please confirm the password.';
                         }
-                        if($kataLaluan != $passwordConfirm){
+                        if($password != $passwordConfirm){
                             $error[] = 'Passwords do not match.';
                         }
-                          if(strlen($kataLaluan)<5){ // min 
+                          if(strlen($password)<5){ // min 
                             $error[] = 'The password is 6 characters long.';
                         }
                         
-                        if(strlen($kataLaluan)>20){ // Max 
+                        if(strlen($password)>20){ // Max 
                             $error[] = 'Password: Max length 20 Characters Not allowed';
                         }
-                          $sql="select * from ngo where (kataNama='$kataNama' or emel='$emel');";
+                          $sql="SELECT * from ngo where (password='$password' or emel='$emel');";
                       $res=mysqli_query($conn,$sql);
                   if (mysqli_num_rows($res) > 0) {
                 $row = mysqli_fetch_assoc($res);
@@ -147,12 +145,12 @@
                           } 
                       }
                         if(!isset($error)){ 
-                            $result = mysqli_query($conn,"INSERT into ngo(Nama,kataNama,kataLaluan,negeri,emel,nomtel,nomakaun) 
-                            values('$Nama','$kataNama,'$kataLaluan','$negeri','$emel','$nomtel','$nomakaun')");
+                            $result = mysqli_query($conn,"INSERT into ngo(Nama,kataNama,password,negeri,emel,nomtel,nomakaun) 
+                            values('$Nama','$kataNama','$password','$negeri','$emel','$nomtel','$nomakaun')");
                           if($result)
                           
                     {
-                        header("Location:mainpage.php"); 
+                        header("Location:ngo.php"); 
                     $done=2; 
                     }
                     else{
@@ -187,7 +185,7 @@
 
   <div class="form-group"style="width:10cm;">
     <label class="label_txt">emel ngo </label>
-    <input type="text" class="form-control" name="emel"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['emel'];}?>" required="">
+    <input type="email" class="form-control" name="emel"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['emel'];}?>" required="">
   </div>
  
 <div class="form-group"style="width:10cm;">
@@ -206,18 +204,20 @@
   </div>
  <div class="form-group" style="width:10cm;">
     <label class="label_txt">kata nama</label>
-    <input type="text" class="form-control" name="kataNama"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['Nama'];}?>" required="">
+    <input type="text" class="form-control" name="kataNama"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['kataNama'];}?>" required="">
     </div>
 
 
   <div class="form-group"style="width:10cm;">
     <label class="label_txt">Kata laluan </label>
-    <input type="password" name="kataLaluan"style="width:10cm; background-color:lightyellow;" class="form-control" required="">
+    <input type="password" name="password"style="width:10cm; background-color:lightyellow;" class="form-control" required="">
   </div>
+
    <div class="form-group"style="width:10cm;">
     <label class="label_txt"> pengesahan kata laluan </label>
     <input type="password" name="passwordConfirm" style="width:10cm; background-color:lightyellow;"class="form-control" required="">
   </div>
+
   <button type="submit" name="signup" class="btn btn-primary btn-group-lg form_btn" 
         style = "position:relative; left:80px; top:2px;">Daftar!</button>
         <p> </p>
