@@ -120,12 +120,6 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="viewuser.php">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">deelte</span>
-            </a>
-          </li>
 
           <li class="nav-item">
             <a class="nav-link" href="comment.php">
