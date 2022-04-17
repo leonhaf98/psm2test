@@ -167,7 +167,7 @@
               <div class="card">
                 <div class="card-body">
                   <p class="card-title">Info laman web ini</p>
-                  <p class="text-muted font-weight-light"> 1.4 Objektif projek
+                  <p class="text-muted font-weight-light"> 1.4 Objektif projeka
                                 Objektif projek ini adalah yang seperti berikut:</p>
 
                                 <p>(a) Untuk mengenal pasti keperluan pengguna bagi Sistem Sumbangan Bantuan 
