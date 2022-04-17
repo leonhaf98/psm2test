@@ -20,7 +20,7 @@
 <body>
 <?php
 include('database.php');
-$query = "SELECT Nama, kataNama, KataLaluan, negeri, emel, nomtel, nomakaun FROM ngo";
+$query = "SELECT Nama, kataNama, password, negeri, emel, nomtel, nomakaun FROM ngo";
 $result = mysqli_query($conn, $query);
 ?>
 

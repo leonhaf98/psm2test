@@ -18,8 +18,18 @@
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
+<?php
+session_start();//important
+
+$kataNama=$_SESSION["kataNama"];
+$getInfo="SELECT * from ngo where kataNama='$kataNama'";
+$con=mysqli_connect("localhost","root","","user");
+$res=mysqli_query($con,$getInfo);
+$row=mysqli_fetch_array($res);
+mysqli_close($con);
+?>
+
   <div class="container-scroller">
-  
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -66,15 +76,15 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar"style=" background-color:pink">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="donator.php">
+            <a class="nav-link" href="ngo.php">
               <i class="ti-shield menu-icon"></i>
               <span class="menu-title"style=" color:black">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="derma.php">
+            <a class="nav-link" href="pages/tables/basic-table.html">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title"style=" color:black">Sumbangan</span>
+              <span class="menu-title"style=" color:black">Laporan Sumbangan</span>
             </a>
           </li>
           <li class="nav-item">
@@ -86,15 +96,16 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">Halaman akaun</span>
+              <span class="menu-title"style=" color:black">User Pages</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
-                <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Pengguna</a></li>
-                <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
-                <li class="nav-item"> <a class="nav-link" href="edits.php"> update</a></li>
+                <li class="nav-item"> <a class="nav-link" href="ngoprofile.php"> Profil NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="editngo.php"> Sunting Profil</a></li>
+                <li class="nav-item"> <a class="nav-link" href="userslist.php"> Senarai Penyumbang</a></li>
+                
               </ul>
             </div>
           </li>
@@ -110,108 +121,69 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h4 class="font-weight-bold mb-0"> Dashboard</h4>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
-                </div>
-              </div>
-            </div>
+          
           </div>
           <div class="row">
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Sumbangan</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">10000</h3>
-                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
+          <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+              <div class="brand-logo">
+                
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Sasaran</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">1000</h3>
-                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Jumlah Penyumbang</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">1000</h3>
-                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-          <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Info laman web ini</p>
-                  <p class="text-muted font-weight-light"> 1.4 Objektif projek
-                                Objektif projek ini adalah yang seperti berikut:</p>
+              <h4>Profile Penyumbang</h4>
+              <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
+              
+                <div class="form-group" style="left: 100px;">
 
-                                <p>(a) Untuk mengenal pasti keperluan pengguna bagi Sistem Sumbangan Bantuan 
-                                Kepada Mangsa Banjir (My E-Bantuan) dalam menyalurkan bantuan wang
-                                ringgit kepada mangsa.</p>
-                                <p>(b) Untuk membangunkan dan mereka bentuk Sistem Sumbangan Bantuan 
-                                Kepada Mangsa Banjir (My E- Bantuan) yang mempunyai fungsi untuk 
-                                menguruskan wang bantuan kepada mangsa banjir.</p>
-                                <p>(c) Untuk menguji kefungsian Sistem Sumbangan Bantuan Kepada Mangsa Banjir 
-                                (My E-Bantuan) mengikut keperluan pengguna.</p>
-                    </p>
-                  <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
-                  
+                <p>nama pertama </p>
+                    <input type="text" value="<?php echo $row['Nama']; ?>">
+                
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card border-bottom-0">
-                <div class="card-body pb-0">
-                  <p class="card-title">Purchases</p>
-                  <p class="text-muted font-weight-light">The argument in favor of using filler text goes something like this: If you use real content in the design process, anytime you reach a review</p>
-                  <div class="d-flex flex-wrap mb-5">
-                    <div class="me-5 mt-3">
-                      <p class="text-muted">Status</p>
-                      <h3>362</h3>
-                    </div>
-                    <div class="me-5 mt-3">
-                      <p class="text-muted">New users</p>
-                      <h3>187</h3>
-                    </div>
-                    <div class="me-5 mt-3">
-                      <p class="text-muted">Chats</p>
-                      <h3>524</h3>
-                    </div>
-                    <div class="mt-3">
-                      <p class="text-muted">Feedbacks</p>
-                      <h3>509</h3>
-                    </div> 
-                  </div>
+          
+                <div class="form-group">
+                <p>nama terakhir </p>
+                    <input type="text" value="<?php echo $row['negeri']; ?>">
+                
                 </div>
-                <canvas id="order-chart" class="w-100"></canvas>
-              </div>
+
+                <div class="form-group">
+                <p>alamat penyumbang </p>
+                    <input type="text" value="<?php echo $row['emel']; ?>">
+                
+                </div>
+
+                <div class="form-group">
+                <p>nombor telefon </p>
+                    <input type="text" value="<?php echo $row['nomtel']; ?>">
+                
+                </div>
+
+                <div class="form-group">
+                <p>emel </p>
+                    <input type="email" value="<?php echo $row['nomakaun']; ?>">
+                
+                </div>
+
+                <div class="form-group">
+                <p>kata nama </p>
+                    <input type="text" value="<?php echo $row['kataNama']; ?>">
+                </div>
+
+                <div class="form-group">
+
+                <p>kata laluan</p>
+                    <input type="text" value="<?php echo $row['password']; ?>">
+                </div>
+
+                <a href="mainpage.php">  
+                <input type="submit" value="Kemaskini" style = "position:relative; left:200px; top:2px;">
+
+                <div class="text-center mt-4 font-weight-light">
+                  Kembali ke halaman utama  <a href="ngo.php" class="text-primary"></a>
+                </div>
+              </form>
             </div>
           </div>
-        
+          <div class="row">
+   
           <div class="row">
       
           <div class="row">

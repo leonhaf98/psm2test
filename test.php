@@ -194,11 +194,6 @@ foreach($error as $error){
     <label class="label_txt">Nama terakhir </label>
     <input type="text" class="form-control" name="lname"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['lname'];}?>" required="">
   </div>
- 
-<div class="form-group"style="width:10cm;">
-    <label class="label_txt">Username </label>
-    <input type="text" class="form-control" name="username"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['username'];}?>" required="">
-  </div>
 
 <div class="form-group"style="width:10cm;">
     <label class="label_txt">Email </label>
@@ -214,7 +209,10 @@ foreach($error as $error){
     <label class="label_txt">alamat </label>
     <input type="alamat" class="form-control" name="alamat" style="width:10cm; background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['alamat'];}?>" required="">
   </div>
-
+  <div class="form-group"style="width:10cm;">
+    <label class="label_txt">Username </label>
+    <input type="text" class="form-control" name="username"style="width:10cm; background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['username'];}?>" required="">
+  </div>
   <div class="form-group"style="width:10cm;">
     <label class="label_txt">Kata laluan </label>
     <input type="password" name="password" class="form-control"style="width:10cm; background-color:lightyellow;" required="">

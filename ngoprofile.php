@@ -104,6 +104,7 @@ mysqli_close($con);
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngoprofile.php"> Profil NGO</a></li>
                 <li class="nav-item"> <a class="nav-link" href="userslist.php"> Senarai Penyumbang</a></li>
+                
               </ul>
             </div>
           </li>
@@ -168,11 +169,11 @@ mysqli_close($con);
                 <div class="form-group">
 
                 <p>kata laluan</p>
-                    <input type="text" value="<?php echo $row['KataLaluan']; ?>">
+                    <input type="text" value="<?php echo $row['password']; ?>">
                 </div>
 
                 <a href="mainpage.php">  
-                <input type="submit" value="Kemaskini" style = "position:relative; left:200px; top:2px;">
+                <td><a href="update-actionngo.php?userid=<?php echo $row["ngo_id"]; ?>">Update</a></td>
 
                 <div class="text-center mt-4 font-weight-light">
                   Kembali ke halaman utama  <a href="ngo.php" class="text-primary"></a>

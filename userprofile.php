@@ -104,6 +104,7 @@ mysqli_close($con);
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Penyumbang</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="edits.php"> update</a></li>
               </ul>
             </div>
           </li>
@@ -171,10 +172,11 @@ mysqli_close($con);
                 </div>
 
                 <a href="mainpage.php">  
-                <input type="submit" value="Kemaskini" style = "position:relative; left:200px; top:2px;">
+                
+                <a style="left: 100px;" href="update-action.php?userid=<?php echo $row["id"]; ?>">Update</a>
 
                 <div class="text-center mt-4 font-weight-light">
-                  Kembali ke halaman utama pengguna <a href="donator.php" class="text-primary">Login</a>
+                  Kembali ke halaman utama pengguna <a href="donator.php" class="text-primary">utama</a>
                 </div>
               </form>
             </div>
