@@ -73,7 +73,7 @@ include("auth.php");
           <li class="nav-item">
             <a class="nav-link">
               <i class=""></i>
-              <span class="menu-title"style=" color:black"><p>Welcome <?php echo $_SESSION['username']; ?>!</p></span>
+              <span class="menu-title"style=" color:black">
             </a>
           </li>
           <li class="nav-item">
@@ -124,7 +124,7 @@ include("auth.php");
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 class="font-weight-bold mb-0"> Dashboard</h4>
+                  <h4 class="font-weight-bold mb-0"><p style="font-size: larger;">SELAMAT DATANG <?php echo $_SESSION['username']; ?>!</p></span> </h4>
                 </div>
                 <div>
                     <button type="button" class="btn btn-primary btn-icon-text btn-rounded">

@@ -47,6 +47,7 @@ include("authngo.php");
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
+          <p style="font-size: larger; color:black;">SELAMAT DATANG <?php echo $_SESSION['kataNama']; ?>                        </p></span></h4>
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
               <img src="images/faces/face28.jpg" alt="profile"/>
             </a>
@@ -71,7 +72,7 @@ include("authngo.php");
         <li class="nav-item">
             <a class="nav-link">
               <i class=""></i>
-              <span class="menu-title"style=" color:black"><p>Selamat Datang! <?php echo $_SESSION['kataNama']; ?>!</p></span>
+              <span class="menu-title"style=" color:black">
             </a>
           </li>
           <li class="nav-item">
@@ -121,7 +122,7 @@ include("authngo.php");
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 class="font-weight-bold mb-0"> Dashboard</h4>
+                  <h4 class="font-weight-bold mb-0"><p style="font-size: larger;">SELAMAT DATANG <?php echo $_SESSION['kataNama']; ?>!</p></span></h4>
                 </div>
                 <div>
                     <!--button type="button" class="btn btn-primary btn-icon-text btn-rounded">
