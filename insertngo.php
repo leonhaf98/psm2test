@@ -41,7 +41,7 @@
             echo "<h3>data stored in a successfully.</h3>";
             echo nl2br("$ngo_id\n $Nama\n $kataNama\n "
                 . "$password\n $negeri\n $emel\n $nomtel\n $nomakaun");
-                header("Location:ngo.php");    
+                header("Location:mainpage.php");    
                
         } else{
             echo "ERROR: Hush! Sorry $sql. " 

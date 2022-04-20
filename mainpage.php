@@ -45,19 +45,26 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face28.jpg" alt="profile"/>
+              Sila tekan butang ini untuk log masuk
+              <img src="images/faces/log-in.png" alt="profile" style="width: 80px; height: 80px;">
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
+              <a class="dropdown-item" href="loginuser.php">
+                <i class="ti-settings text-primary" ></i>
+                Login Penyumbang
+              </a>
+              <a class="dropdown-item" href="loginngo.php">
                 <i class="ti-settings text-primary"></i>
-                Settings
+                Login NGO
               </a>
             </div>
           </li>
         </ul>
+        
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="ti-view-list"></span>
         </button>
+        
       </div>
     </nav>
     <!-- partial -->
@@ -136,7 +143,7 @@
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 class="font-weight-bold mb-0"style=" color:black"> Dashboard</h4>
+                  <h4 class="font-weight-bold mb-0"style=" color:black"> HALAMAN UTAMA</h4>
                 </div>
                 <div>
                     <!--button type="button" class="btn btn-primary btn-icon-text btn-rounded">

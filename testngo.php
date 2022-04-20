@@ -150,7 +150,7 @@
                           if($result)
                           
                     {
-                        header("Location:ngo.php"); 
+                        header("Location:mainpage.php"); 
                     $done=2; 
                     }
                     else{
