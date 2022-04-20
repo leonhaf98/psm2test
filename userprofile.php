@@ -104,7 +104,7 @@ mysqli_close($con);
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Penyumbang</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
-                <li class="nav-item"> <a class="nav-link" href="edits.php"> update</a></li>
+                <!--li class="nav-item"> <a class="nav-link" href="edits.php"> update</a></li-->
               </ul>
             </div>
           </li>

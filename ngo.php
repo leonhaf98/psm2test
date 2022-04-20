@@ -18,6 +18,10 @@
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
+<?php
+//include auth.php file on all secure pages
+include("authngo.php");
+?>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -64,6 +68,12 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar"style=" background-color:pink">
         <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link">
+              <i class=""></i>
+              <span class="menu-title"style=" color:black"><p>Welcome <?php echo $_SESSION['kataNama']; ?>!</p></span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="ngo.php">
               <i class="ti-shield menu-icon"></i>
