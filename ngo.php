@@ -71,7 +71,7 @@ include("authngo.php");
         <li class="nav-item">
             <a class="nav-link">
               <i class=""></i>
-              <span class="menu-title"style=" color:black"><p>Welcome <?php echo $_SESSION['kataNama']; ?>!</p></span>
+              <span class="menu-title"style=" color:black"><p>Selamat Datang! <?php echo $_SESSION['kataNama']; ?>!</p></span>
             </a>
           </li>
           <li class="nav-item">
