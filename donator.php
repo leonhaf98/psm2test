@@ -17,6 +17,10 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
+<?php
+//include auth.php file on all secure pages
+include("auth.php");
+?>
 <body>
   <div class="container-scroller">
   
@@ -42,6 +46,7 @@
             </div>
           </li>
         </ul>
+        
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
@@ -65,6 +70,12 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar"style=" background-color:pink">
         <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class=""></i>
+              <span class="menu-title"style=" color:black"><p>Welcome <?php echo $_SESSION['username']; ?>!</p></span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="donator.php">
               <i class="ti-shield menu-icon"></i>
@@ -94,7 +105,7 @@
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Pengguna</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
-                <li class="nav-item"> <a class="nav-link" href="edits.php"> update</a></li>
+                <!--li class="nav-item"> <a class="nav-link" href="edits.php"> update</a></li-->
               </ul>
             </div>
           </li>
