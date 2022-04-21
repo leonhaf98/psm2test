@@ -53,7 +53,7 @@
         <!-- Top content -->
         <div class="top-content">
         	
-        <div class="inner-bg" style="background-color:lightgreen;">
+        <div class="inner-bg" style="background-color:aliceblue;">
                 <div class="container">
                     <div class="row">
                         
@@ -82,8 +82,10 @@
 			                        	<label class="sr-only" for="form-password">Password</label>
 			                        	<input type="password" name="password" placeholder="kata laluan" class="form-password form-control" id="form-password">
 			                        </div>
-                                    <strong><input type="submit" name="submit" value="log masuk"style="color: black;"></strong>
+                                    <strong><input type="submit"  name="submit" value="log masuk"style="color: black;"></strong>
+                                    
 			                    </form>
+                                <a class="btn btn-success" href="mainpage.php"><i class="mdi mdi-home me-2"></i>Halaman Utama</a>
 		                    </div>
                         </div>
                     </div>

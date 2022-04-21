@@ -92,7 +92,7 @@
                 }
                 ?>
 				<form action="" method="POST">
-					<h3>BORANG PENDAFTARAN Penyumbang</h3>
+					<h3>BORANG PENDAFTARAN NGO</h3>
 					<div class="form-group signup_form">
 					
 						<div class="form-wrapper">

@@ -53,7 +53,7 @@
         <!-- Top content -->
         <div class="top-content">
         	
-            <div class="inner-bg" style="background-color:lightgreen;">
+            <div class="inner-bg" style="background-color:aliceblue;">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text" style="color: black;">
@@ -83,6 +83,7 @@
 			                        </div>
                                     <strong><input type="submit" name="submit" value="log masuk" style="color: black;"></strong>
 			                    </form>
+                                <a class="btn btn-success" href="../mainpage.php"><i class="mdi mdi-home me-2"></i>Halaman Utama</a>
 		                    </div>
                         </div>
                     </div>

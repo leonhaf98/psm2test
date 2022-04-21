@@ -101,7 +101,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="loginuser.php"> Log masuk pengguna </a></li>
-                <li class="nav-item"> <a class="nav-link" href="test.php"> Pendaftaran Pengguna</a></li>
+                <li class="nav-item"> <a class="nav-link" href="testlog.php"> Pendaftaran Pengguna</a></li>
                 
               </ul>
             </div>
