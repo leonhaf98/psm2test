@@ -44,7 +44,7 @@
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+            <strong><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown" style="color: black;"></strong>
               Sila tekan butang ini untuk log masuk
               <img src="images/faces/log-in.png" alt="profile" style="width: 80px; height: 80px;">
             </a>
@@ -115,7 +115,7 @@
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Log masuk ngo</a></li>
-                <li class="nav-item"> <a class="nav-link" href="testngo.php"> Pendaftaran NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="testlogngo.php"> Pendaftaran NGO</a></li>
               </ul>
             </div>
           </li>
@@ -127,6 +127,12 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="login2.php">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title"style=" color:black">test</span>
+            </a>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link" href="comment.php">

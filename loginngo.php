@@ -53,11 +53,11 @@
         <!-- Top content -->
         <div class="top-content">
         	
-            <div class="inner-bg">
+            <div class="inner-bg" style="background-color:lightgreen;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Bootstrap</strong> Login Form</h1>
+                        <div class="col-sm-8 col-sm-offset-2 text" style="color: black;">
+                            <h1 style="color: black;"><strong>SISTEM E-SUMBANGAN</strong></h1>
                         </div>
                     </div>
                     <div class="row">
@@ -65,30 +65,30 @@
                         	<div class="form-top">
                         		<div class="form-top-left">
                         			<h3>Selamat Datang NGO</h3>
-                            		<p>Enter your username and password to log on:</p>
+                            		<p>Sila masukkan kata nama dan kata laluan</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-key"></i>
                         		</div>
                             </div>
-                            <div class="form-bottom"style="background-color:forestgreen;">
+                            <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Username</label>
+			                    		<label class="sr-only" for="form-username">kata nama anda</label>
 			                        	<input type="text" name="user_name" placeholder="Username..." class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Password</label>
+			                        	<label class="sr-only" for="form-password">kata laluan anda</label>
 			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
-                                    <input type="submit" name="submit" value="log masuk" style="background-color: mediumblue;">
+                                    <strong><input type="submit" name="submit" value="log masuk" style="color: black;"></strong>
 			                    </form>
 		                    </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
-                        	<h3>...or login with:</h3>
+                        	<h3> atau</h3>
                         	<div class="social-login-buttons">
 	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
 	                        		<i class="fa fa-facebook"></i> Facebook

@@ -53,11 +53,12 @@
         <!-- Top content -->
         <div class="top-content">
         	
-            <div class="inner-bg">
+        <div class="inner-bg" style="background-color:lightgreen;">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Bootstrap</strong> Login Form</h1>
+                        
+                    <div class="col-sm-8 col-sm-offset-2 text" style="color: black;">
+                    <h1 style="color: black;"><strong>SISTEM E-SUMBANGAN</strong></h1>
                         </div>
                     </div>
                     <div class="row">
@@ -71,24 +72,24 @@
                         			<i class="fa fa-key"></i>
                         		</div>
                             </div>
-                            <div class="form-bottom" style="background-color:forestgreen;">
+                            <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form" >
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="user_name" placeholder="Username..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="user_name" placeholder="kata nama anda" class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+			                        	<input type="password" name="password" placeholder="kata laluan" class="form-password form-control" id="form-password">
 			                        </div>
-                                    <input type="submit" name="submit" value="log masuk" style="background-color: mediumblue;">
+                                    <strong><input type="submit" name="submit" value="log masuk"style="color: black;"></strong>
 			                    </form>
 		                    </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
-                        	<h3>...or login with:</h3>
+                        	<h3></h3>
                         	<div class="social-login-buttons">
 	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
 	                        		<i class="fa fa-facebook"></i> Facebook

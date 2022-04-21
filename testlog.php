@@ -101,7 +101,7 @@ foreach($error as $error){
 		<div class="wrapper" style="background-image: url('images/bg-registration-form-3.jpg');">
 			<div class="inner">
 				<form action="" method="POST">
-					<h3>Registration Form</h3>
+					<h3>BORANG PENDAFTARAN PENYUMBANG</h3>
 					<div class="form-group signup_form">
 					
 						<div class="form-wrapper">
