@@ -86,7 +86,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="testngo.php">
+            <a class="nav-link" href="testlog.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title"style=" color:black">Hubungi kami</span>
             </a>
