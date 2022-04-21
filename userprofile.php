@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v3 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fontss/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="csss/stylee.css">
+	</head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -118,7 +129,7 @@ mysqli_close($con);
       </nav>
       <!-- partial -->
       <div class="main-panel">
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="background-color: aliceblue;">
           <div class="row">
           
           </div>
@@ -128,14 +139,82 @@ mysqli_close($con);
                 
               </div>
               <h4>Profile Penyumbang</h4>
-              <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
-              
-                <div class="form-group" style="left: 100px;">
+              <h6 class="font-weight-light"> </h6>
+              <form action="" method="POST">
+					        <h3>Dibawah merupakan maklumat terkini anda</h3>
+                <h3>..................................................................</h3>
+					      <div class="form-group signup_form">
+					
+						    <div class="form-wrapper">
+						  	<label for="">Nama pertama</label>
+						  	<div class="form-holder" >
+                <i style="font-style: normal; font-size: 15px;"></i>            
+								<input type="text" class="form-control" name="Nama" style="background-color:lightyellow;" value="<?php echo $row ['first_name']; ?>">
+							  </div>
+					  	  </div>
+					      <div class="form-wrapper">
+					  	  <label for="">nama kedua</label>
+						  	<div class="form-holder">
+								<i style="font-style: normal; font-size: 15px;"></i>
+								<input type="text" class="form-control" name="emel"style="background-color:lightyellow;" value="<?php echo $row['last_name']; ?>">
+						  	</div>
+						   </div>
+						    </div>
+
+						   <div class="form-group signup_form">
+					    	<div class="form-wrapper">
+							  <label for="">alamat</label>
+							  <div class="form-holder">
+                <i style="font-style: normal; font-size: 15px;"></i>
+								<input type="text" class="form-control" name="negeri"style="background-color:lightyellow;" value="<?php echo $row['alamat']; ?>">
+							  </div>
+						    </div>
+               <div class="form-wrapper">
+							  <label for="">nombor telefon</label>
+							  <div class="form-holder">
+               <i style="font-style: normal; font-size: 15px;"></i>
+								<input type="text" class="form-control" name="negeri"style="background-color:lightyellow;" value="<?php echo $row['telnum']; ?>">
+					  		</div>
+						    </div>
+					  	  </div>
+						    <div class="form-group signup_form">
+
+						   </div>
+
+					  	  <div class="form-group signup_form">
+						    <div class="form-wrapper">
+							  <label for="">email</label>
+							  <div class="form-holder">
+                <i style="font-style: normal; font-size: 15px;"></i>
+								<input type="email" class="form-control" name="negeri"style="background-color:lightyellow;" value="<?php echo $row['email']; ?>">
+						  	</div>
+					    	</div>
+                 <div class="form-wrapper">
+							  <label for="">nombor telefon</label>
+							  <div class="form-holder">
+                <i style="font-style: normal; font-size: 15px;"></i>
+								<input type="text" class="form-control" name="negeri"style="background-color:lightyellow;" value="<?php echo $row['telnum']; ?>">
+							  </div>
+					  	  </div>
+						   </div>
+               <a button class="btn btn-primary btn-group-lg form_btn"href="update-action.php?userid=<?php echo $row["id"]; ?>">Kemaskini</button> </a>
+
+						    </div>
+					  	  <div class="form-end">
+					
+					      	<div class="button-holder">
+						
+						
+					      	</div>
+						
+					    </div>
+				    </form>
+                <!--div class="form-group" style="left: 100px;">
                 <p>nama pertama </p>
                     <input type="text" value="<?php echo $row['first_name']; ?>">
                 
                 </div>
-          
+            
                 <div class="form-group">
                 <p>nama terakhir </p>
                     <input type="text" value="<?php echo $row['last_name']; ?>">
@@ -168,12 +247,11 @@ mysqli_close($con);
                 <div class="form-group">
                 <p>kata laluan</p>
                     <input type="text" value="<?php echo $row['password']; ?>">
-              
-                </div>
+                </div-->
 
                 <a href="mainpage.php">  
                 
-                <a style="left: 100px;" href="update-action.php?userid=<?php echo $row["id"]; ?>">Update</a>
+                <!--a style="left: 100px;" href="update-action.php?userid=<?php echo $row["id"]; ?>">Update</a-->
 
                 <div class="text-center mt-4 font-weight-light">
                   Kembali ke halaman utama pengguna <a href="donator.php" class="text-primary">utama</a>

@@ -110,9 +110,9 @@
 								<input type="email" class="form-control" name="emel"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['emel'];}?>" required="">
 							</div>
 						</div>
-					</div>
+						</div>
 
-					<div class="form-group signup_form">
+						<div class="form-group signup_form">
 						<div class="form-wrapper">
 							<label for="">negeri</label>
 							<div class="form-holder">
@@ -127,8 +127,8 @@
 								<input type="text" class="form-control" name="nomtel"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['nomtel'];}?>" required="">
 							</div>
 						</div>
-					</div>
-					<div class="form-group signup_form">
+						</div>
+						<div class="form-group signup_form">
 						<div class="form-wrapper">
 							<label for="">nombor akaun</label>
 							<div class="form-holder">
@@ -136,8 +136,8 @@
 								<input type="telnum" class="form-control" name="nomakaun"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['nomakaun'];}?>" required="">
 							</div>
 						</div>
-					</div>
-					<div class="form-group signup_form">
+						</div>
+						<div class="form-group signup_form">
 						<div class="form-wrapper">
 							<label for="">kata nama:</label>
 							<div class="form-holder"value="<?php if(isset($error)){ echo $_POST['kataNama'];}?>">
@@ -160,8 +160,8 @@
 								<input type="password" name="passwordConfirm" style="background-color:lightyellow;"class="form-control" placeholder="********"required="">
 							</div>
 						</div>
-					</div>
-					<div class="form-end">
+						</div>
+						<div class="form-end">
 						<div class="checkbox">
 							<label>
 								<input type="checkbox"> sila tanda ini untuk pengesahan maklumat diatas
