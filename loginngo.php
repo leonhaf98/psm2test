@@ -83,7 +83,7 @@
 			                        </div>
                                     <strong><input type="submit" name="submit" value="log masuk" style="color: black;"></strong>
 			                    </form>
-                                <a class="btn btn-success" href="../mainpage.php"><i class="mdi mdi-home me-2"></i>Halaman Utama</a>
+                                <a class="btn btn-success" href="mainpage.php"><i class="mdi mdi-home me-2"></i>Halaman Utama</a>
 		                    </div>
                         </div>
                     </div>
