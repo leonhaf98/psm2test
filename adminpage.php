@@ -43,7 +43,7 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-profile dropdown">
+          <!--li class="nav-item nav-profile dropdown">
             <strong><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown" style="color: black;"></strong>
               Sila tekan butang ini untuk log masuk
               <img src="images/faces/log-in.png" alt="profile" style="width: 80px; height: 80px;">
@@ -57,12 +57,8 @@
                 <i class="ti-settings text-primary"></i>
                 Login NGO
               </a>
-              <a class="dropdown-item" href="adminlog.php">
-                <i class="ti-settings text-primary"></i>
-                Admin
-              </a>
             </div>
-          </li>
+          </li-->
         </ul>
         
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
@@ -83,9 +79,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="loginuser.php">
+            <a class="nav-link" href="logoutngo.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Sumbangan</span>
+              <span class="menu-title"style=" color:black">log keluar</span>
             </a>
           </li>
 
@@ -99,12 +95,12 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
-              <span class="menu-title"style=" color:black">Penderma</span>
+              <span class="menu-title"style=" color:black">Penyumbang</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="loginuser.php"> Log masuk pengguna </a></li>
+                <li class="nav-item"> <a class="nav-link" href="loginuser.php"> senarai penyumbang </a></li>
                 <li class="nav-item"> <a class="nav-link" href="testlog.php"> Pendaftaran Pengguna</a></li>
                 
               </ul>
@@ -118,7 +114,7 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Log masuk ngo</a></li>
+                <li class="nav-item"> <a class="nav-link" href="loginngo.php"> Senarai NGO</a></li>
                 <li class="nav-item"> <a class="nav-link" href="testlogngo.php"> Pendaftaran NGO</a></li>
               </ul>
             </div>
@@ -132,16 +128,9 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="login2.php">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">test</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
             <a class="nav-link" href="comment.php">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Maklum Balas</span>
+              <span class="menu-title"style=" color:black">Senarai Maklum Balas</span>
             </a>
           </li>
         </ul>
