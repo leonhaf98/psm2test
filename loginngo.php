@@ -81,7 +81,7 @@
 			                        	<label class="sr-only" for="form-password">kata laluan anda</label>
 			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
-                                    <strong><input type="submit" name="submit" value="log masuk" style="color: black;"></strong>
+                                    <strong><input type="submit" name="submit" class="btn btn-success" value="log masuk" style="color: black;"></strong>
 			                    </form>
                                 <a class="btn btn-success" href="mainpage.php"><i class="mdi mdi-home me-2"></i>Halaman Utama</a>
 		                    </div>
