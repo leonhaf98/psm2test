@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>E-SUMBANGAN ONLINE</title>
+  <title>TESTING</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
@@ -18,8 +18,13 @@
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
+<?php
+include('database.php');
+$query = "SELECT Nama, kataNama, password, negeri, emel, nomtel, nomakaun FROM ngo";
+$result = mysqli_query($conn, $query);
+?>
+
   <div class="container-scroller">
-   
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -43,28 +48,21 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
-          <!--li class="nav-item nav-profile dropdown">
-            <strong><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown" style="color: black;"></strong>
-              Sila tekan butang ini untuk log masuk
-              <img src="images/faces/log-in.png" alt="profile" style="width: 80px; height: 80px;">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face28.jpg" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="loginuser.php">
-                <i class="ti-settings text-primary" ></i>
-                Login Penyumbang
-              </a>
-              <a class="dropdown-item" href="loginngo.php">
+              <a class="dropdown-item">
                 <i class="ti-settings text-primary"></i>
-                Login NGO
+                Settings
               </a>
             </div>
-          </li-->
+          </li>
         </ul>
-        
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="ti-view-list"></span>
         </button>
-        
       </div>
     </nav>
     <!-- partial -->
@@ -139,120 +137,52 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h4 class="font-weight-bold mb-0"style=" color:black"> HALAMAN UTAMA</h4>
-                </div>
-                <div>
-                    <!--button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button-->
-                </div>
-              </div>
-            </div>
+          
           </div>
           <div class="row">
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">JUMLAH DERMA</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">106500</h3>
-                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
+          <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+              <div class="brand-logo">
+                
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">SASARAN DERMA</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">90585</h3>
-                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">PENGGUNA</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">10028</h3>
-                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">NGO berdaftar</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">60
-                    </h3>
-                    <i class="ti-layers-alt icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-success">23.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Info laman web ini</p>
-                  <p class="text-muted font-weight-light"> 1.4 Objektif projek
-                                Objektif projek ini adalah yang seperti berikut:</p>
+              <h4>Profile Penyumbang</h4>
+              <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
+              <table border ="1" cellspacing="0" cellpadding="10">
+  <td>
+  <tr>
+    <th>no.</th>
+    <th>Nama NGO</th>
+    <th>negeri</th>
+    <th>emel</th>
+    <th>nomtel</th>
+    <th>nomakaun</th>
+  </td>
+<?php
+if (mysqli_num_rows($result) > 0) {
+  $sn=1;
+  while($data = mysqli_fetch_assoc($result)) {
+ ?>
+ <tr>
+   <td><?php echo $sn; ?> </td>
+   <td><?php echo $data['Nama']; ?> </td>
+   <td><?php echo $data['negeri']; ?> </td>
+   <td><?php echo $data['emel']; ?> </td>
+   <td><?php echo $data['nomtel']; ?> </td>
+   <td><?php echo $data['nomakaun']; ?> </td>
 
-                                <p>(a) Untuk mengenal pasti keperluan pengguna bagi Sistem Sumbangan Bantuan 
-                                Kepada Mangsa Banjir (My E-Bantuan) dalam menyalurkan bantuan wang
-                                ringgit kepada mangsa.</p>
-                                <p>(b) Untuk membangunkan dan mereka bentuk Sistem Sumbangan Bantuan 
-                                Kepada Mangsa Banjir (My E- Bantuan) yang mempunyai fungsi untuk 
-                                menguruskan wang bantuan kepada mangsa banjir.</p>
-                                <p>(c) Untuk menguji kefungsian Sistem Sumbangan Bantuan Kepada Mangsa Banjir 
-                                (My E-Bantuan) mengikut keperluan pengguna.</p>
-                    </p>
-                  <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card border-bottom-0">
-                <div class="card-body pb-0">
-                  <p class="card-title">Purchases</p>
-                  <p class="text-muted font-weight-light">The argument in favor of using filler text goes something like this: If you use real content in the design process, anytime you reach a review</p>
-                  <div class="d-flex flex-wrap mb-5">
-                    <div class="me-5 mt-3">
-                      <p class="text-muted">Status</p>
-                      <h3>362</h3>
-                    </div>
-                    <div class="me-5 mt-3">
-                      <p class="text-muted">New users</p>
-                      <h3>187</h3>
-                    </div>
-                    <div class="me-5 mt-3">
-                      <p class="text-muted">Chats</p>
-                      <h3>524</h3>
-                    </div>
-                    <div class="mt-3">
-                      <p class="text-muted">Feedbacks</p>
-                      <h3>509</h3>
-                    </div> 
-                  </div>
-                </div>
-                <canvas id="order-chart" class="w-100"></canvas>
-              </div>
+   <!-- <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>-->
+ <tr>
+ <?php
+  $sn++;}} else { ?>
+    <tr>
+     <td colspan="8">No data found</td>
+    </tr>
+ <?php } ?>
+  </table>
+              </form>
             </div>
           </div>
+          <div class="row">
+     
           <div class="row">
       
           <div class="row">
