@@ -21,59 +21,20 @@
 if(strlen($fname)>20){  // Max 
       $error[] = 'First Name: Max length 20 Characters Not allowed';
         }
-if(!preg_match("/^[A-Za-z _]*[A-Za-z ]+[A-Za-z _]*$/", $fname)){
-            $error[] = 'Invalid Entry First Name. Please Enter letters without any Digit or special symbols like ( 1,2,3#,$,%,&,*,!,~,`,^,-,)';
-        }    
+
 if(strlen($lname)<3){ // Minimum 
-      $error[] = 'Please enter Last Name using 3 charaters atleast.';
+      $error[] = 'Please enter atleast 3 digit.';
         }
-if(strlen($lname)>20){  // Max 
+		
+
+	if(strlen($lname)>20){  // Max 
       $error[] = 'Last Name: Max length 20 Characters Not allowed';
         }
-if(!preg_match("/^[A-Za-z _]*[A-Za-z ]+[A-Za-z _]*$/", $lname)){
+	if(!preg_match("/^[A-Za-z _]*[A-Za-z ]+[A-Za-z _]*$/", $fname)){
             $error[] = 'Invalid Entry Last Name. Please Enter letters without any Digit or special symbols like ( 1,2,3#,$,%,&,*,!,~,`,^,-,)';
               }    
-      if(strlen($username)<3){ // Change Minimum Lenghth   
-            $error[] = 'Please enter Username using 3 charaters atleast.';
-        }
-  if(strlen($username)>50){ // Change Max Length 
-            $error[] = 'Username : Max length 50 Characters Not allowed';
-        }
-  if(!preg_match("/^^[^0-9][a-z0-9]+([_-]?[a-z0-9])*$/", $username)){
-            $error[] = 'Invalid Entry for Username. Enter lowercase letters without any space and No number at the start- Eg - myusername, okuniqueuser or myusername123';
-        }  
-if(strlen($email)>50){  // Max 
-            $error[] = 'Email: Max length 50 Characters Not allowed';
-        }
-   if($passwordConfirm ==''){
-            $error[] = 'Please confirm the password.';
-        }
-        if($password != $passwordConfirm){
-            $error[] = 'Passwords do not match.';
-        }
-          if(strlen($password)<5){ // min 
-            $error[] = 'The password is 6 characters long.';
-        }
-        
-         if(strlen($password)>20){ // Max 
-            $error[] = 'Password: Max length 20 Characters Not allowed';
-        }
-          $sql="select * from users where (username='$username' or email='$email');";
-      $res=mysqli_query($conn,$sql);
-   if (mysqli_num_rows($res) > 0) {
-$row = mysqli_fetch_assoc($res);
-
-     if($username==$row['username'])
-     {
-           $error[] ='Username alredy Exists.';
-          } 
-       if($email==$row['email'])
-       {
-            $error[] ='Email alredy Exists.';
-          } 
-      }
          if(!isset($error)){ 
-            $result = mysqli_query($conn,"INSERT into users(nama,nomakaun,nomtel,nilai) 
+            $result = mysqli_query($conn,"INSERT into sumbangan(nama,nomakaun,nomtel,nilai) 
             values('$fname','$lname','$telnum','$nilai')");
            if($result)
            
@@ -125,14 +86,14 @@ foreach($error as $error){
 							<label for="">nombor telefon</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
-								<input type="alamat" class="form-control" name="nomtel" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['telnum'];}?>" >
+								<input type="text" class="form-control" name="telnum"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['telnum'];}?>" >
 							</div>
 						</div>
 						<div class="form-wrapper">
 							<label for="">nilai sumbangan</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
-								<input type="telnum" class="form-control" name="nilai"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['nilai'];}?>" >
+								<input type="text" class="form-control" name="nilai"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['nilai'];}?>" >
 							</div>
 						</div>
 					</div>

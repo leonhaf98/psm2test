@@ -20,7 +20,7 @@
 <body>
 <?php
 include('database.php');
-$query = "SELECT Nama, kataNama, password, negeri, emel, nomtel, nomakaun FROM ngo";
+$query = "SELECT nama, nomakaun, nomtel, nilai FROM sumbangan";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -70,16 +70,22 @@ $result = mysqli_query($conn, $query);
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar"style=" background-color:pink">
         <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link">
+              <i class=""></i>
+              <span class="menu-title"style=" color:black">
+            </a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="donator.php">
+            <a class="nav-link" href="ngo.php">
               <i class="ti-shield menu-icon"></i>
               <span class="menu-title"style=" color:black">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="derma.php">
+            <a class="nav-link" href="pages/tables/basic-table.html">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title"style=" color:black">Sumbangan</span>
+              <span class="menu-title"style=" color:black">Laporan Sumbangan</span>
             </a>
           </li>
           <li class="nav-item">
@@ -91,14 +97,14 @@ $result = mysqli_query($conn, $query);
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">Halaman Pengguna</span>
+              <span class="menu-title"style=" color:black">User Pages</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
-                <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Penyumbang</a></li>
-                <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="logoutngo.php"> Logout</a></li>
+                <li class="nav-item"> <a class="nav-link" href="ngoprofile.php"> Profil NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="userslist.php"> Senarai penyumbang</a></li>
               </ul>
             </div>
           </li>
@@ -120,18 +126,16 @@ $result = mysqli_query($conn, $query);
               <div class="brand-logo">
                 
               </div>
-              <h4>Senarai NGO terkini</h4>
+              <h4>Senarai penyumbang</h4>
               <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
               <table border ="1" cellspacing="0" cellpadding="10" style="border: teal;">
                 <td >
-                <tr>
-                <th>no.</th>
-                <th>Nama NGO</th>
-                <th>negeri</th>
-                <th>emel</th>
-                <th>nomtel</th>
-                 <th>nomakaun</th>
-                </td>
+                     <tr>
+                        <th>Nama </th>
+                        <th>nombor telefon</th>
+                        <th>nombor akaun</th>
+                        <th>nilai sumbangan (RM)</th>
+                 </td>
 <?php
 if (mysqli_num_rows($result) > 0) {
   $sn=1;
@@ -139,12 +143,11 @@ if (mysqli_num_rows($result) > 0) {
  ?>
      
       <tr style="background-color: #D6EEEE">
-      <td><?php echo $sn; ?> </td>
-          <td><?php echo $data['Nama']; ?> </td>
-          <td><?php echo $data['negeri']; ?> </td>
-          <td><?php echo $data['emel']; ?> </td>
-          <td><?php echo $data['nomtel']; ?> </td>
-          <td><?php echo $data['nomakaun']; ?> </td>
+        <td><?php echo $data['nama']; ?> </td>
+        <td><?php echo $data['nomtel']; ?> </td>
+        <td><?php echo $data['nomakaun']; ?> </td>
+        <td><?php echo $data['nilai']; ?> </td>
+
         <!--td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td-->
       <tr>
       <?php
@@ -154,7 +157,7 @@ if (mysqli_num_rows($result) > 0) {
           </tr>
       <?php } ?>
         </table>
-        
+
               </form>
             </div>
           </div>
@@ -170,7 +173,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
-   
+=
         <!-- partial -->
       </div>
       <!-- main-panel ends -->

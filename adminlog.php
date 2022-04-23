@@ -65,7 +65,7 @@
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Selamat Datang Penyumbang</h3>
+                        			<h3>Selamat Datang Admin</h3>
                             		<p>Sila masukkan kata nama dan kata laluan anda dibawah</p>
                         		</div>
                         		<div class="form-top-right">
