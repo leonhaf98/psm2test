@@ -126,7 +126,7 @@ $result = mysqli_query($conn, $query);
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="comment.php">
+            <a class="nav-link" href="commentlist.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">Senarai Maklum Balas</span>
             </a>
@@ -134,8 +134,8 @@ $result = mysqli_query($conn, $query);
         </ul>
       </nav>
       <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
+      <div class="main-panel" style="background-color: aliceblue;">
+        <div class="content-wrapper" style="background-color:white ;">
           <div class="row">
           
           </div>
@@ -144,9 +144,9 @@ $result = mysqli_query($conn, $query);
               <div class="brand-logo">
                 
               </div>
-              <h4>Profile Penyumbang</h4>
+              <h4>Senarai penyumbang terkini</h4>
               <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
-              <table border ="1" cellspacing="0" cellpadding="10">
+              <table border ="1" cellspacing="0" cellpadding="10" style="border: teal;">
   <td>
   <tr>
     <th>S.N</th>
@@ -161,7 +161,7 @@ if (mysqli_num_rows($result) > 0) {
   $sn=1;
   while($data = mysqli_fetch_assoc($result)) {
  ?>
- <tr>
+ <tr style="background-color: #D6EEEE">
    <td><?php echo $sn; ?> </td>
    <td><?php echo $data['first_name']; ?> </td>
    <td><?php echo $data['last_name']; ?> </td>
@@ -169,7 +169,7 @@ if (mysqli_num_rows($result) > 0) {
    <td><?php echo $data['alamat']; ?> </td>
    <td><?php echo $data['email']; ?> </td>
 
-   <!-- <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>-->
+   <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>
  <tr>
  <?php
   $sn++;}} else { ?>
@@ -193,11 +193,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best  dashboard </a> test</span>
-          </div>
-        </footer>
+  
         <!-- partial -->
       </div>
       <!-- main-panel ends -->

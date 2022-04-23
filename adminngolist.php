@@ -126,7 +126,7 @@ $result = mysqli_query($conn, $query);
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="comment.php">
+            <a class="nav-link" href="commentlist.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">Senarai Maklum Balas</span>
             </a>
@@ -134,8 +134,8 @@ $result = mysqli_query($conn, $query);
         </ul>
       </nav>
       <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
+      <div class="main-panel" style="background-color: aliceblue;">
+        <div class="content-wrapper" style="background-color:white;">
           <div class="row">
           
           </div>
@@ -144,40 +144,41 @@ $result = mysqli_query($conn, $query);
               <div class="brand-logo">
                 
               </div>
-              <h4>Profile Penyumbang</h4>
+              <h4>Senarai NGO terkini</h4>
               <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
-              <table border ="1" cellspacing="0" cellpadding="10">
-  <td>
+              <table border ="1" cellspacing="0" cellpadding="10" style="border: teal;">
+  <td >
   <tr>
-    <th>no.</th>
+    <th >no.</th>
     <th>Nama NGO</th>
     <th>negeri</th>
     <th>emel</th>
-    <th>nomtel</th>
-    <th>nomakaun</th>
+    <th>nombor telefon</th>
+    <th>nombor akaun</th>
   </td>
 <?php
 if (mysqli_num_rows($result) > 0) {
   $sn=1;
   while($data = mysqli_fetch_assoc($result)) {
  ?>
- <tr>
-   <td><?php echo $sn; ?> </td>
-   <td><?php echo $data['Nama']; ?> </td>
-   <td><?php echo $data['negeri']; ?> </td>
-   <td><?php echo $data['emel']; ?> </td>
-   <td><?php echo $data['nomtel']; ?> </td>
-   <td><?php echo $data['nomakaun']; ?> </td>
+     
+      <tr style="background-color: #D6EEEE">
+        <td><?php echo $sn; ?> </td>
+        <td><?php echo $data['Nama']; ?> </td>
+        <td><?php echo $data['negeri']; ?> </td>
+        <td><?php echo $data['emel']; ?> </td>
+        <td><?php echo $data['nomtel']; ?> </td>
+        <td><?php echo $data['nomakaun']; ?> </td>
 
-   <!-- <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>-->
- <tr>
- <?php
-  $sn++;}} else { ?>
-    <tr>
-     <td colspan="8">No data found</td>
-    </tr>
- <?php } ?>
-  </table>
+        <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>
+      <tr>
+      <?php
+        $sn++;}} else { ?>
+          <tr>
+          <td colspan="8">No data found</td>
+          </tr>
+      <?php } ?>
+        </table>
               </form>
             </div>
           </div>
@@ -193,11 +194,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best  dashboard </a> test</span>
-          </div>
-        </footer>
+=
         <!-- partial -->
       </div>
       <!-- main-panel ends -->

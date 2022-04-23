@@ -123,38 +123,41 @@ $result = mysqli_query($conn, $query);
               </div>
               <h4>Profile Penyumbang</h4>
               <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
-              <table border ="1" cellspacing="0" cellpadding="10">
-  <td>
-  <tr>
-    <th>no.</th>
-    <th>Nama NGO</th>
-    <th>negeri</th>
-    <th>emel</th>
-    <th>nomtel</th>
-    <th>nomakaun</th>
-  </td>
+              <table border ="1" cellspacing="0"style="width:100%" cellpadding="10">
+              <td>
+                  <tr>
+                <th>no.</th>
+                <th>Nama NGO</th>
+                <th>negeri</th>
+                <th>emel</th>
+                <th>nomtel</th>
+                 <th>nomakaun</th>
+                </td>
+
 <?php
 if (mysqli_num_rows($result) > 0) {
   $sn=1;
   while($data = mysqli_fetch_assoc($result)) {
  ?>
- <tr>
-   <td><?php echo $sn; ?> </td>
-   <td><?php echo $data['Nama']; ?> </td>
-   <td><?php echo $data['negeri']; ?> </td>
-   <td><?php echo $data['emel']; ?> </td>
-   <td><?php echo $data['nomtel']; ?> </td>
-   <td><?php echo $data['nomakaun']; ?> </td>
+      <table style="background-color: #D6EEEE">
+          <tr>
+          <td><?php echo $sn; ?> </td>
+          <td><?php echo $data['Nama']; ?> </td>
+          <td><?php echo $data['negeri']; ?> </td>
+          <td><?php echo $data['emel']; ?> </td>
+          <td><?php echo $data['nomtel']; ?> </td>
+          <td><?php echo $data['nomakaun']; ?> </td>
 
-   <!-- <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>-->
- <tr>
- <?php
-  $sn++;}} else { ?>
-    <tr>
-     <td colspan="8">No data found</td>
-    </tr>
- <?php } ?>
-  </table>
+          <!-- <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>-->
+        <tr>
+        </table>    
+        <?php
+          $sn++;}} else { ?>
+            <tr>
+            <td colspan="8">No data found</td>
+            </tr>
+        <?php } ?>
+      
               </form>
             </div>
           </div>

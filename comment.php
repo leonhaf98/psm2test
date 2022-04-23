@@ -173,27 +173,7 @@
             </div>
           </div>
           <div class="row">
-          <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Info laman web ini</p>
-                  <p class="text-muted font-weight-light"> 1.4 Objektif projek
-                                Objektif projek ini adalah yang seperti berikut:</p>
-
-                                <p>(a) Untuk mengenal pasti keperluan pengguna bagi Sistem Sumbangan Bantuan 
-                                Kepada Mangsa Banjir (My E-Bantuan) dalam menyalurkan bantuan wang
-                                ringgit kepada mangsa.</p>
-                                <p>(b) Untuk membangunkan dan mereka bentuk Sistem Sumbangan Bantuan 
-                                Kepada Mangsa Banjir (My E- Bantuan) yang mempunyai fungsi untuk 
-                                menguruskan wang bantuan kepada mangsa banjir.</p>
-                                <p>(c) Untuk menguji kefungsian Sistem Sumbangan Bantuan Kepada Mangsa Banjir 
-                                (My E-Bantuan) mengikut keperluan pengguna.</p>
-                    </p>
-                  <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
-                  
-                </div>
-              </div>
-            </div>
+     
           <div class="row">
       
           <div class="row">
