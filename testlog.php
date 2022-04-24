@@ -12,7 +12,12 @@
 		<link rel="stylesheet" href="csss/stylee.css">
 	</head>
 	<?php require_once("database.php"); ?>
-	<?php 
+	
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/bg.jpg');">
+			<div class="inner">
+			<?php 
  if(isset($_POST['signup'])){
   extract($_POST);
   if(strlen($fname)<3){ // Minimum 
@@ -65,11 +70,11 @@ $row = mysqli_fetch_assoc($res);
 
      if($username==$row['username'])
      {
-           $error[] ='Username alredy Exists.';
+           $error[] ='KATANAMA SUDAH DIPAKAI';
           } 
        if($email==$row['email'])
        {
-            $error[] ='Email alredy Exists.';
+            $error[] ='EMEL SUDAH DIGUNAKAN';
           } 
       }
          if(!isset($error)){ 
@@ -96,23 +101,19 @@ foreach($error as $error){
 }
 }
 ?>
-	<body>
-
-		<div class="wrapper" style="background-image: url('images/bg-registration-form-3.jpg');">
-			<div class="inner">
 				<form action="" method="POST">
 					<h3>BORANG PENDAFTARAN PENYUMBANG</h3>
 					<div class="form-group signup_form">
 					
 						<div class="form-wrapper">
-							<label for="">Nama pertama:</label>
+							<label for="">Nama pertama            *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-account-o"></i>
 								<input type="text" class="form-control" name="fname" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['fname'];}?>" required="">
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">Nama terakhir</label>
+							<label for="">Nama terakhir *</label>
 							<div class="form-holder">
 								<i style="font-style: normal; font-size: 15px;">@</i>
 								<input type="text" class="form-control" name="lname"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['lname'];}?>" required="">
@@ -122,14 +123,14 @@ foreach($error as $error){
 
 					<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">alamat</label>
+							<label for="">alamat *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="alamat" class="form-control" name="alamat" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['alamat'];}?>" required="">
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">nombor telefon</label>
+							<label for="">nombor telefon *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="telnum" class="form-control" name="telnum"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['telnum'];}?>" required="">
@@ -138,7 +139,7 @@ foreach($error as $error){
 					</div>
 					<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">email</label>
+							<label for="">email *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="email" class="form-control" name="email"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['email'];}?>" required="">
@@ -147,14 +148,14 @@ foreach($error as $error){
 					</div>
 					<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">kata nama:</label>
+							<label for="">kata nama *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="text" class="form-control" name="username"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['username'];}?>" required="">
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">kata laluan</label>
+							<label for="">kata laluan *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="password" name="password" class="form-control"style="background-color:lightyellow;" placeholder="********" required="">
@@ -162,7 +163,7 @@ foreach($error as $error){
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">pengesahan kata laluan</label>
+							<label for="">pengesahan kata laluan *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="password" name="passwordConfirm" class="form-control"style="wbackground-color:lightyellow;" placeholder="********"required="">

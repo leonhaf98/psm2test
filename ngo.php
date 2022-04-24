@@ -47,7 +47,7 @@ include("authngo.php");
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
-          <p style="font-size: larger; color:black;">SELAMAT DATANG <?php echo $_SESSION['kataNama']; ?>                        </p></span></h4>
+          
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
               <img src="images/faces/face28.jpg" alt="profile"/>
             </a>

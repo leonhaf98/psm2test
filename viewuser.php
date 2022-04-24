@@ -37,7 +37,7 @@
             <th>password</th>   
         </tr>  
         </thead>  
-     </td>
+</td>
         <?php  
         include("database.php");  
         $view_users_query="select * from users";//select query for viewing users.  

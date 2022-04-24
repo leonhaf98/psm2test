@@ -146,7 +146,7 @@ if (mysqli_num_rows($result) > 0) {
    <td><?php echo $data['alamat']; ?> </td>
    <td><?php echo $data['email']; ?> </td>
 
-   <!-- <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>-->
+  <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>
  <tr>
  <?php
   $sn++;}} else { ?>

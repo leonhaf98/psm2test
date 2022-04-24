@@ -15,7 +15,7 @@
         
 	<body>
 
-		<div class="wrapper" style="background-image: url('images/bg-registration-form-3.jpg');">
+		<div class="wrapper" style="background-image: url('images/bg.jpg');">
       
 
 			<div class="inner">
@@ -96,7 +96,7 @@
 					<div class="form-group signup_form">
 					
 						<div class="form-wrapper">
-							<label for="">Nama persatuan</label>
+							<label for="">Nama persatuan *</label>
 							<div class="form-holder" >
 								<i class="zmdi zmdi-account-o"></i>
                                 
@@ -104,7 +104,7 @@
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">emel ngo</label>
+							<label for="">emel ngo *</label>
 							<div class="form-holder">
 								<i style="font-style: normal; font-size: 15px;">@</i>
 								<input type="email" class="form-control" name="emel"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['emel'];}?>" required="">
@@ -114,7 +114,7 @@
 
 						<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">negeri</label>
+							<label for="">negeri *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="text" class="form-control" name="negeri"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['negeri'];}?>" required="">
@@ -130,7 +130,7 @@
 						</div>
 						<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">nombor akaun</label>
+							<label for="">nombor akaun *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="telnum" class="form-control" name="nomakaun"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['nomakaun'];}?>" required="">
@@ -139,14 +139,14 @@
 						</div>
 						<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">kata nama:</label>
+							<label for="">kata nama *</label>
 							<div class="form-holder"value="<?php if(isset($error)){ echo $_POST['kataNama'];}?>">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="text" class="form-control" name="kataNama"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['kataNama'];}?>" required="">
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">kata laluan</label>
+							<label for="">kata laluan *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="password" name="password"style="background-color:lightyellow;" class="form-control"placeholder="********" required="">

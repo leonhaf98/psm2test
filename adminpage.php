@@ -125,12 +125,7 @@
               <span class="menu-title"style=" color:black">Senarai Maklum Balas</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="documentation/documentation.html">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Documentation</span>
-            </a>
-          </li>
+       
         </ul>
       </nav>
       <!-- partial -->

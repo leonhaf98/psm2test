@@ -145,39 +145,55 @@ $result = mysqli_query($conn, $query);
                 
               </div>
               <h4>Senarai penyumbang terkini</h4>
-              <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
-              <table border ="1" cellspacing="0" cellpadding="10" style="border: teal;">
-  <td>
-  <tr>
-    <th>S.N</th>
-    <th>Full Name</th>
-    <th>last name</th>
-    <th>telefon number</th>
-    <th>alamat</th>
-    <th>email</th>
-  </td>
-<?php
-if (mysqli_num_rows($result) > 0) {
-  $sn=1;
-  while($data = mysqli_fetch_assoc($result)) {
- ?>
- <tr style="background-color: #D6EEEE">
-   <td><?php echo $sn; ?> </td>
-   <td><?php echo $data['first_name']; ?> </td>
-   <td><?php echo $data['last_name']; ?> </td>
-   <td><?php echo $data['telnum']; ?> </td>
-   <td><?php echo $data['alamat']; ?> </td>
-   <td><?php echo $data['email']; ?> </td>
+              <h6 class="font-weight-light"> </h6>
+              <div class="table-scrol">  
+    <h1 align="center">Senarai Penyumbang</h1>  
+  
+<div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
+    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
+        <thead>  
+        <td>
+        <tr>  
+            <th>nama pertama </th>  
+            <th>nama terakhir</th>  
+            <th>telefon number</th>  
+            <th>emel</th>
+            <th>alamat</th>
 
-   <td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td>
- <tr>
- <?php
-  $sn++;}} else { ?>
-    <tr>
-     <td colspan="8">No data found</td>
-    </tr>
- <?php } ?>
-  </table>
+        </tr>  
+        </thead>  
+</td>
+        <?php  
+        include("database.php");  
+        $view_users_query="select * from users";//select query for viewing users.  
+        $run=mysqli_query($conn,$view_users_query);//here run the sql query.  
+  
+        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
+        {  
+            $first_name=$row[1];  
+            $last_name=$row[2];   
+            $telnum=$row[3];
+            $email=$row[4];
+            $alamat=$row[5];
+
+
+        ?>  
+  
+        <tr>  
+<!--here showing results in the table -->  
+            <td><?php echo $first_name;  ?></td>  
+            <td><?php echo $last_name;  ?></td>  
+            <td><?php echo $telnum;  ?></td> 
+            <td><?php echo $email;  ?></td>
+            <td><?php echo $alamat;  ?></td>
+
+
+            <td><a href="deletepenyumbang.php?del=<?php echo $first_name?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+        </tr>  
+  
+        <?php } ?>  
+  
+    </table>  
               </form>
             </div>
           </div>

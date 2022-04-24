@@ -27,9 +27,9 @@ margin: 0 auto;
 <div class="row">
 <div class="col-md-12">
 <div class="page-header">
-<h2>Update Record</h2>
+<h2>Kemaskini akaun</h2>
 </div>
-<p>Please edit the input values and submit to update the record.</p>
+<p>Sila masukkan apa yang perlu diubah dibawah</p>
 <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
 <div class="form-group">
 <label>Name</label>

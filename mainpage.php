@@ -99,12 +99,12 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
-              <span class="menu-title"style=" color:black">Penderma</span>
+              <span class="menu-title"style=" color:black">Pendaftaran</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="loginuser.php"> Log masuk pengguna </a></li>
+                <li class="nav-item"> <a class="nav-link" href="testlogngo.php"> Pendaftaran NGO </a></li>
                 <li class="nav-item"> <a class="nav-link" href="testlog.php"> Pendaftaran Pengguna</a></li>
                 
               </ul>
@@ -113,7 +113,7 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">NGO</span>
+              <span class="menu-title"style=" color:black">testing</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
@@ -128,13 +128,6 @@
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">Documentation</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="login2.php">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">test</span>
             </a>
           </li>
 
