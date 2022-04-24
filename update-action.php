@@ -2,7 +2,7 @@
 // Include database connection file
 require_once "database.php";
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE users set  first_name='" . $_POST['first_name'] . "', telnum='" . $_POST['telnum'] . "' ,email='" . $_POST['email'] . "' WHERE id='" . $_POST['id'] . "'");
+mysqli_query($conn,"UPDATE users set  first_name='" . $_POST['first_name'] . "' ,alamat='" . $_POST['alamat'] . "' ,telnum='" . $_POST['telnum'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
 $result = mysqli_query($conn,"SELECT * FROM users WHERE id='" . $_GET['userid'] . "'");
@@ -35,13 +35,16 @@ margin: 0 auto;
 <label>Name</label>
 <input type="text" name="first_name" class="form-control" value="<?php echo $row["first_name"]; ?>">
 </div>
+
+
 <div class="form-group ">
-<label>Email</label>
-<input type="email" name="email" class="form-control" value="<?php echo $row["email"]; ?>">
+<label>nombor telefon</label>
+<input type="text" name="telnum" class="form-control" value="<?php echo $row["telnum"]; ?>">
 </div>
+
 <div class="form-group">
-<label>Mobile</label>
-<input type="mobile" name="telnum" class="form-control" value="<?php echo $row["telnum"]; ?>">
+<label>alamat</label>
+<input type="text" name="alamat" class="form-control" value="<?php echo $row["alamat"]; ?>">
 </div>
 <input type="hidden" name="id" value="<?php echo $row["id"]; ?>"/>
 <input type="submit" class="btn btn-primary" value="Submit">

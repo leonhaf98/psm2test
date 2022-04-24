@@ -189,13 +189,7 @@ mysqli_close($con);
 								<input type="email" class="form-control" name="negeri"style="background-color:lightyellow;" value="<?php echo $row['email']; ?>">
 						  	</div>
 					    	</div>
-                 <div class="form-wrapper">
-							  <label for="">nombor telefon</label>
-							  <div class="form-holder">
-                <i style="font-style: normal; font-size: 15px;"></i>
-								<input type="text" class="form-control" name="negeri"style="background-color:lightyellow;" value="<?php echo $row['telnum']; ?>">
-							  </div>
-					  	  </div>
+          
 						   </div>
                <a button class="btn btn-primary btn-group-lg form_btn"href="update-action.php?userid=<?php echo $row["id"]; ?>">Kemaskini</button> </a>
 

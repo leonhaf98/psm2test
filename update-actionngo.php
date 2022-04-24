@@ -2,7 +2,7 @@
 // Include database connection file
 require_once "database.php";
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE ngo set  Nama='" . $_POST['Nama'] . "', nomtel='" . $_POST['nomtel'] . "' ,emel='" . $_POST['emel'] . "' WHERE ngo_id='" . $_POST['ngo_id'] . "'");
+mysqli_query($conn,"UPDATE ngo set  Nama='" . $_POST['Nama'] . "', nomtel='" . $_POST['nomtel'] . "' ,nomakaun='" . $_POST['nomakaun'] . "' WHERE ngo_id='" . $_POST['ngo_id'] . "'");
 $message = "Record Modified Successfully";
 }
 $result = mysqli_query($conn,"SELECT * FROM ngo WHERE ngo_id='" . $_GET['userid'] . "'");
@@ -12,7 +12,7 @@ $row= mysqli_fetch_array($result);
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Update Record</title>
+<title>Kemaskini profil anda</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 <style type="text/css">
 .wrapper{
@@ -27,17 +27,17 @@ margin: 0 auto;
 <div class="row">
 <div class="col-md-12">
 <div class="page-header">
-<h2>Update Record</h2>
+<h2>Kemaskini record</h2>
 </div>
 <p>Please edit the input values and submit to update the record.</p>
 <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
 <div class="form-group">
-<label>Name</label>
+<label>Nama</label>
 <input type="text" name="Nama" class="form-control" value="<?php echo $row["Nama"]; ?>">
 </div>
 <div class="form-group ">
-<label>Email</label>
-<input type="email" name="emel" class="form-control" value="<?php echo $row["emel"]; ?>">
+<label>nombor akaun</label>
+<input type="text" name="nomakaun" class="form-control" value="<?php echo $row["nomakaun"]; ?>">
 </div>
 <div class="form-group">
 <label>Mobile</label>
