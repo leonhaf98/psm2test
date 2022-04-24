@@ -114,7 +114,7 @@ mysqli_close($con);
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngoprofile.php"> Profil NGO</a></li>
-                <li class="nav-item"> <a class="nav-link" href="userslist.php"> Senarai Penyumbang</a></li>
+                <li class="nav-item"> <a class="nav-link" href="donatorlist.php"> Senarai Penyumbang</a></li>
                 
               </ul>
             </div>

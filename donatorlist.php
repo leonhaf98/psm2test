@@ -104,7 +104,7 @@ $result = mysqli_query($conn, $query);
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="logoutngo.php"> Logout</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngoprofile.php"> Profil NGO</a></li>
-                <li class="nav-item"> <a class="nav-link" href="userslist.php"> Senarai penyumbang</a></li>
+                <li class="nav-item"> <a class="nav-link" href="donatorlist.php"> Senarai penyumbang</a></li>
               </ul>
             </div>
           </li>
@@ -127,37 +127,56 @@ $result = mysqli_query($conn, $query);
                 
               </div>
               <h4>Senarai penyumbang</h4>
-              <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
-              <table border ="1" cellspacing="0" cellpadding="10" style="border: teal;">
-                <td >
-                     <tr>
-                        <th>Nama </th>
-                        <th>nombor telefon</th>
-                        <th>nombor akaun</th>
-                        <th>nilai sumbangan (RM)</th>
-                 </td>
-<?php
-if (mysqli_num_rows($result) > 0) {
-  $sn=1;
-  while($data = mysqli_fetch_assoc($result)) {
- ?>
-     
-      <tr style="background-color: #D6EEEE">
-        <td><?php echo $data['nama']; ?> </td>
-        <td><?php echo $data['nomtel']; ?> </td>
-        <td><?php echo $data['nomakaun']; ?> </td>
-        <td><?php echo $data['nilai']; ?> </td>
+              <h6 class="font-weight-light"> </h6>
+              <div class="table-scrol">  
+    <h1 align="center">Senarai terkini</h1>  
+  
+<div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
+    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
+        <thead>  
+        <td>
+        <tr>  
+            <th>nama  </th>  
+            <th>nombor akaun</th>
+            <th>telefon number</th>  
+            <th>nilai (RM)</th>
 
-        <!--td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td-->
-      <tr>
-      <?php
-        $sn++;}} else { ?>
-          <tr>
-          <td colspan="8">No data found</td>
-          </tr>
-      <?php } ?>
-        </table>
 
+        </tr>  
+        </thead>  
+</td>
+        <?php  
+        include("database.php");  
+        $view_users_query="select * from sumbangan";//select query for viewing users.  
+        $run=mysqli_query($conn,$view_users_query);//here run the sql query.  
+  
+        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
+        {  
+            $nama=$row[1];  
+            $nomakaun=$row[2];   
+            $nomtel=$row[3];
+            $nilai=$row[4];
+
+
+
+        ?>  
+  
+        <tr>  
+<!--here showing results in the table -->  
+            <td><?php echo $nama;  ?></td>  
+            <td><?php echo  $nomakaun;?></td>  
+            <td><?php echo  $nomtel;?></td>
+            <td><?php echo $nilai;  ?></td>  
+
+
+            <!--td><a href="deletengo.php?del=<?php echo $Nama?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+        </tr>  
+  
+        <?php } ?>  
+  
+    </table>  
+        </div>  
+</div>  
               </form>
             </div>
           </div>

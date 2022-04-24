@@ -121,40 +121,57 @@ $result = mysqli_query($conn, $query);
                 
               </div>
               <h4>Senarai NGO terkini</h4>
-              <h6 class="font-weight-light"> Maklumat Yang diperlukan diruangan tersebut</h6>
-              <table border ="1" cellspacing="0" cellpadding="10" style="border: teal;">
-                <td >
-                <tr>
-                <th>no.</th>
-                <th>Nama NGO</th>
-                <th>negeri</th>
-                <th>emel</th>
-                <th>nomtel</th>
-                 <th>nomakaun</th>
-                </td>
-<?php
-if (mysqli_num_rows($result) > 0) {
-  $sn=1;
-  while($data = mysqli_fetch_assoc($result)) {
- ?>
-     
-      <tr style="background-color: #D6EEEE">
-      <td><?php echo $sn; ?> </td>
-          <td><?php echo $data['Nama']; ?> </td>
-          <td><?php echo $data['negeri']; ?> </td>
-          <td><?php echo $data['emel']; ?> </td>
-          <td><?php echo $data['nomtel']; ?> </td>
-          <td><?php echo $data['nomakaun']; ?> </td>
-        <!--td><a href="Delete.php?del=<?php echo $username ?>"><button class="btn btn-danger">Delete</button></a></td-->
-      <tr>
-      <?php
-        $sn++;}} else { ?>
-          <tr>
-          <td colspan="8">No data found</td>
-          </tr>
-      <?php } ?>
-        </table>
-        
+              <h6 class="font-weight-light"> </h6>
+              <div class="table-scrol">  
+    <h1 align="center">Senarai NGO</h1>  
+  
+<div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
+    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
+        <thead>  
+        <td>
+        <tr>  
+            <th>nama </th>  
+            <th>negeri</th>  
+            <th>telefon number</th>  
+            <th>emel</th>
+            <th>nombor akaun</th>
+
+        </tr>  
+        </thead>  
+</td>
+        <?php  
+        include("database.php");  
+        $view_users_query="select * from ngo";//select query for viewing users.  
+        $run=mysqli_query($conn,$view_users_query);//here run the sql query.  
+  
+        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
+        {  
+            $Nama=$row[1];  
+            $negeri=$row[2];   
+            $nomtel=$row[3];
+            $emel=$row[4];
+            $nomakaun=$row[5];
+
+
+        ?>  
+  
+        <tr>  
+<!--here showing results in the table -->  
+            <td><?php echo $Nama;  ?></td>  
+            <td><?php echo $negeri;  ?></td>  
+            <td><?php echo $nomtel;  ?></td> 
+            <td><?php echo $emel;  ?></td>
+            <td><?php echo $nomakaun;  ?></td>
+
+
+            <!--td><a href="deletengo.php?del=<?php echo $Nama?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+        </tr>  
+  
+        <?php } ?>  
+  
+    </table>  
+        </div>  
+</div>  
               </form>
             </div>
           </div>

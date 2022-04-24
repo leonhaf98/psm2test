@@ -110,7 +110,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <!--li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
               <span class="menu-title"style=" color:black">testing</span>
@@ -122,7 +122,7 @@
                 <li class="nav-item"> <a class="nav-link" href="testlogngo.php"> Pendaftaran NGO</a></li>
               </ul>
             </div>
-          </li>
+          </li-->
 
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
