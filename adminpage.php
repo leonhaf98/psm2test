@@ -86,9 +86,9 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="testlog.php">
+            <a class="nav-link" href="displayuser.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Hubungi kami</span>
+              <span class="menu-title"style=" color:black">display test</span>
             </a>
           </li>
           
