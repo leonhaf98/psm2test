@@ -79,7 +79,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="logoutngo.php">
+            <a class="nav-link" href="logoutadmin.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title"style=" color:black">log keluar</span>
             </a>

@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
     $message="";
     if(count($_POST)>0) {
         $con = mysqli_connect('localhost','root','','user') or die('Unable To connect');
@@ -82,6 +83,7 @@
 			                        	<label class="sr-only" for="form-password">Password</label>
 			                        	<input type="password" name="password" placeholder="kata laluan" class="form-password form-control" id="form-password">
 			                        </div>
+                      
                                     <strong><input type="submit" class="btn btn-success" name="submit" value="log masuk"style="color: black;"></strong>
                                     
 			                    </form>
@@ -89,6 +91,7 @@
 		                    </div>
                         </div>
                     </div>
+                    <p>Log Masuk : <a href="adminlog.php">Admin</a> </p>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3></h3>
@@ -103,6 +106,7 @@
 	                        		<i class="fa fa-google-plus"></i> Google Plus
 	                        	</a>
                         	</div>
+                            
                         </div>
                     </div>
                 </div>

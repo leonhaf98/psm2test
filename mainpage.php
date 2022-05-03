@@ -51,15 +51,11 @@
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item" href="loginuser.php">
                 <i class="ti-settings text-primary" ></i>
-                Login Penyumbang
+                Log Masuk Pengguna
               </a>
               <a class="dropdown-item" href="loginngo.php">
                 <i class="ti-settings text-primary"></i>
                 Login NGO
-              </a>
-              <a class="dropdown-item" href="adminlog.php">
-                <i class="ti-settings text-primary"></i>
-                Admin
               </a>
             </div>
           </li>
@@ -93,6 +89,13 @@
             <a class="nav-link" href="testlog.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title"style=" color:black">Hubungi kami</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">
+              <i class="ti-star menu-icon"></i>
+              <span class="menu-title"style=" color:black">log test</span>
             </a>
           </li>
           
