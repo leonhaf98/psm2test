@@ -74,10 +74,10 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form" >
+			                    <form action="cek_login.php" method="post" class="login-form" >
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="user_name" placeholder="kata nama anda" class="form-username form-control" id="form-username">
+			                        	<input type="text" name="username" placeholder="kata nama anda" class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Password</label>
