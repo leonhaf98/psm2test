@@ -59,6 +59,43 @@ foreach($error as $error){
 ?>
 	<body>
 
+	<?php
+  
+  // Connect to database 
+  $con = mysqli_connect("localhost","root","","user");
+	
+  // mysqli_connect("servername","username","password","database_name")
+ 
+  // Get all the categories from category table
+  $sql = "SELECT * FROM `ngo`";
+  $all_categories = mysqli_query($con,$sql);
+ 
+  // The following code checks if the submit button is clicked 
+  // and inserts the data in the database accordingly
+  if(isset($_POST['submit']))
+  {
+	  // Store the Product name in a "name" variable
+	  $name = mysqli_real_escape_string($con,$_POST['Nama']);
+	   
+	  // Store the Category ID in a "id" variable
+	  $id = mysqli_real_escape_string($con,$_POST['ngo_id']); 
+	   
+	  // Creating an insert query using SQL syntax and
+	  // storing it in a variable.
+	  $sql_insert = 
+	  "INSERT INTO `ngo`(`Nama`, `ngo_id`)
+		  VALUES ('$name','$id')";
+		 
+		// The following code attempts to execute the SQL query
+		// if the query executes with no errors 
+		// a javascript alert message is displayed
+		// which says the data is inserted successfully
+		if(mysqli_query($con,$sql_insert))
+	  {
+		  echo '<script>alert("Product added successfully")</script>';
+	  }
+  }
+?>
 		<div class="wrapper" style="background-image: url('images/bg-registration-form-3.jpg');">
 			<div class="inner">
 				<form action="" method="POST">
@@ -94,6 +131,32 @@ foreach($error as $error){
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="text" class="form-control" name="nilai"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['nilai'];}?>" >
+							</div>
+						</div>
+					</div>
+					<div class="form-group signup_form">
+						<div class="form-wrapper">
+							<label for="">NGO dipilih :</label>
+							<div class="form-holder" style="font-size: large;">
+							<select name="Category" style="font-size: large;">
+								<?php 
+									// use a while loop to fetch data 
+									// from the $all_categories variable 
+									// and individually display as an option
+									while ($category = mysqli_fetch_array(
+											$all_categories,MYSQLI_ASSOC)):; 
+								?>
+									<option value="<?php echo $category["ngo_id"];?>">
+									
+										<?php echo $category["Nama"];
+											// To show the category name to the user
+										?>
+									</option>
+								<?php 
+									endwhile; 
+									// While loop must be terminated
+								?>
+							</select>
 							</div>
 						</div>
 					</div>

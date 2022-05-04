@@ -144,12 +144,12 @@ $result = mysqli_query($conn, $query);
               <div class="brand-logo">
                 
               </div>
-              <h4>Senarai NGO terkini</h4>
+             
               <h6 class="font-weight-light"> </h6>
               <div class="table-scrol">  
-    <h1 align="center">Senarai NGO</h1>  
-  
-    <?php
+              <h1 align="center">Senarai NGO</h1>  
+
+              <?php
     include("database.php");
 
     $rowperpage = 5;
@@ -188,55 +188,66 @@ $result = mysqli_query($conn, $query);
         return $sorturl;
     }
     ?>
+
 <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
-    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
-    <tr class="tr_header">
-            
-            <th ><a href="<?php echo sortorder('Nama'); ?>" class="sort">nama</a></th>
-            <th ><a href="<?php echo sortorder('negeri'); ?>" class="sort">alamat</a></th>
-            <th ><a href="<?php echo sortorder('emel'); ?>" class="sort">nombor telefon</a></th>
-            <th ><a href="<?php echo sortorder('nomtel'); ?>" class="sort">Email</a></th>
-            <th ><a href="<?php echo sortorder('nomakaun'); ?>" class="sort">Email</a></th>
+    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed" >  
+        <thead>  
+        
+        <tr>  
+        <th ><a href="<?php echo sortorder('Nama'); ?>" class="sort">nama</a></th>
+            <th ><a href="<?php echo sortorder('kataNama'); ?>" class="sort">kata nama</a></th>
+            <th ><a href="<?php echo sortorder('password'); ?>" class="sort">kata laluan</a></th>
+            <th ><a href="<?php echo sortorder('negeri'); ?>" class="sort">negeri</a></th>
+            <th ><a href="<?php echo sortorder('emel'); ?>" class="sort">email</a></th>
+            <th ><a href="<?php echo sortorder('nomtel'); ?>" class="sort">no. tel</a></th>
+            <th ><a href="<?php echo sortorder('nomakaun'); ?>" class="sort">no. akaun</a></th>
             <th >padam</th>
-        </tr>
-        <?php
-        // count total number of rows
-        $sql = "SELECT COUNT(*) AS cntrows FROM users";
+
+        </tr>  
+        </thead>  
+
+        <?php  
+        include("database.php");  
+        $view_users_query="select * from ngo";//select query for viewing users.  
+        $run=mysqli_query($conn,$view_users_query);//here run the sql query.  
+        $sql = "SELECT COUNT(*) AS cntrows FROM ngo";
         $result = mysqli_query($conn,$sql);
         $fetchresult = mysqli_fetch_array($result);
         $allcount = $fetchresult['cntrows'];
 
-        // selecting rows
         $orderby = " ORDER BY ngo_id desc ";
         if(isset($_GET['order_by']) && isset($_GET['sort'])){
             $orderby = ' order by '.$_GET['order_by'].' '.$_GET['sort'];
         }
-        
-        // fetch rows
+
         $sql = "SELECT * FROM ngo ".$orderby." limit $row,".$rowperpage;
         $result = mysqli_query($conn,$sql);
         $sno = $row + 1;
-        while($fetch = mysqli_fetch_array($result)){
-          
-            $name = $fetch['Nama'];
-            $salary = $fetch['negeri'];
-            $gender = $fetch['emel'];
-            $city = $fetch['nomtel'];
-            $email = $fetch['nomakaun'];
-            ?>
-            <tr>
-                
-                <td align='center'><?php echo $name; ?></td>
-                <td align='center'><?php echo $salary; ?></td>
-                <td align='center'><?php echo $gender; ?></td>
-                <td align='center'><?php echo $city; ?></td>
-                <td align='center'><?php echo $email; ?></td>
-                <td><a href="deletepenyumbang.php?del=<?php echo $first_name?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger--> 
-            </tr>
-            <?php
-            $sno ++;
-        }
-        ?>
+      
+        while($fetch = mysqli_fetch_array($result))//while look to fetch the result and store in a array $row.  
+        {  
+            $Nama=$fetch[1];  
+            $kataNama=$fetch[2];   
+            $password=$fetch[3];
+            $negeri=$fetch[4];
+            $emel=$fetch[5];
+            $nomtel=$fetch[6];
+            $nomakaun=$fetch[7];
+        ?>  
+  
+        <tr>  
+<!--here showing results in the table -->  
+            <td><?php echo $Nama;  ?></td>  
+            <td><?php echo $kataNama;  ?></td>  
+            <td><?php echo $password;  ?></td> 
+            <td><?php echo $negeri;  ?></td>
+            <td><?php echo $emel;  ?></td>
+            <td><?php echo $nomtel;  ?></td>
+            <td><?php echo $nomakaun;  ?></td>
+            <td><a href="deletengo.php?del=<?php echo $Nama?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+        </tr>  
+  
+        <?php } ?>  
   
     </table>  
     <form method="post" action="">
@@ -247,6 +258,9 @@ $result = mysqli_query($conn, $query);
             <input type="submit" class="button" name="but_next" value="Next">
         </div>
     </form>
+        </div>  
+</div>  
+              </form>
             </div>
           </div>
           <div class="row">

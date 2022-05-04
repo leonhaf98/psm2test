@@ -216,6 +216,7 @@ $result = mysqli_query($conn, $query);
         $sno = $row + 1;
         while($fetch = mysqli_fetch_array($result)){
           
+          
             $name = $fetch['first_name'];
             $salary = $fetch['last_name'];
             $gender = $fetch['alamat'];
@@ -228,7 +229,7 @@ $result = mysqli_query($conn, $query);
                 <td align='center'><?php echo $gender; ?></td>
                 <td align='center'><?php echo $city; ?></td>
                 <td align='center'><?php echo $email; ?></td>
-                <td><a href="deletepenyumbang.php?del=<?php echo $first_name?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger--> 
+                <td><a href="deletepenyumbang.php"><button class="btn btn-danger" >Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->
             </tr>
             <?php
             $sno ++;
