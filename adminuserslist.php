@@ -147,54 +147,103 @@ $result = mysqli_query($conn, $query);
               <h4>Senarai penyumbang terkini</h4>
               <h6 class="font-weight-light"> </h6>
               <div class="table-scrol">  
-    <h1 align="center">Senarai Penyumbang</h1>  
-  
+    <h1 align="center">Senarai Penyumbang</h1> 
+    <?php
+    include("database.php");
+
+    $rowperpage = 5;
+    $row = 0;
+
+    // Previous Button
+    if(isset($_POST['but_prev'])){
+        $row = $_POST['row'];
+        $row -= $rowperpage;
+        if( $row < 0 ){
+            $row = 0;
+        }
+    }
+
+    // Next Button
+    if(isset($_POST['but_next'])){
+        $row = $_POST['row'];
+        $allcount = $_POST['allcount'];
+
+        $val = $row + $rowperpage;
+        if( $val < $allcount ){
+            $row = $val;
+        }
+    }
+
+    // generating orderby and sort url for table header
+    function sortorder($fieldname){
+        $sorturl = "?order_by=".$fieldname."&sort=";
+        $sorttype = "asc";
+        if(isset($_GET['order_by']) && $_GET['order_by'] == $fieldname){
+            if(isset($_GET['sort']) && $_GET['sort'] == "asc"){
+                $sorttype = "desc";
+            }
+        }
+        $sorturl .= $sorttype;
+        return $sorturl;
+    }
+    ?>
 <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
     <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
-        <thead>  
-        <td>
-        <tr>  
-            <th>nama pertama </th>  
-            <th>nama terakhir</th>  
-            <th>telefon number</th>  
-            <th>emel</th>
-            <th>alamat</th>
+    <tr class="tr_header">
+            
+            <th ><a href="<?php echo sortorder('first_name'); ?>" class="sort">nama</a></th>
+            <th ><a href="<?php echo sortorder('alamat'); ?>" class="sort">alamat</a></th>
+            <th ><a href="<?php echo sortorder('telnum'); ?>" class="sort">nombor telefon</a></th>
+            <th ><a href="<?php echo sortorder('email'); ?>" class="sort">Email</a></th>
+            <th >padam</th>
+        </tr>
+        <?php
+        // count total number of rows
+        $sql = "SELECT COUNT(*) AS cntrows FROM users";
+        $result = mysqli_query($conn,$sql);
+        $fetchresult = mysqli_fetch_array($result);
+        $allcount = $fetchresult['cntrows'];
 
-        </tr>  
-        </thead>  
-</td>
-        <?php  
-        include("database.php");  
-        $view_users_query="select * from users";//select query for viewing users.  
-        $run=mysqli_query($conn,$view_users_query);//here run the sql query.  
-  
-        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
-        {  
-            $first_name=$row[1];  
-            $last_name=$row[2];   
-            $telnum=$row[3];
-            $email=$row[4];
-            $alamat=$row[5];
-
-
-        ?>  
-  
-        <tr>  
-<!--here showing results in the table -->  
-            <td><?php echo $first_name;  ?></td>  
-            <td><?php echo $last_name;  ?></td>  
-            <td><?php echo $telnum;  ?></td> 
-            <td><?php echo $email;  ?></td>
-            <td><?php echo $alamat;  ?></td>
-
-
-            <td><a href="deletepenyumbang.php?del=<?php echo $first_name?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
-        </tr>  
-  
-        <?php } ?>  
+        // selecting rows
+        $orderby = " ORDER BY id desc ";
+        if(isset($_GET['order_by']) && isset($_GET['sort'])){
+            $orderby = ' order by '.$_GET['order_by'].' '.$_GET['sort'];
+        }
+        
+        // fetch rows
+        $sql = "SELECT * FROM users ".$orderby." limit $row,".$rowperpage;
+        $result = mysqli_query($conn,$sql);
+        $sno = $row + 1;
+        while($fetch = mysqli_fetch_array($result)){
+          
+            $name = $fetch['first_name'];
+            $salary = $fetch['last_name'];
+            $gender = $fetch['alamat'];
+            $city = $fetch['telnum'];
+            $email = $fetch['email'];
+            ?>
+            <tr>
+                
+                <td align='center'><?php echo $name; ?></td>
+                <td align='center'><?php echo $gender; ?></td>
+                <td align='center'><?php echo $city; ?></td>
+                <td align='center'><?php echo $email; ?></td>
+                <td><a href="deletepenyumbang.php?del=<?php echo $first_name?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger--> 
+            </tr>
+            <?php
+            $sno ++;
+        }
+        ?>
   
     </table>  
-              </form>
+    <form method="post" action="">
+        <div id="div_pagination" style="width: 30cm;">
+            <input type="hidden" name="row" value="<?php echo $row; ?>">
+            <input type="hidden" name="allcount" value="<?php echo $allcount; ?>">
+            <input type="submit" class="button" name="but_prev" value="Previous" >
+            <input type="submit" class="button" name="but_next" value="Next">
+        </div>
+    </form>
             </div>
           </div>
           <div class="row">
