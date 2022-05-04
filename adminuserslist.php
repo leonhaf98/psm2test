@@ -187,54 +187,66 @@ $result = mysqli_query($conn, $query);
         return $sorturl;
     }
     ?>
+
 <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
-    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
-    <tr class="tr_header">
-            
-            <th ><a href="<?php echo sortorder('first_name'); ?>" class="sort">nama</a></th>
-            <th ><a href="<?php echo sortorder('alamat'); ?>" class="sort">alamat</a></th>
-            <th ><a href="<?php echo sortorder('telnum'); ?>" class="sort">nombor telefon</a></th>
-            <th ><a href="<?php echo sortorder('email'); ?>" class="sort">Email</a></th>
+    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed" >  
+        <thead>  
+        
+        <tr>  
+        <th ><a href="<?php echo sortorder('first_name'); ?>" class="sort">nama</a></th>
+            <th ><a href="<?php echo sortorder('last_name'); ?>" class="sort">kata nama</a></th>
+            <th ><a href="<?php echo sortorder('telnum'); ?>" class="sort">kata laluan</a></th>
+            <th ><a href="<?php echo sortorder('alamat'); ?>" class="sort">negeri</a></th>
+            <th ><a href="<?php echo sortorder('email'); ?>" class="sort">email</a></th>
+            <th ><a href="<?php echo sortorder('username'); ?>" class="sort">no. tel</a></th>
+            <th ><a href="<?php echo sortorder('password'); ?>" class="sort">no. akaun</a></th>
             <th >padam</th>
-        </tr>
-        <?php
-        // count total number of rows
+
+        </tr>  
+        </thead>  
+
+        <?php  
+        include("database.php");  
+        $view_users_query="select * from users";//select query for viewing users.  
+        $run=mysqli_query($conn,$view_users_query);//here run the sql query.  
         $sql = "SELECT COUNT(*) AS cntrows FROM users";
         $result = mysqli_query($conn,$sql);
         $fetchresult = mysqli_fetch_array($result);
         $allcount = $fetchresult['cntrows'];
 
-        // selecting rows
         $orderby = " ORDER BY id desc ";
         if(isset($_GET['order_by']) && isset($_GET['sort'])){
             $orderby = ' order by '.$_GET['order_by'].' '.$_GET['sort'];
         }
-        
-        // fetch rows
+
         $sql = "SELECT * FROM users ".$orderby." limit $row,".$rowperpage;
         $result = mysqli_query($conn,$sql);
         $sno = $row + 1;
-        while($fetch = mysqli_fetch_array($result)){
-          
-          
-            $name = $fetch['first_name'];
-            $salary = $fetch['last_name'];
-            $gender = $fetch['alamat'];
-            $city = $fetch['telnum'];
-            $email = $fetch['email'];
-            ?>
-            <tr>
-                
-                <td align='center'><?php echo $name; ?></td>
-                <td align='center'><?php echo $gender; ?></td>
-                <td align='center'><?php echo $city; ?></td>
-                <td align='center'><?php echo $email; ?></td>
-                <td><a href="deletepenyumbang.php"><button class="btn btn-danger" >Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->
-            </tr>
-            <?php
-            $sno ++;
-        }
-        ?>
+      
+        while($fetch = mysqli_fetch_array($result))//while look to fetch the result and store in a array $row.  
+        {  
+            $first_name=$fetch[1];  
+            $last_name=$fetch[2];   
+            $telnum=$fetch[3];
+            $alamat=$fetch[4];
+            $email=$fetch[5];
+            $username=$fetch[6];
+            $password=$fetch[7];
+        ?>  
+  
+        <tr>  
+<!--here showing results in the table -->  
+            <td><?php echo $first_name;  ?></td>  
+            <td><?php echo $last_name;  ?></td>  
+            <td><?php echo $telnum;  ?></td> 
+            <td><?php echo $alamat;  ?></td>
+            <td><?php echo $email;  ?></td>
+            <td><?php echo $username;  ?></td>
+            <td><?php echo $password;  ?></td>
+            <td><a href="deletepenyumbang.php?del=<?php echo $username?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+        </tr>  
+  
+        <?php } ?>  
   
     </table>  
     <form method="post" action="">
