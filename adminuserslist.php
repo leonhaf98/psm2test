@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+<style>
+table
+{
+border-width:2px;
+border-color:pink;
+}
+</style>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -141,13 +148,15 @@ $result = mysqli_query($conn, $query);
           </div>
           <div class="row">
           <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-              <div class="brand-logo">
-                
+              <div class="brand-logo"> 
               </div>
               <h4>Senarai penyumbang terkini</h4>
+              <div style = "position:relative; left:850px; top:2px;">
+              <a href="testlog.php">Tambah Pengguna</a>
+           </div>
               <h6 class="font-weight-light"> </h6>
               <div class="table-scrol">  
-    <h1 align="center">Senarai Penyumbang</h1> 
+   
     <?php
     include("database.php");
 
@@ -189,7 +198,7 @@ $result = mysqli_query($conn, $query);
     ?>
 
 <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
-    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed" >  
+    <table class="table table-bordered table-hover table-striped " style="table-layout: relative; " >  
         <thead>  
         
         <tr>  
