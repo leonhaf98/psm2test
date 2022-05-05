@@ -165,22 +165,73 @@
                 <div class="card-body">
                   <p class="card-title text-md-center text-xl-left">JUMLAH DERMA</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">106500</h3>
-                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                                 <?php
+                                  //servername
+                                  $servername = "localhost";
+                                  //username
+                                  $username = "root";
+                                  //empty password
+                                  $password = "";
+                                  //geek is the database name
+                                  $dbname = "user";
+                                  
+                                  // Create connection by passing these connection parameters
+                                  $conn = new mysqli($servername, $username, $password, $dbname);
+                             
+                                  //sql query
+                                  $sql = "SELECT  SUM(nilai) from sumbangan";
+                                  $result = $conn->query($sql);
+                                  //display data on web page
+                                  while($row = mysqli_fetch_array($result)){
+                                      echo "Jumlah kutipan=RM". $row['SUM(nilai)'];
+
+                                      echo "<br>";
+                                  }
+                                  //close the connection
+                                  
+                                  $conn->close();
+                                ?>
+                    <!--h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">106500</h3-->
                   </div>  
-                  <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
+               
                 </div>
               </div>
             </div>
             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">SASARAN DERMA</p>
+                  <p class="card-title text-md-center text-xl-left">Penyumbang</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">90585</h3>
-                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  <?php
+                                  //servername
+                                  $servername = "localhost";
+                                  //username
+                                  $username = "root";
+                                  //empty password
+                                  $password = "";
+                                  //geek is the database name
+                                  $dbname = "user";
+                                  
+                                  // Create connection by passing these connection parameters
+                                  $conn = new mysqli($servername, $username, $password, $dbname);
+                             
+                                  //sql query 
+                                  $sql = "SELECT * from users";
+                                  $result = $conn->query($sql);
+                                  if ($result = mysqli_query($conn, $sql)) {
+
+                                    // Return the number of rows in result set
+                                    $rowcount = mysqli_num_rows( $result );
+                                    
+                                    // Display result
+                                    echo "Jumlah pengguna : " .$rowcount;
+                                 }
+                                  //close the connection
+                                  
+                                  $conn->close();
+                                ?>
                   </div>  
-                  <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
+             
                 </div>
               </div>
             </div>
