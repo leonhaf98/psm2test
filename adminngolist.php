@@ -135,19 +135,20 @@ $result = mysqli_query($conn, $query);
       </nav>
       <!-- partial -->
       <div class="main-panel" style="background-color: aliceblue;">
-        <div class="content-wrapper" style="background-color:white;">
+        <div class="content-wrapper" style="background-color:white ;">
           <div class="row">
           
           </div>
           <div class="row">
           <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-              <div class="brand-logo">
-                
+              <div class="brand-logo"> 
               </div>
-             
+              <h4>Senarai ngo terkini</h4>
+              <div style = "position:relative; left:850px; top:2px;">
+              <a href="testlogngo.php">Tambah Pengguna</a>
+           </div>
               <h6 class="font-weight-light"> </h6>
               <div class="table-scrol">  
-              <h1 align="center">Senarai NGO</h1>  
 
               <?php
     include("database.php");
@@ -190,7 +191,7 @@ $result = mysqli_query($conn, $query);
     ?>
 
 <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
-    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed" >  
+    <table class="table table-bordered table-hover table-striped" style="table-layout: relative" >  
         <thead>  
         
         <tr>  

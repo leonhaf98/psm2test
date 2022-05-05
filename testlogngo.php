@@ -71,8 +71,8 @@
                           } 
                          }
                         if(!isset($error)){ 
-                            $result = mysqli_query($conn,"INSERT into ngo(Nama,kataNama,password,negeri,emel,nomtel,nomakaun) 
-                            values('$Nama','$kataNama','$password','$negeri','$emel','$nomtel','$nomakaun')");
+                            $result = mysqli_query($conn,"INSERT into ngo(Nama,kataNama,password,negeri,emel,nomtel,nomakaun,date) 
+                            values('$Nama','$kataNama','$password','$negeri','$emel','$nomtel','$nomakaun','$date')");
                           if($result)
                           
                     {

@@ -29,15 +29,7 @@ if(strlen($fname)>20){  // Max
 if(!preg_match("/^[A-Za-z _]*[A-Za-z ]+[A-Za-z _]*$/", $fname)){
             $error[] = 'Invalid Entry First Name. Please Enter letters without any Digit or special symbols like ( 1,2,3#,$,%,&,*,!,~,`,^,-,)';
         }    
-if(strlen($lname)<3){ // Minimum 
-      $error[] = 'Please enter Last Name using 3 charaters atleast.';
-        }
-if(strlen($lname)>20){  // Max 
-      $error[] = 'Last Name: Max length 20 Characters Not allowed';
-        }
-if(!preg_match("/^[A-Za-z _]*[A-Za-z ]+[A-Za-z _]*$/", $lname)){
-            $error[] = 'Invalid Entry Last Name. Please Enter letters without any Digit or special symbols like ( 1,2,3#,$,%,&,*,!,~,`,^,-,)';
-              }    
+
       if(strlen($username)<3){ // Change Minimum Lenghth   
             $error[] = 'Please enter Username using 3 charaters atleast.';
         }
@@ -78,8 +70,8 @@ $row = mysqli_fetch_assoc($res);
           } 
       }
          if(!isset($error)){ 
-            $result = mysqli_query($conn,"INSERT into users(first_name,last_name,username,email,telnum,alamat,password) 
-            values('$fname','$lname','$username','$email','$telnum','$alamat','$password')");
+            $result = mysqli_query($conn,"INSERT into users(first_name,username,email,telnum,alamat,password,date) 
+            values('$fname','$username','$email','$telnum','$alamat','$password','$date')");
            if($result)
            
     {
@@ -106,19 +98,19 @@ foreach($error as $error){
 					<div class="form-group signup_form">
 					
 						<div class="form-wrapper">
-							<label for="">Nama pertama            *</label>
+							<label for="">Nama            *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-account-o"></i>
 								<input type="text" class="form-control" name="fname" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['fname'];}?>" required="">
 							</div>
 						</div>
-						<div class="form-wrapper">
+						<!--div class="form-wrapper">
 							<label for="">Nama terakhir *</label>
 							<div class="form-holder">
 								<i style="font-style: normal; font-size: 15px;">@</i>
 								<input type="text" class="form-control" name="lname"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['lname'];}?>" required="">
 							</div>
-						</div>
+						</div-->
 					</div>
 
 					<div class="form-group signup_form">

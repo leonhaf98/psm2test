@@ -86,7 +86,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="displayuser.php">
+            <a class="nav-link" href="chart.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title"style=" color:black">display test</span>
             </a>
