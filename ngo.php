@@ -78,25 +78,25 @@ include("authngo.php");
           <li class="nav-item">
             <a class="nav-link" href="ngo.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title"style=" color:black">Dashboard</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/tables/basic-table.html">
               <i class="ti-view-list-alt menu-icon"></i>
-              <span class="menu-title"style=" color:black">Laporan Sumbangan</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Laporan Sumbangan</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/icons/themify.html">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Tentang kami</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Tentang kami</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">User Pages</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">User Pages</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
@@ -110,7 +110,7 @@ include("authngo.php");
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Documentation</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Documentation</span>
             </a>
           </li>
         </ul>

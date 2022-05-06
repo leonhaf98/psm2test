@@ -75,27 +75,27 @@
           <li class="nav-item">
             <a class="nav-link" href="adminpage.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logoutadmin.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">log keluar</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">log keluar</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="chart.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">display test</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">display test</span>
             </a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
-              <span class="menu-title"style=" color:black">Penyumbang</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Penyumbang</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -109,7 +109,7 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">NGO</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">NGO</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
@@ -122,7 +122,7 @@
           <li class="nav-item">
             <a class="nav-link" href="commentlist.php">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Senarai Maklum Balas</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Senarai Maklum Balas</span>
             </a>
           </li>
        
@@ -135,7 +135,7 @@
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 class="font-weight-bold mb-0"style=" color:black"> HALAMAN UTAMA</h4>
+                  <h4 class="font-weight-bold mb-0"style=" color:black;font-family:verdana"> HALAMAN UTAMA</h4>
                 </div>
                 <div>
                     <!--button type="button" class="btn btn-primary btn-icon-text btn-rounded">

@@ -80,27 +80,27 @@ $result = mysqli_query($conn, $query);
           <li class="nav-item">
             <a class="nav-link" href="adminpage.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logoutngo.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">log keluar</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">log keluar</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="testlog.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Hubungi kami</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Hubungi kami</span>
             </a>
           </li>
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
-              <span class="menu-title"style=" color:black">Penyumbang</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Penyumbang</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -114,7 +114,7 @@ $result = mysqli_query($conn, $query);
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">NGO</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">NGO</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
@@ -128,14 +128,14 @@ $result = mysqli_query($conn, $query);
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Documentation</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Documentation</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="commentlist.php">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Senarai Maklum Balas</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Senarai Maklum Balas</span>
             </a>
           </li>
         </ul>
@@ -150,7 +150,7 @@ $result = mysqli_query($conn, $query);
           <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo"> 
               </div>
-              <h4>Senarai penyumbang terkini</h4>
+              <h4 style=" color:black;font-family:verdana">Senarai penyumbang terkini</h4>
               <div style = "position:relative; left:850px; top:2px;">
               <a href="testlog.php">Tambah Pengguna</a>
            </div>

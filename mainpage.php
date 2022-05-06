@@ -14,6 +14,7 @@
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
+  
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -45,12 +46,12 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
             <strong><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown" style="color: black;"></strong>
-              Sila tekan butang ini untuk log masuk
+              
               <img src="images/faces/log-in.png" alt="profile" style="width: 80px; height: 80px;">
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item" href="loginuser.php">
-                <i class="ti-settings text-primary" ></i>
+                <i class="ti-settings text-primary" style="font-family:verdana" ></i>
                 Log Masuk Pengguna
               </a>
               <a class="dropdown-item" href="loginngo.php">
@@ -75,34 +76,28 @@
           <li class="nav-item">
             <a class="nav-link" href="mainpage.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title"style="font-family:verdana">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="loginuser.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Sumbangan</span>
+              <span class="menu-title"style=" color:black; font-family:verdana">Sumbangan</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="testlog.php">
+            <a class="nav-link" href="contact.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Hubungi kami</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Hubungi kami</span>
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">
-              <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">log test</span>
-            </a>
-          </li>
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
-              <span class="menu-title"style=" color:black">Pendaftaran</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Pendaftaran</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -130,14 +125,14 @@
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Documentation</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Dokumentasi</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="comment.php">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Maklum Balas</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Maklum Balas</span>
             </a>
           </li>
         </ul>
@@ -149,7 +144,7 @@
             <div class="col-md-12 grid-margin">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <h4 class="font-weight-bold mb-0"style=" color:black"> HALAMAN UTAMA</h4>
+                  <h4 class="font-weight-bold mb-0"style=" color:black;font-family:verdana"> HALAMAN UTAMA</h4>
                 </div>
                 <div>
                     <!--button type="button" class="btn btn-primary btn-icon-text btn-rounded">

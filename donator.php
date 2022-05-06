@@ -73,13 +73,13 @@ include("auth.php");
           <li class="nav-item">
             <a class="nav-link">
               <i class=""></i>
-              <span class="menu-title"style=" color:black">
+              <span class="menu-title"style=" color:black;font-family:verdana">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="donator.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title"style=" color:black">Dashboard</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
@@ -91,13 +91,13 @@ include("auth.php");
           <li class="nav-item">
             <a class="nav-link" href="pages/icons/themify.html">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Tentang kami</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Tentang kami</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
-              <span class="menu-title"style=" color:black">Halaman akaun</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Halaman akaun</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">

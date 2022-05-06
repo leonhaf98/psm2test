@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- MATERIAL DESIGN ICONIC FONT -->
-		<link rel="stylesheet" href="fontss/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		<!--link rel="stylesheet" href="fontss/material-design-iconic-font/css/material-design-iconic-font.min.css"-->
 		
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="csss/stylee.css">
@@ -97,8 +97,8 @@ foreach($error as $error){
 					<h3>BORANG PENDAFTARAN PENYUMBANG</h3>
 					<div class="form-group signup_form">
 					
-						<div class="form-wrapper">
-							<label for="">Nama            *</label>
+						<div class="form-wrapper font-weight-bold mb-0">
+							<label for=""style=" color:black;font-family:verdana">Nama            *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-account-o"></i>
 								<input type="text" class="form-control" name="fname" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['fname'];}?>" required="">
@@ -115,14 +115,14 @@ foreach($error as $error){
 
 					<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">alamat *</label>
+							<label for=""style=" color:black;font-family:verdana">alamat *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="alamat" class="form-control" name="alamat" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['alamat'];}?>" required="">
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">nombor telefon *</label>
+							<label for=""style=" color:black;font-family:verdana">nombor telefon *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="telnum" class="form-control" name="telnum"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['telnum'];}?>" required="">
@@ -131,7 +131,7 @@ foreach($error as $error){
 					</div>
 					<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">email *</label>
+							<label for=""style=" color:black;font-family:verdana">email *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="email" class="form-control" name="email"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['email'];}?>" required="">
@@ -140,14 +140,14 @@ foreach($error as $error){
 					</div>
 					<div class="form-group signup_form">
 						<div class="form-wrapper">
-							<label for="">kata nama *</label>
+							<label for=""style=" color:black;font-family:verdana">kata nama *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="text" class="form-control" name="username"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['username'];}?>" required="">
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">kata laluan *</label>
+							<label for=""style=" color:black;font-family:verdana">kata laluan *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="password" name="password" class="form-control"style="background-color:lightyellow;" placeholder="********" required="">
@@ -155,7 +155,7 @@ foreach($error as $error){
 							</div>
 						</div>
 						<div class="form-wrapper">
-							<label for="">pengesahan kata laluan *</label>
+							<label for=""style=" color:black;font-family:verdana">pengesahan kata laluan *</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="password" name="passwordConfirm" class="form-control"style="wbackground-color:lightyellow;" placeholder="********"required="">
@@ -164,7 +164,7 @@ foreach($error as $error){
 					</div>
 					<div class="form-end">
 						<div class="checkbox">
-							<label>
+							<label style=" color:black;font-family:verdana">
 								<input type="checkbox"> sila tanda ini untuk pengesahan maklumat diatas
 								<span class="checkmark"></span>
 							</label>
