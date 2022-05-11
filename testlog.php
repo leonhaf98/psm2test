@@ -76,7 +76,7 @@ $row = mysqli_fetch_assoc($res);
 				$headers = 'From: muhammadhafz98@gmail.com'."\r\n".
 				'MIMI-Version: 1.0'."\r\n".
 				'Content-Type: text/html; charset-utf-8';
-				$result= mail("muhammadhafz98@gmail.com","Tahniah","Akaun anda sudah didaftarkan",$headers);
+				$result= mail("muhammadhafz98@gmail.com","Tahniah","Akaun anda sudah didaftarkan!S",$headers);
 
 var_dump($result);	
            if($result)
@@ -99,16 +99,7 @@ foreach($error as $error){
   echo '<p class="errmsg">&#x26A0;'.$error.' </p>'; 
 }
 }
-if (isset($_POST['signup'])) {
 
-	$headers = 'From: muhammadhafz98@gmail.com'."\r\n".
-				'MIMI-Version: 1.0'."\r\n".
-				'Content-Type: text/html; charset-utf-8';
-	$result= mail("muhammadhafz98@gmail.com","Tahniah","Akaun anda sudah didaftarkan",$headers);
-
-	var_dump($result);	
-	
-  }
 ?>
 
 				<form action="" method="POST">

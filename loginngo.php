@@ -87,6 +87,7 @@
 		                    </div>
                         </div>
                     </div>
+                    <div class="link forget-pass text-left"><a href="forgot-password copy.php">Forgot password?</a></div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3> atau</h3>
