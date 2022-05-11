@@ -151,7 +151,7 @@ $result = mysqli_query($conn, $query);
               <div class="brand-logo"> 
               </div>
               <h4 style=" color:black;font-family:verdana">Senarai penyumbang terkini</h4>
-              <div style = "position:relative; left:850px; top:2px;">
+              <div style = "position:relative; left:700px; top:2px;">
               <a href="testlog.php">Tambah Pengguna</a>
            </div>
               <h6 class="font-weight-light"> </h6>

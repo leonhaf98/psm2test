@@ -72,6 +72,13 @@ $row = mysqli_fetch_assoc($res);
          if(!isset($error)){ 
             $result = mysqli_query($conn,"INSERT into users(first_name,username,email,telnum,alamat,password,date) 
             values('$fname','$username','$email','$telnum','$alamat','$password','$date')");
+
+				$headers = 'From: muhammadhafz98@gmail.com'."\r\n".
+				'MIMI-Version: 1.0'."\r\n".
+				'Content-Type: text/html; charset-utf-8';
+				$result= mail("muhammadhafz98@gmail.com","Tahniah","Akaun anda sudah didaftarkan",$headers);
+
+var_dump($result);	
            if($result)
            
     {
@@ -92,7 +99,18 @@ foreach($error as $error){
   echo '<p class="errmsg">&#x26A0;'.$error.' </p>'; 
 }
 }
+if (isset($_POST['signup'])) {
+
+	$headers = 'From: muhammadhafz98@gmail.com'."\r\n".
+				'MIMI-Version: 1.0'."\r\n".
+				'Content-Type: text/html; charset-utf-8';
+	$result= mail("muhammadhafz98@gmail.com","Tahniah","Akaun anda sudah didaftarkan",$headers);
+
+	var_dump($result);	
+	
+  }
 ?>
+
 				<form action="" method="POST">
 					<h3>BORANG PENDAFTARAN PENYUMBANG</h3>
 					<div class="form-group signup_form">
@@ -136,6 +154,7 @@ foreach($error as $error){
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="email" class="form-control" name="email"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['email'];}?>" required="">
 							</div>
+							
 						</div>
 					</div>
 					<div class="form-group signup_form">

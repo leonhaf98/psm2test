@@ -87,11 +87,12 @@
                                     <strong><input type="submit" class="btn btn-success" name="submit" value="log masuk"style="color: black;"></strong>
                                     
 			                    </form>
+                                
                                 <a class="btn btn-success" href="mainpage.php"><i class="mdi mdi-home me-2"style="color: black;"></i>Halaman Utama</a>
 		                    </div>
                         </div>
                     </div>
-                    <p>Log Masuk : <a href="adminlog.php">Admin</a> </p>
+                    <p>lupa kata laluan? <a href="indexx.php">Klik disini</a> </p>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3></h3>

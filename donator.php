@@ -102,7 +102,7 @@ include("auth.php");
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li>
+                <!--li class="nav-item"> <a class="nav-link" href="logout.php"> Logout</a></li-->
                 <li class="nav-item"> <a class="nav-link" href="userprofile.php"> Profil Pengguna</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ngolist.php"> Senarai NGO</a></li>
                 <!--li class="nav-item"> <a class="nav-link" href="edits.php"> update</a></li-->
@@ -113,6 +113,12 @@ include("auth.php");
             <a class="nav-link" href="">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">laporan sumbangan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php">
+              <i class="ti-star menu-icon"></i>
+              <span class="menu-title"style=" color:black;font-family:verdana">Log keluar</span>
             </a>
           </li>
         </ul>
@@ -127,9 +133,7 @@ include("auth.php");
                   <h4 class="font-weight-bold mb-0"><p style="font-size: larger;">SELAMAT DATANG <?php echo $_SESSION['username']; ?>!</p></span> </h4>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
+                   
                 </div>
               </div>
             </div>
@@ -167,34 +171,86 @@ include("auth.php");
                                   $conn->close();
                                 ?>
                   </div>  
-                  <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
+                  <p class="mb-0 mt-2 text-danger"><span class="text-black ms-1"><small></small></span></p>
                 </div>
               </div>
             </div>
             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Sasaran</p>
+                  <p class="card-title text-md-center text-xl-left">Penyumbang</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">1000</h3>
-                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  <?php
+                                  //servername
+                                  $servername = "localhost";
+                                  //username
+                                  $username = "root";
+                                  //empty password
+                                  $password = "";
+                                  //geek is the database name
+                                  $dbname = "user";
+                                  
+                                  // Create connection by passing these connection parameters
+                                  $conn = new mysqli($servername, $username, $password, $dbname);
+                             
+                                  //sql query 
+                                  $sql = "SELECT * from users";
+                                  $result = $conn->query($sql);
+                                  if ($result = mysqli_query($conn, $sql)) {
+
+                                    // Return the number of rows in result set
+                                    $rowcount = mysqli_num_rows( $result );
+                                    
+                                    // Display result
+                                    echo "Jumlah berdaftar:" .$rowcount;
+                                 }
+                                  //close the connection
+                                  
+                                  $conn->close();
+                                ?>
                   </div>  
-                  <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
+             
                 </div>
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
+             </div>
+             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">Jumlah Penyumbang</p>
+                  <p class="card-title text-md-center text-xl-left">NGO Berdaftar</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">1000</h3>
-                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  <?php
+                                  //servername
+                                  $servername = "localhost";
+                                  //username
+                                  $username = "root";
+                                  //empty password
+                                  $password = "";
+                                  //geek is the database name
+                                  $dbname = "user";
+                                  
+                                  // Create connection by passing these connection parameters
+                                  $conn = new mysqli($servername, $username, $password, $dbname);
+                             
+                                  //sql query 
+                                  $sql = "SELECT * from ngo";
+                                  $result = $conn->query($sql);
+                                  if ($result = mysqli_query($conn, $sql)) {
+
+                                    // Return the number of rows in result set
+                                    $rowcount = mysqli_num_rows( $result );
+                                    
+                                    // Display result
+                                    echo "Jumlah NGO : " .$rowcount;
+                                 }
+                                  //close the connection
+                                  
+                                  $conn->close();
+                                ?>
                   </div>  
-                  <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
+                  <p class="mb-0 mt-2 text-success"><span class="text-black ms-1"><small></small></span></p>
                 </div>
               </div>
-            </div>
+             </div>
           </div>
           <div class="row">
           <div class="col-md-6 grid-margin stretch-card">

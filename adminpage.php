@@ -78,17 +78,11 @@
               <span class="menu-title"style=" color:black;font-family:verdana">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logoutadmin.php">
-              <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black;font-family:verdana">log keluar</span>
-            </a>
-          </li>
 
           <li class="nav-item">
             <a class="nav-link" href="chart.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black;font-family:verdana">display test</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">report test</span>
             </a>
           </li>
           
@@ -123,6 +117,12 @@
             <a class="nav-link" href="commentlist.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black;font-family:verdana">Senarai Maklum Balas</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logoutadmin.php">
+              <i class="ti-star menu-icon"></i>
+              <span class="menu-title"style=" color:black;font-family:verdana">log keluar</span>
             </a>
           </li>
        

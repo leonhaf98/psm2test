@@ -130,6 +130,13 @@
           </li>
 
           <li class="nav-item">
+            <a class="nav-link" href="indexx.php">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title"style=" color:black;font-family:verdana">testt</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href="comment.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black;font-family:verdana">Maklum Balas</span>
@@ -158,7 +165,7 @@
             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">JUMLAH DERMA</p>
+                  <p class="card-title text-md-center text-xl-left">JUMLAH SUMBANGAN</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
                                  <?php
                                   //servername
@@ -178,7 +185,7 @@
                                   $result = $conn->query($sql);
                                   //display data on web page
                                   while($row = mysqli_fetch_array($result)){
-                                      echo "Jumlah kutipan=RM". $row['SUM(nilai)'];
+                                      echo "Jumlah : RM". $row['SUM(nilai)'];
 
                                       echo "<br>";
                                   }
@@ -191,8 +198,8 @@
                
                 </div>
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
+             </div>
+             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <p class="card-title text-md-center text-xl-left">Penyumbang</p>
@@ -219,7 +226,7 @@
                                     $rowcount = mysqli_num_rows( $result );
                                     
                                     // Display result
-                                    echo "Jumlah pengguna : " .$rowcount;
+                                    echo "Jumlahnya :" .$rowcount;
                                  }
                                   //close the connection
                                   
@@ -229,36 +236,49 @@
              
                 </div>
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
+             </div>
+             <div class="col-md-3 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">PENGGUNA</p>
+                  <p class="card-title text-md-center text-xl-left">NGO Berdaftar</p>
                   <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">10028</h3>
-                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                  <?php
+                                  //servername
+                                  $servername = "localhost";
+                                  //username
+                                  $username = "root";
+                                  //empty password
+                                  $password = "";
+                                  //geek is the database name
+                                  $dbname = "user";
+                                  
+                                  // Create connection by passing these connection parameters
+                                  $conn = new mysqli($servername, $username, $password, $dbname);
+                             
+                                  //sql query 
+                                  $sql = "SELECT * from ngo";
+                                  $result = $conn->query($sql);
+                                  if ($result = mysqli_query($conn, $sql)) {
+
+                                    // Return the number of rows in result set
+                                    $rowcount = mysqli_num_rows( $result );
+                                    
+                                    // Display result
+                                    echo "Jumlah NGO : " .$rowcount;
+                                 }
+                                  //close the connection
+                                  
+                                  $conn->close();
+                                ?>
                   </div>  
-                  <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
+                  <p class="mb-0 mt-2 text-success"><span class="text-black ms-1"><small></small></span></p>
                 </div>
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">NGO berdaftar</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">60
-                    </h3>
-                    <i class="ti-layers-alt icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>  
-                  <p class="mb-0 mt-2 text-success">23.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
+             </div>
+             </div>
+             <div class="row">
+             <div class="col-md-6 grid-margin stretch-card">
+               <div class="card">
                 <div class="card-body">
                   <p class="card-title">Info laman web ini</p>
                   <p class="text-muted font-weight-light"> 1.4 Objektif projek
@@ -277,8 +297,8 @@
                   
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 grid-margin stretch-card">
+             </div>
+             <div class="col-md-6 grid-margin stretch-card">
               <div class="card border-bottom-0">
                 <div class="card-body pb-0">
                   <p class="card-title">Purchases</p>
@@ -305,10 +325,10 @@
                 <canvas id="order-chart" class="w-100"></canvas>
               </div>
             </div>
-          </div>
-          <div class="row">
+            </div>
+            <div class="row">
       
-          <div class="row">
+           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               
             </div>

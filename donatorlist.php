@@ -102,7 +102,7 @@ $result = mysqli_query($conn, $query);
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="logoutngo.php"> Logout</a></li>
+                <!--li class="nav-item"> <a class="nav-link" href="logoutngo.php"> Logout</a></li-->
                 <li class="nav-item"> <a class="nav-link" href="ngoprofile.php"> Profil NGO</a></li>
                 <li class="nav-item"> <a class="nav-link" href="donatorlist.php"> Senarai penyumbang</a></li>
               </ul>
@@ -111,7 +111,13 @@ $result = mysqli_query($conn, $query);
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Documentation</span>
+              <span class="menu-title"style=" color:black">Dokumentasi</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logoutngo.php">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title"style=" color:black;font-family:verdana">Log Keluar</span>
             </a>
           </li>
         </ul>
@@ -129,7 +135,7 @@ $result = mysqli_query($conn, $query);
               <h4>Senarai penyumbang</h4>
               <h6 class="font-weight-light"> </h6>
               <div class="table-scrol">  
-    <h1 align="center">Senarai terkini</h1>  
+    <h1 align="center"></h1>  
   
     <?php
     include("database.php");
@@ -171,8 +177,8 @@ $result = mysqli_query($conn, $query);
     }
     ?>
 <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
-    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
-    <tr class="tr_header">
+    <table class="table table-bordered table-hover table-striped" style="table-layout: relative; ">  
+    <tr class="tr_header" style="display: center;">
             
             <th ><a href="<?php echo sortorder('first_name'); ?>" class="sort">nama</a></th>
             <th ><a href="<?php echo sortorder('alamat'); ?>" class="sort">alamat</a></th>

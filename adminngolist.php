@@ -144,7 +144,7 @@ $result = mysqli_query($conn, $query);
               <div class="brand-logo"> 
               </div>
               <h4>Senarai ngo terkini</h4>
-              <div style = "position:relative; left:850px; top:2px;">
+              <div style = "position:relative; left:700px; top:2px;">
               <a href="testlogngo.php">Tambah Pengguna</a>
            </div>
               <h6 class="font-weight-light"> </h6>

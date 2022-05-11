@@ -36,11 +36,12 @@ if(strlen($lname)<3){ // Minimum
          if(!isset($error)){ 
             $result = mysqli_query($conn,"INSERT into sumbangan(nama,nomakaun,nomtel,nilai) 
             values('$fname','$lname','$telnum','$nilai')");
-           if($result)
+           if($result==1)
            
     {
-        header("Location:mainpage.php"); 
-     $done=2; 
+		$ins = "INSERT INTO 'ngo' ('nilai')";
+        header("Location:donator.php"); 
+     
     }
     else{
       $error[] ='Failed : Something went wrong';
