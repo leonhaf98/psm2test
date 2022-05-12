@@ -203,12 +203,10 @@ $result = mysqli_query($conn, $query);
         
         <tr>  
         <th ><a href="<?php echo sortorder('first_name'); ?>" class="sort">nama</a></th>
-            <th ><a href="<?php echo sortorder('last_name'); ?>" class="sort">kata nama</a></th>
-            <th ><a href="<?php echo sortorder('telnum'); ?>" class="sort">kata laluan</a></th>
-            <th ><a href="<?php echo sortorder('alamat'); ?>" class="sort">negeri</a></th>
-            <th ><a href="<?php echo sortorder('email'); ?>" class="sort">email</a></th>
-            <th ><a href="<?php echo sortorder('username'); ?>" class="sort">no. tel</a></th>
-            <th ><a href="<?php echo sortorder('password'); ?>" class="sort">no. akaun</a></th>
+            <th ><a href="<?php echo sortorder('telnum'); ?>" class="sort">alamat</a></th>
+            <th ><a href="<?php echo sortorder('alamat'); ?>" class="sort">emel</a></th>
+            <th ><a href="<?php echo sortorder('email'); ?>" class="sort">no telefon</a></th>
+
             <th >padam</th>
 
         </tr>  
@@ -245,13 +243,11 @@ $result = mysqli_query($conn, $query);
   
         <tr>  
 <!--here showing results in the table -->  
-            <td><?php echo $first_name;  ?></td>  
-            <td><?php echo $last_name;  ?></td>  
-            <td><?php echo $telnum;  ?></td> 
+            <td><?php echo $first_name;  ?></td>   
             <td><?php echo $alamat;  ?></td>
             <td><?php echo $email;  ?></td>
-            <td><?php echo $username;  ?></td>
-            <td><?php echo $password;  ?></td>
+            <td><?php echo $telnum;  ?></td> 
+
             <td><a href="deletepenyumbang.php?del=<?php echo $username?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
         </tr>  
   

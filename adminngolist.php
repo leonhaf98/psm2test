@@ -196,10 +196,8 @@ $result = mysqli_query($conn, $query);
         
         <tr>  
         <th ><a href="<?php echo sortorder('Nama'); ?>" class="sort">nama</a></th>
-            <th ><a href="<?php echo sortorder('kataNama'); ?>" class="sort">kata nama</a></th>
-            <th ><a href="<?php echo sortorder('password'); ?>" class="sort">kata laluan</a></th>
-            <th ><a href="<?php echo sortorder('negeri'); ?>" class="sort">negeri</a></th>
             <th ><a href="<?php echo sortorder('emel'); ?>" class="sort">email</a></th>
+            <th ><a href="<?php echo sortorder('negeri'); ?>" class="sort">negeri</a></th>
             <th ><a href="<?php echo sortorder('nomtel'); ?>" class="sort">no. tel</a></th>
             <th ><a href="<?php echo sortorder('nomakaun'); ?>" class="sort">no. akaun</a></th>
             <th >padam</th>
@@ -239,10 +237,8 @@ $result = mysqli_query($conn, $query);
         <tr>  
 <!--here showing results in the table -->  
             <td><?php echo $Nama;  ?></td>  
-            <td><?php echo $kataNama;  ?></td>  
-            <td><?php echo $password;  ?></td> 
-            <td><?php echo $negeri;  ?></td>
             <td><?php echo $emel;  ?></td>
+            <td><?php echo $negeri;  ?></td>
             <td><?php echo $nomtel;  ?></td>
             <td><?php echo $nomakaun;  ?></td>
             <td><a href="deletengo.php?del=<?php echo $Nama?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
