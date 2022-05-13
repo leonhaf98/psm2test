@@ -375,6 +375,9 @@ img {vertical-align: middle;}
                 </div>
               </div>
              </div>
+             <div class="col-md-3 grid-margin stretch-card">
+     
+             </div>
              </div>
              <div class="row">
              <div class="col-md-6 grid-margin stretch-card">

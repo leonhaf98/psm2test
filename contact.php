@@ -159,34 +159,53 @@
 				      		<div id="form-message-success" class="mb-4">
 				            Sila isikan maklum anda dibawah!
 				      		</div>
-									<form method="POST" id="contactForm" name="contactForm" class="contactForm" style="color: aliceblue;">
+									<form method="POST"  class="contactForm" style="color: aliceblue;">
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+													<input type="text" class="form-control" name="nama" id="nama" placeholder="Name">
 												</div>
 											</div>
 											<div class="col-md-12"> 
 												<div class="form-group">
-													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+													<input type="email" class="form-control" name="emel" id="emel" placeholder="Email">
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+													<textarea name="message" class="form-control" name="message" id="message" cols="30" rows="6" placeholder="Message"></textarea>
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<textarea name="message" class="form-control" id="message" cols="30" rows="6" placeholder="Message"></textarea>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="submit" value="Send Message" class="btn btn-primary">
+													<input type="submit" value="Send Message" name="submit" class="btn btn-primary">
 													<div class="submitting"></div>
 												</div>
 											</div>
+                          <?php
+                            if(isset($_POST["submit"])){
+                            include 'database.php';
+
+                            $sql = "INSERT INTO contact (nama, emel, message)
+                            VALUES ('".$_POST["nama"]."','".$_POST["emel"]."','".$_POST["message"]."')";
+
+                            if ($conn->query($sql) === TRUE) {
+                            echo "
+                                <script type= 'text/javascript'>
+                                    alert('maklumat anda telah berjaya di simpan');
+                                </script>";
+                            } 
+                            else 
+                            {
+                                echo 
+                                "<script type= 'text/javascript'>
+                                    alert('Error: " . $sql . "<br>" . $conn->error."');
+                                </script>";
+                            }
+
+                            $conn->close();
+                            }
+                            ?>
 										</div>
 									</form>
 								</div>

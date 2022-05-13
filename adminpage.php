@@ -85,6 +85,13 @@
               <span class="menu-title"style=" color:black;font-family:verdana">report test</span>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="cchart.php">
+              <i class="ti-star menu-icon"></i>
+              <span class="menu-title"style=" color:black;font-family:verdana">report test</span>
+            </a>
+          </li>
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">

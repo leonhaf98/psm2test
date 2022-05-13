@@ -5,11 +5,12 @@ $conn = mysqli_connect("localhost","root","","user");
     echo "Problem in database connection! Contact administrator!" . mysqli_error();
  }else{
          $sql ="SELECT * FROM sumbangan";
+         $chkresults = mysqli_query($conn,"SELECT MONTH(tarikh_sumbang) AS subscriber_month, COUNT(*) AS subscriber_count FROM sumbangan GROUP BY MONTH(tarikh_sumbang)"); 
          $result = mysqli_query($conn,$sql);
          $chart_data="";
          while ($row = mysqli_fetch_array($result)) { 
  
-            $productname[]  = $row['nama']  ;
+            $productname[]  = $row['tarikh_sumbang']  ;
             $sales[] = $row['nilai'];
         }
  
