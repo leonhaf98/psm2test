@@ -194,12 +194,7 @@ img {vertical-align: middle;}
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="indexx.php">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black;font-family:verdana">testt</span>
-            </a>
-          </li>
+         
 
           <li class="nav-item">
             <a class="nav-link" href="comment.php">

@@ -121,6 +121,19 @@
             </div>
           </li>
           <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="ti-user menu-icon"></i>
+              <span class="menu-title"style=" color:black;font-family:verdana">Laporan</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="sumchart.php"> jumlah ngo</a></li>
+                <li class="nav-item"> <a class="nav-link" href="cchart.php"> jumlah penyumbang</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="commentlist.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black;font-family:verdana">Senarai Maklum Balas</span>

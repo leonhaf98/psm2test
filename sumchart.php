@@ -9,15 +9,15 @@ include_once("database.php");
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
     <body>
-         <?php
-      $chkresults = mysqli_query($conn,"SELECT MONTH(tarikh_sumbang) AS subscriber_month, COUNT(*) AS subscriber_count FROM sumbangan GROUP BY MONTH(tarikh_sumbang)");    
+      <?php
+         $chkresults = mysqli_query($conn,"SELECT MONTH(tarikh_daftar) AS subscriber_month, COUNT(*) AS subscriber_count FROM ngo GROUP BY MONTH(tarikh_daftar)");    
       ?>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['Bar']});
-      google.charts.setOnLoadCallback(drawChart); 
+      google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-           ['bulan','Penyumbang'],
+           ['bulan 1 hingga 12','jumlah ngo'],
          <?php     
         while($row=mysqli_fetch_assoc($chkresults)){            
            echo "['".$row["subscriber_month"]."',".$row["subscriber_count"]."],";
@@ -26,11 +26,11 @@ include_once("database.php");
         ]);
         var options = {
           chart: {
-            title: 'Carta Graf Jumlah Penyumbang berdaftar',          
+            title: 'Carta Graf Jumlah ngo berdaftar',          
           },
           bars: 'vertical',
           vAxis: {format: 'decimal'},
-          height: 300,        
+          height: 300,         
           width:1000,
           colors: ['#d95f02']
         };

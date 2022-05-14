@@ -119,6 +119,20 @@ $result = mysqli_query($conn, $query);
           </li>
 
           <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="ti-user menu-icon"></i>
+              <span class="menu-title"style=" color:black;font-family:verdana">Laporan</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="adminngolist.php"> Senarai NGO</a></li>
+                <li class="nav-item"> <a class="nav-link" href="testlogngo.php"> Pendaftaran NGO</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black;font-family:verdana">Documentation</span>
@@ -129,6 +143,12 @@ $result = mysqli_query($conn, $query);
             <a class="nav-link" href="commentlist.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black;font-family:verdana">Senarai Maklum Balas</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logoutngo.php">
+              <i class="ti-star menu-icon"></i>
+              <span class="menu-title"style=" color:black;font-family:verdana">log keluar</span>
             </a>
           </li>
         </ul>
