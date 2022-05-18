@@ -89,9 +89,9 @@ include("auth.php");
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/icons/themify.html">
+            <a class="nav-link" href="menderma.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black;font-family:verdana">Tentang kami</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Test derma</span>
             </a>
           </li>
           <li class="nav-item">

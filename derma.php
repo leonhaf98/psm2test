@@ -34,8 +34,8 @@ if(strlen($lname)<3){ // Minimum
             $error[] = 'Invalid Entry Last Name. Please Enter letters without any Digit or special symbols like ( 1,2,3#,$,%,&,*,!,~,`,^,-,)';
               }    
          if(!isset($error)){ 
-            $result = mysqli_query($conn,"INSERT into sumbangan(nama,nomakaun,nomtel,nilai) 
-            values('$fname','$lname','$telnum','$nilai')");
+            $result = mysqli_query($conn,"INSERT into sumbangan(nama,nomakaun,nomtel,nilai,nama_ngo) 
+            values('$fname','$lname','$telnum','$nilai','$nama_ngo')");
            if($result==1)
            
     {
@@ -139,7 +139,7 @@ foreach($error as $error){
 						<div class="form-wrapper">
 							<label for="">NGO dipilih :</label>
 							<div class="form-holder" style="font-size: large;">
-							<select name="Category" style="font-size: large;">
+							<select name="nama_ngo" style="font-size: large;">
 								<?php 
 									// use a while loop to fetch data 
 									// from the $all_categories variable 
@@ -147,7 +147,7 @@ foreach($error as $error){
 									while ($category = mysqli_fetch_array(
 											$all_categories,MYSQLI_ASSOC)):; 
 								?>
-									<option value="<?php echo $category["ngo_id"];?>">
+									<option value="<?php echo $category["Nama"];?>">
 									
 										<?php echo $category["Nama"];
 											// To show the category name to the user

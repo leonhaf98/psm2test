@@ -112,23 +112,23 @@ if(isset($_POST['signup'])){
             $insert_code = "UPDATE ngo SET code = $code WHERE emel = '$email'";
             $run_query =  mysqli_query($conn, $insert_code);
             if($run_query){
-                $subject = "Password Reset Code";
-                $message = "Your password reset code is $code";
+                $subject = "Set semula kod kata laluan";
+                $message = "kod kata laluan anda adalah $code";
                 $sender = "From: shahiprem7890@gmail.com";
                 if(mail($email, $subject, $message, $sender)){
-                    $info = "We've sent a passwrod reset otp to your email - $email";
+                    $info = "kami telah hantar OTP kod kepada emel anda - $email";
                     $_SESSION['info'] = $info;
                     $_SESSION['emel'] = $email;
                     header('location: reset-code copy.php');
                     exit();
                 }else{
-                    $errors['otp-error'] = "Failed while sending code!";
+                    $errors['otp-error'] = "gagal menghantar kod OTP!";
                 }
             }else{
                 $errors['db-error'] = "Something went wrong!";
             }
         }else{
-            $errors['emel'] = "This email address does not exist!";
+            $errors['emel'] = "Emel ini tidak wujud!";
         }
     }
 
@@ -142,12 +142,12 @@ if(isset($_POST['signup'])){
             $fetch_data = mysqli_fetch_assoc($code_res);
             $email = $fetch_data['emel'];
             $_SESSION['emel'] = $email;
-            $info = "Please create a new password that you don't use on any other site.";
+            $info = "Sila masukkan kata laluan yang terbaharu anda.";
             $_SESSION['info'] = $info;
             header('location: new-password copy.php');
             exit();
         }else{
-            $errors['otp-error'] = "You've entered incorrect code!";
+            $errors['otp-error'] = "Salah kod OTP!";
         }
     }
 
@@ -157,7 +157,7 @@ if(isset($_POST['signup'])){
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $cpassword = mysqli_real_escape_string($conn, $_POST['cpassword']);
         if($password !== $cpassword){
-            $errors['password'] = "Confirm password not matched!";
+            $errors['password'] = "Kata laluan tidak sama!";
         }else{
             $code = 0;
             $email = $_SESSION['emel']; //getting this email using session
@@ -165,7 +165,7 @@ if(isset($_POST['signup'])){
             $update_pass = "UPDATE ngo SET code = $code, password = '$encpass' WHERE emel = '$email'";
             $run_query = mysqli_query($conn, $update_pass);
             if($run_query){
-                $info = "Your password changed. Now you can login with your new password.";
+                $info = "Kata laluan anda telah berubah. Sila cuba semula untuk log masuk.";
                 $_SESSION['info'] = $info;
                 header('Location: password-changed copy.php');
             }else{

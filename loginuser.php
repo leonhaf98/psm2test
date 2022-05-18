@@ -89,11 +89,12 @@
 			                    </form>
                                 
                                 <a class="btn btn-success" href="mainpage.php"><i class="mdi mdi-home me-2"style="color: black;"></i>Halaman Utama</a>
+                                
 		                    </div>
                         </div>
                     </div>
-                    <div class="link forget-pass text-left"><a href="forgot-password.php">Forgot password?</a></div>
-                    <p>lupa kata laluan? <a href="indexx.php">Klik disini</a> </p>
+                    <!--div class="link forget-pass text-left"><a href="forgot-password.php">Forgot password?</a></div-->
+                    <p>lupa kata laluan? <a href="forgot-password.php">Klik disini</a> </p>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3></h3>
