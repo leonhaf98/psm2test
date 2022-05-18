@@ -34,8 +34,8 @@ if(strlen($lname)<3){ // Minimum
             $error[] = 'Invalid Entry Last Name. Please Enter letters without any Digit or special symbols like ( 1,2,3#,$,%,&,*,!,~,`,^,-,)';
               }    
          if(!isset($error)){ 
-            $result = mysqli_query($conn,"INSERT into sumbangan(nama,nomakaun,nomtel,nilai,nama_ngo) 
-            values('$fname','$lname','$telnum','$nilai','$nama_ngo')");
+            $result = mysqli_query($conn,"INSERT into sumbangan(nama,nomakaun,nomtel,nilai,nama_ngo,negeri) 
+            values('$fname','$lname','$telnum','$nilai','$nama_ngo','$negeri')");
            if($result==1)
            
     {
@@ -97,6 +97,16 @@ foreach($error as $error){
 	  }
   }
 ?>
+<?php
+session_start();//important
+
+$username=$_SESSION["username"];
+$getInfo="SELECT * from users where username='$username'";
+$con=mysqli_connect("localhost","root","","user");
+$res=mysqli_query($con,$getInfo);
+$row=mysqli_fetch_array($res);
+mysqli_close($con);
+?>
 		<div class="wrapper" style="background-image: url('images/bg-registration-form-3.jpg');">
 			<div class="inner">
 				<form action="" method="POST">
@@ -107,7 +117,7 @@ foreach($error as $error){
 							<label for="">Nama </label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-account-o"></i>
-								<input type="text" class="form-control" name="fname" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['fname'];}?>" >
+								<input type="text" class="form-control" name="fname" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['fname'];} echo $row ['first_name'];?>" >
 							</div>
 						</div>
 						<div class="form-wrapper">
@@ -132,6 +142,37 @@ foreach($error as $error){
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
 								<input type="text" class="form-control" name="nilai"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['nilai'];}?>" >
+							</div>
+						</div>
+					</div>
+					<div class="form-group signup_form">
+						<div class="form-wrapper">
+							<div class="form-holder">
+							<div class="form-wrapper">
+							<label for="">Negeri </label>
+							<div class="form-holder">
+							<select name="negeri">
+											<option value="Selangor">Selangor</option>
+											<option value="Kuala Lumpur">Kuala Lumpur</option>
+											<option value="Putrajaya">Putrajaya</option>
+											<option value="Johor">Johor</option>
+											<option value="Perak">Perak</option>
+											<option value="Kedah">Kedah</option>
+											<option value="Pulau Pinang">Pulau Pinang</option>
+											<option value="Perlis">Perlis</option>
+											<option value="Negeri Sembilan">Negeri Sembilan</option>
+											<option value="Melaka">Melaka</option>
+											<option value="Johor">Johor</option>
+											<option value="Pahang">Pahang</option>
+											<option value="Terengganu">Terengganu</option>
+											<option value="Kelantan">Kelantan</option>
+											<option value="Sarawak">Sarawak</option>
+											<option value="Sabah">Sabah</option>
+									
+											</select>
+							</div>
+						</div>	
+								
 							</div>
 						</div>
 					</div>

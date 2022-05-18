@@ -44,20 +44,27 @@
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face28.jpg" alt="profile"/>
+            <strong><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown" style="color: black;"></strong>
+              
+              <img src="images/faces/log-in.png" alt="profile" style="width: 80px; height: 80px;">
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
+              <a class="dropdown-item" href="loginuser.php">
+                <i class="ti-settings text-primary" style="font-family:verdana" ></i>
+                Log Masuk Pengguna
+              </a>
+              <a class="dropdown-item" href="loginngo.php">
                 <i class="ti-settings text-primary"></i>
-                Settings
+                Login NGO
               </a>
             </div>
           </li>
         </ul>
+        
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="ti-view-list"></span>
         </button>
+        
       </div>
     </nav>
     <!-- partial -->
@@ -68,27 +75,28 @@
           <li class="nav-item">
             <a class="nav-link" href="mainpage.php">
               <i class="ti-shield menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title"style="font-family:verdana">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="loginuser.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Sumbangan</span>
+              <span class="menu-title"style=" color:black; font-family:verdana">Sumbangan</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="testlog.php">
+            <a class="nav-link" href="contact.php">
               <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black">Hubungi kami</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Hubungi kami</span>
             </a>
           </li>
+
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="ti-palette menu-icon"></i>
-              <span class="menu-title"style=" color:black">Pendaftaran</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Pendaftaran</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -99,7 +107,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <!--li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
               <span class="menu-title"style=" color:black">testing</span>
@@ -111,19 +119,21 @@
                 <li class="nav-item"> <a class="nav-link" href="testlogngo.php"> Pendaftaran NGO</a></li>
               </ul>
             </div>
-          </li>
+          </li-->
 
           <li class="nav-item">
             <a class="nav-link" href="documentation/documentation.html">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Documentation</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Dokumentasi</span>
             </a>
           </li>
+
+         
 
           <li class="nav-item">
             <a class="nav-link" href="comment.php">
               <i class="ti-write menu-icon"></i>
-              <span class="menu-title"style=" color:black">Maklum Balas</span>
+              <span class="menu-title"style=" color:black;font-family:verdana">Maklum Balas</span>
             </a>
           </li>
         </ul>
