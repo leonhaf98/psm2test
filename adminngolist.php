@@ -271,8 +271,8 @@ $result = mysqli_query($conn, $query);
         <div id="div_pagination" style="width: 30cm;">
             <input type="hidden" name="row" value="<?php echo $row; ?>">
             <input type="hidden" name="allcount" value="<?php echo $allcount; ?>">
-            <input type="submit" class="button" name="but_prev" value="Previous" >
-            <input type="submit" class="button" name="but_next" value="Next">
+            <input type="submit" class="button" name="but_prev" value="Sebelumnya" >
+            <input type="submit" class="button" name="but_next" value="Seterusnya">
         </div>
     </form>
         </div>  

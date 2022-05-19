@@ -34,8 +34,8 @@ if(strlen($lname)<3){ // Minimum
             $error[] = 'Invalid Entry Last Name. Please Enter letters without any Digit or special symbols like ( 1,2,3#,$,%,&,*,!,~,`,^,-,)';
               }    
          if(!isset($error)){ 
-            $result = mysqli_query($conn,"INSERT into sumbangan(nama,nomakaun,nomtel,nilai,nama_ngo,negeri) 
-            values('$fname','$lname','$telnum','$nilai','$nama_ngo','$negeri')");
+            $result = mysqli_query($conn,"INSERT into sumbangan(nama,nomakaun,nomtel,nilai,nama_ngo,negeri,users_id) 
+            values('$fname','$lname','$telnum','$nilai','$nama_ngo','$negeri','$sumid')");
            if($result==1)
            
     {
@@ -112,7 +112,6 @@ mysqli_close($con);
 				<form action="" method="POST">
 					<h3>BORANG SUMBANGAN</h3>
 					<div class="form-group signup_form">
-					
 						<div class="form-wrapper">
 							<label for="">Nama </label>
 							<div class="form-holder">
@@ -120,11 +119,20 @@ mysqli_close($con);
 								<input type="text" class="form-control" name="fname" style="background-color:lightyellow;"value="<?php if(isset($error)){ echo $_POST['fname'];} echo $row ['first_name'];?>" >
 							</div>
 						</div>
+
 						<div class="form-wrapper">
 							<label for="">Nombor akaun</label>
 							<div class="form-holder">
 								<i style="font-style: normal; font-size: 15px;">@</i>
-								<input type="text" class="form-control" name="lname"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['lname'];}?>" >
+								<input type="text" class="form-control" name="lname"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['lname'];} echo $row['nomakaun']; ?>" >
+							</div>
+						</div>
+
+						<div class="form-wrapper">
+							
+							<div class="form-holder">
+								
+								<input type="hidden" class="form-control" name="sumid"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['sumid'];} echo $row['id']; ?>" >
 							</div>
 						</div>
 					</div>
@@ -134,7 +142,7 @@ mysqli_close($con);
 							<label for="">nombor telefon</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
-								<input type="text" class="form-control" name="telnum"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['telnum'];}?>" >
+								<input type="text" class="form-control" name="telnum"style="background-color:lightyellow;" value="<?php if(isset($error)){ echo $_POST['telnum'];} echo $row['telnum']; ?>" >
 							</div>
 						</div>
 						<div class="form-wrapper">
@@ -201,6 +209,7 @@ mysqli_close($con);
 							</select>
 							</div>
 						</div>
+						
 					</div>
 
 					<div class="form-end">
@@ -210,6 +219,7 @@ mysqli_close($con);
 								<span class="checkmark"></span>
 							</label>
 						</div>
+						
 						<div class="button-holder">
 					  	<button type="submit" name="signup" class="btn btn-primary btn-group-lg form_btn">Sumbang</button>
             

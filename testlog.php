@@ -70,7 +70,7 @@ $row = mysqli_fetch_assoc($res);
           } 
       }
          if(!isset($error)){ 
-            $result = mysqli_query($conn,"INSERT into users(first_name,username,email,telnum,alamat,password,date) 
+            $result = mysqli_query($conn,"INSERT into users(first_name,username,email,telnum,alamat,password,tarikh) 
             values('$fname','$username','$email','$telnum','$alamat','$password','$date')");
 
 				$headers = 'From: muhammadhafz98@gmail.com'."\r\n".

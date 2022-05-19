@@ -88,12 +88,7 @@ include("auth.php");
               <span class="menu-title"style=" color:black">Sumbangan</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="menderma.php">
-              <i class="ti-star menu-icon"></i>
-              <span class="menu-title"style=" color:black;font-family:verdana">Test derma</span>
-            </a>
-          </li>
+   
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="ti-user menu-icon"></i>
@@ -110,7 +105,7 @@ include("auth.php");
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="reportuser.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">laporan sumbangan</span>
             </a>

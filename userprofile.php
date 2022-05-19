@@ -146,17 +146,17 @@ mysqli_close($con);
 					      <div class="form-group signup_form">
 					
 						    <div class="form-wrapper">
-						  	<label for="">Nama pertama</label>
+						  	<label for="">Nama </label>
 						  	<div class="form-holder" >
                 <i style="font-style: normal; font-size: 15px;"></i>            
 								<input type="text" class="form-control" name="Nama" style="background-color:lightyellow;" value="<?php echo $row ['first_name']; ?>">
 							  </div>
 					  	  </div>
 					      <div class="form-wrapper">
-					  	  <label for="">nama kedua</label>
+					  	  <label for="">nombor akaun</label>
 						  	<div class="form-holder">
 								<i style="font-style: normal; font-size: 15px;"></i>
-								<input type="text" class="form-control" name="emel"style="background-color:lightyellow;" value="<?php echo $row['last_name']; ?>">
+								<input type="text" class="form-control" name="emel"style="background-color:lightyellow;" value="<?php echo $row['nomakaun']; ?>">
 						  	</div>
 						   </div>
 						    </div>
