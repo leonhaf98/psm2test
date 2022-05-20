@@ -111,6 +111,12 @@ include("auth.php");
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="laporanuser.php">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title"style=" color:black">test sumbang</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="logout.php">
               <i class="ti-star menu-icon"></i>
               <span class="menu-title"style=" color:black;font-family:verdana">Log keluar</span>

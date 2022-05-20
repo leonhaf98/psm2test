@@ -128,8 +128,9 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="sumchart.php"> jumlah ngo</a></li>
-                <li class="nav-item"> <a class="nav-link" href="cchart.php"> jumlah penyumbang</a></li>
+                <li class="nav-item"> <a class="nav-link" href="sumchart.php">carta jumlah ngo</a></li>
+                <li class="nav-item"> <a class="nav-link" href="cchart.php"> carta jumlah penyumbang</a></li>
+                <li class="nav-item"> <a class="nav-link" href="displayreportuser.php"> jumlah sumbangan</a></li>
               </ul>
             </div>
           </li>
