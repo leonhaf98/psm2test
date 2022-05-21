@@ -244,7 +244,7 @@ $result = mysqli_query($conn, $query);
         ?>  
   
         <tr>  
-<!--here showing results in the table -->  
+          <!--here showing results in the table -->  
             <td><?php echo $first_name;  ?></td>   
             <td><?php echo $alamat;  ?></td>
             <td><?php echo $email;  ?></td>
