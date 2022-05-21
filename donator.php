@@ -111,7 +111,7 @@ include("auth.php");
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="laporanuser.php">
+            <a class="nav-link" href="displayuserlaporan.php">
               <i class="ti-write menu-icon"></i>
               <span class="menu-title"style=" color:black">test sumbang</span>
             </a>
